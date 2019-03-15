@@ -1,5 +1,12 @@
 # my-portfolio-v2
 
+## ENV BUILD
+``` bash
+NODE_ENV                        string  environment build
+TITLE                           string  title website
+FAVICON                         string  path / url location favicon
+```
+
 ## Project setup
 ```
 yarn install
