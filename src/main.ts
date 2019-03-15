@@ -5,10 +5,11 @@ import store from './store'
 import Vuetify from 'vuetify'
 import filters from './filters'
 import colors from 'vuetify/es5/util/colors'
-import VueClipboards from 'vue-clipboard2'
 import './assets/stylus/main.styl'
 import 'vuetify/dist/vuetify.min.css'
 import '@mdi/font/css/materialdesignicons.css'
+
+const VueClipboards = require('vue-clipboard2')
 
 Vue.use(Vuetify, {
   iconfont: 'mdi',
