@@ -10,7 +10,7 @@
   >
     <v-layout row wrap class="text-xs-center mx-3">
       <v-flex xs12 class="pt-4">
-        <v-avatar class="elevation-1" color="offwhite" size="130">
+        <v-avatar class="elevation-7 avatar" color="offwhite" size="150">
           <img :src="logo" alt="avatar" />
         </v-avatar>
       </v-flex>
@@ -35,7 +35,7 @@
         <v-divider></v-divider>
       </v-flex>
     </v-layout>
-    <v-list dense class="hidden-sm-and-up">
+    <v-list dense class="hidden-lg-and-up">
       <v-list-tile
         v-for="(item, index) in menu"
         :key="index"
@@ -68,8 +68,12 @@
     <v-layout row wrap justify-space-around class="pa-4">
       <v-flex xs11>
         <v-layout row wrap>
-          <v-flex xs4 v-for="(item, index) in imageList" :key="index">
-            <!-- <img width="74px" height="97%" :src="getImage(item.src)"/> -->
+          <v-flex xs4 v-for="(item, index) in images" :key="index">
+            <img
+              :src="doGetImage(item.name, item.token)"
+              width="74"
+              :height="toggle_sidebar ? '97%' : ''"
+            />
           </v-flex>
         </v-layout>
       </v-flex>
@@ -88,12 +92,13 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import data from '@/services/data/Base'
+import { getImageFromStore } from '@/services/functions/Services'
 
 export default {
   data() {
     return {
       menu: data.menu,
-      imageList: data.img_sidebar
+      images: data.img_sidebar
     }
   },
   computed: {
@@ -101,15 +106,22 @@ export default {
       toggle_sidebar: state => state.toggle_sidebar
     }),
     logo() {
-      return process.env.VUE_APP_LOGO_BLACK
-        ? process.env.VUE_APP_LOGO_BLACK
+      return process.env.VUE_APP_LOGO_NOTEXT_BLACK
+        ? process.env.VUE_APP_LOGO_NOTEXT_BLACK
         : ''
     }
   },
   methods: {
-    getImage(name) {
-      return require(`@/assets/images/sidebar/${name}.png`)
+    doGetImage(name, token) {
+      return getImageFromStore(name, token)
     }
   }
 }
 </script>
+
+<style lang="stylus">
+.avatar.v-avatar img
+    border-radius: unset
+    height: 95px
+    width: 95px
+</style>

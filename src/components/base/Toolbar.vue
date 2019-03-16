@@ -15,7 +15,7 @@
     <v-spacer class="hidden-xs-only"></v-spacer>
     <v-toolbar-items v-for="(item, index) in menu" :key="index">
       <v-btn
-        class="menu font-weight-bold hidden-xs-only"
+        class="menu font-weight-bold hidden-md-and-down"
         append
         :to="{ path: item.route }"
         color="black"
