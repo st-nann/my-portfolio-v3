@@ -34,14 +34,19 @@
                 dark
               >
                 KNOW MORE
-                <v-icon class="pl-1" size="15">
+                <v-icon class="pl-2" size="17">
                   mdi-arrow-right-bold-circle-outline
                 </v-icon>
               </v-btn>
             </div>
             <img
               class="bg-img-mobile hidden-lg-and-up"
-              src="~@/assets/images/home/home.jpg"
+              :src="
+                doGetImage(
+                  'home%2Fhome',
+                  '8146bd85-9d4f-48ca-a693-4fb7c696e959'
+                )
+              "
               style="z-index: 1;"
             />
             <v-layout row wrap class="pl-1 font-size-10 hidden-lg-and-up">
@@ -59,8 +64,8 @@
                 small
               >
                 KNOW MORE
-                <v-icon class="pl-2" size="12">
-                  far fa-arrow-alt-circle-right
+                <v-icon class="pl-2" size="16">
+                  mdi-arrow-right-bold-circle-outline
                 </v-icon>
               </v-btn>
             </div>
@@ -94,12 +99,19 @@
 </template>
 
 <script>
+import { getImageFromStore } from '@/services/functions/Services'
+
 export default {
   computed: {
     logo() {
       return process.env.VUE_APP_LOGO_BLACK
         ? process.env.VUE_APP_LOGO_BLACK
         : ''
+    }
+  },
+  methods: {
+    doGetImage(name, token) {
+      return getImageFromStore(name, token)
     }
   }
 }
