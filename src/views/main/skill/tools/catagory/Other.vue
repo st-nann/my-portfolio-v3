@@ -1,25 +1,25 @@
 <template>
-    <v-layout row wrap class="text-xs-center">
-        <v-flex xs4 md3 v-for="(item, index) in other" :key="index">
-            <!-- <img :src="item.image" width="40px"/> -->
-            <p>{{item.name}}</p>
-        </v-flex>
-    </v-layout>
+  <v-layout row wrap class="text-xs-center">
+    <v-flex xs4 md3 v-for="(item, index) in other" :key="index">
+      <!-- <img :src="item.image" width="40px"/> -->
+      <p>{{ item.name }}</p>
+    </v-flex>
+  </v-layout>
 </template>
 
 <script>
-  import _ from 'lodash'
-  import data from '@/services/data/Skill'
+import _ from 'lodash'
+import data from '@/services/data/Skill'
 
-  export default {
-    computed: {
-      other: function () {
-        let listOther = []
-        _.forEach(data.tools, function (item) {
-          listOther = item.other
-        })
-        return listOther
-      }
+export default {
+  computed: {
+    other() {
+      let listOther = []
+      _.forEach(data.tools, function(item) {
+        listOther = item.other
+      })
+      return listOther
     }
   }
+}
 </script>

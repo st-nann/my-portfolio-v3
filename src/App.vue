@@ -7,7 +7,8 @@
       <Toolbar></Toolbar>
       <main class="ma-0">
         <Sidebar></Sidebar>
-        <router-view></router-view>
+        <Loading v-if="loading"></Loading>
+        <router-view v-else></router-view>
       </main>
     </template>
   </v-app>
@@ -16,26 +17,46 @@
 <script>
 import Toolbar from '@/components/base/Toolbar'
 import Sidebar from '@/components/base/Sidebar'
+import Loading from '@/components/base/Loading'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: 'app',
   components: {
     Toolbar,
-    Sidebar
+    Sidebar,
+    Loading
   },
   computed: {
+    ...mapState('components', {
+      loading: state => state.loading
+    }),
     nolayout() {
-      return (
-        typeof this.$route.meta.nolayout
-      )
+      return this.$route.meta.nolayout
     }
+  },
+  watch: {
+    $route(to, from) {
+      this.updateLoading()
+    }
+  },
+  created() {
+    this.loading
+  },
+  methods: {
+    ...mapActions('components', ['updateLoading'])
   }
 }
 </script>
 
 <style lang="stylus">
+@import '~vuetify/src/stylus/main'
+
 #app
   background: #ffffff
+
+.application
+  font-family: 'Didact Gothic', sans-serif !important
 
 .clickable
   cursor: pointer
@@ -54,6 +75,15 @@ img.logo
 
 .font-size-10
   font-size: 10px
+
+.font-size-24
+  font-size: 24px
+
+.font-size-55
+  font-size: 55px
+
+.font-size-112
+  font-size: 112px
 
 .text-decoration
   border-bottom: 1.5px solid black

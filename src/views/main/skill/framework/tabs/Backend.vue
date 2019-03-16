@@ -1,61 +1,61 @@
 <template>
-    <div>
-        <v-layout row wrap v-for="(item, index) in backend" :key="index">
-            <v-flex xs12 sm4 md4>
-                <p class="subheadline pl-4 mobile mb-1">{{item.name}}</p>
-            </v-flex>
-            <v-flex xs9 sm6 md6>
-                <v-progress-linear
-                    v-model="value[index]"
-                    color="teal lighten-1"
-                    class="my-2 ml-4"
-                ></v-progress-linear>
-            </v-flex>
-            <v-flex xs3 sm2 md2>
-                <p class="mb-0 caption text-xs-center">{{item.value}} %</p>
-            </v-flex>
-        </v-layout>
-    </div>
+  <div>
+    <v-layout row wrap v-for="(item, index) in backend" :key="index">
+      <v-flex xs12 sm4 md4>
+        <p class="subheadline pl-4 mobile mb-1">{{ item.name }}</p>
+      </v-flex>
+      <v-flex xs9 sm6 md6>
+        <v-progress-linear
+          v-model="value[index]"
+          color="teal lighten-1"
+          class="my-2 ml-4"
+        ></v-progress-linear>
+      </v-flex>
+      <v-flex xs3 sm2 md2>
+        <p class="mb-0 caption text-xs-center">{{ item.value }} %</p>
+      </v-flex>
+    </v-layout>
+  </div>
 </template>
 
 <script>
-  import _ from 'lodash'
-  import data from '@/services/data/Skill'
+import _ from 'lodash'
+import data from '@/services/data/Skill'
 
-  export default {
-    data () {
-      return {
-        value: []
-      }
-    },
-    computed: {
-      backend: function () {
-        let listBackend = []
-        _.forEach(data.frameworks, function (item) {
-          listBackend = item.backend
-        })
-        return listBackend
-      }
-    },
-    created () {
-      let self = this
-      _.forEach(this.backend, function (item) {
-        self.animationLoop(item.value)
+export default {
+  data() {
+    return {
+      value: []
+    }
+  },
+  computed: {
+    backend() {
+      let listBackend = []
+      _.forEach(data.frameworks, function(item) {
+        listBackend = item.backend
       })
-    },
-    methods: {
-      animationLoop: function (value) {
-        setTimeout(() => {
-          return (this.value.push(value))
-        }, 300)
-      }
+      return listBackend
+    }
+  },
+  created() {
+    let self = this
+    _.forEach(this.backend, function(item) {
+      self.animationLoop(item.value)
+    })
+  },
+  methods: {
+    animationLoop(value) {
+      setTimeout(() => {
+        return this.value.push(value)
+      }, 300)
     }
   }
+}
 </script>
 
 <style lang="stylus" scoped>
-  @media only screen and (max-width: 320px)
-    .mobile
-      margin-bottom: 0px !important
-      margin-top: 10px !important
+@media only screen and (max-width: 320px)
+  .mobile
+    margin-bottom: 0px !important
+    margin-top: 10px !important
 </style>
