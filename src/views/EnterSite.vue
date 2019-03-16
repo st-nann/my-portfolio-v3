@@ -89,7 +89,15 @@
           :align-end="$vuetify.breakpoint.xs"
         >
           <v-flex xs12 style="z-index: 1;" class="hidden-md-and-down">
-            <img class="bg-img-desktop" src="~@/assets/images/home/home.jpg" />
+            <img
+              class="bg-img-desktop"
+              :src="
+                doGetImage(
+                  'home%2Fhome',
+                  '8146bd85-9d4f-48ca-a693-4fb7c696e959'
+                )
+              "
+            />
           </v-flex>
         </v-layout>
       </v-flex>
