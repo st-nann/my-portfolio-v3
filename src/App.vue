@@ -1,25 +1,90 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
-  </div>
+  <v-app id="app" style="height:auto">
+    <template v-if="nolayout">
+      <router-view></router-view>
+    </template>
+    <template v-else>
+      <Toolbar></Toolbar>
+      <main class="ma-0">
+        <Sidebar></Sidebar>
+        <Loading v-if="loading"></Loading>
+        <router-view v-else></router-view>
+      </main>
+    </template>
+  </v-app>
 </template>
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
 
-#nav
-  padding 30px
-  a
-    font-weight bold
-    color #2c3e50
-    &.router-link-exact-active
-      color #42b983
+<script>
+import Toolbar from '@/components/base/Toolbar'
+import Sidebar from '@/components/base/Sidebar'
+import Loading from '@/components/base/Loading'
+import { mapState, mapActions } from 'vuex'
+
+export default {
+  name: 'app',
+  components: {
+    Toolbar,
+    Sidebar,
+    Loading
+  },
+  computed: {
+    ...mapState('components', {
+      loading: state => state.loading
+    }),
+    nolayout() {
+      return this.$route.meta.nolayout
+    }
+  },
+  watch: {
+    $route(to, from) {
+      this.updateLoading()
+    }
+  },
+  created() {
+    this.loading
+  },
+  methods: {
+    ...mapActions('components', ['updateLoading'])
+  }
+}
+</script>
+
+<style lang="stylus">
+@import '~vuetify/src/stylus/main'
+
+#app
+  background: #ffffff
+
+.application
+  font-family: 'Didact Gothic', sans-serif !important
+
+.clickable
+  cursor: pointer
+
+.dialog__content
+  z-index: 99999 !important
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity 1s
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+  opacity: 0
+
+img.logo
+  width: 50px !important
+
+.font-size-10
+  font-size: 10px
+
+.font-size-24
+  font-size: 24px
+
+.font-size-55
+  font-size: 55px
+
+.font-size-112
+  font-size: 112px
+
+.text-decoration
+  border-bottom: 1.5px solid black
 </style>

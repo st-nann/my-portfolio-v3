@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "my-portfolio-v2",
+    "production": "my-portfolio-v2"
+  }
+}
