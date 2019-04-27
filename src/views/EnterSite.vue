@@ -1,35 +1,46 @@
 <template>
   <transition name="fade">
     <v-layout row wrap>
-      <v-flex xs7 sm5 lg6>
+      <v-flex xs12 lg8>
         <img class="ma-2 logo" :src="logo" />
-        <v-layout
-          row
-          wrap
-          :align-center="!$vuetify.breakpoint.xs"
-          :align-start="$vuetify.breakpoint.xs"
-        >
-          <v-flex xs8 offset-xs2 style="z-index: 1;">
+        <v-layout row wrap>
+          <v-flex
+            xs12
+            offset-xs0
+            lg8
+            offset-lg2
+            :class="{
+              'ml-3 pr-2': $vuetify.breakpoint.xs,
+              'ml-5 pr-3': $vuetify.breakpoint.mdAndDown && !$vuetify.breakpoint.xs
+            }"
+          >
             <div
-              class="black--text font-weight-regular"
+              class="black--text"
               :class="{
-                'font-size-55 mt-1': $vuetify.breakpoint.xs,
+                'font-size-65': $vuetify.breakpoint.xs,
                 'font-size-112': $vuetify.breakpoint.smAndUp,
-                'mt-5 pt-5': $vuetify.breakpoint.lgAndUp
+                'title-mobile text-xs-right font-weight-bold': $vuetify.breakpoint.mdAndDown,
+                'mt-5 pt-5 font-weight-regular': $vuetify.breakpoint.lgAndUp
               }"
             >
               sanyanee
             </div>
-            <div class="mt-3 pl-1" :class="{ caption: $vuetify.breakpoint.xs }">
+            <div
+              class="pl-1"
+              :class="{
+                'caption': $vuetify.breakpoint.xs,
+                'text-xs-right': $vuetify.breakpoint.mdAndDown
+              }"
+            >
               サンヤーネィ・タビンボンラック
             </div>
-            <v-divider class="ml-1 my-3 line"></v-divider>
             <div class="hidden-md-and-down">
               <v-btn
-                class="elevation-3 ml-1"
+                class="elevation-1 mt-4 ml-1"
                 append
                 :to="{ path: '/aboutme' }"
-                color="darkblue"
+                color="cinnamon"
+                outline
                 round
                 dark
               >
@@ -41,67 +52,64 @@
             </div>
             <img
               class="bg-img-mobile hidden-lg-and-up"
+              width="100%"
               :src="
                 doGetImage(
                   'home%2Fhome',
-                  '8146bd85-9d4f-48ca-a693-4fb7c696e959'
+                  '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
                 )
               "
               style="z-index: 1;"
             />
-            <v-layout row wrap class="pl-1 font-size-10 hidden-lg-and-up">
-              <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
-              <v-flex xs12>DEVELOPER</v-flex>
+            <v-layout row wrap class="pl-1 pb-2 font-size-10 hidden-lg-and-up">
+              <v-flex xs7>
+                <v-layout row wrap>
+                  <v-flex xs12 class="subheading">1993 -</v-flex>
+                  <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
+                  <v-flex xs12>DEVELOPER</v-flex>
+                </v-layout>
+              </v-flex>
+              <v-flex xs5 class="text-xs-right">
+                <v-divider vertical></v-divider>
+                <v-btn
+                  class="button-mobile mx-0"
+                  append
+                  :to="{ path: '/aboutme' }"
+                  color="cinnamon"
+                  flat
+                  dark
+                  small
+                >
+                  KNOW MORE
+                  <v-icon class="pl-2" size="16">
+                    mdi-arrow-right-bold-circle-outline
+                  </v-icon>
+                </v-btn>
+              </v-flex>
             </v-layout>
-            <div class="hidden-lg-and-up mt-2 mb-3">
-              <v-btn
-                class="elevation-3 px-3 ml-0"
-                append
-                :to="{ path: '/aboutme' }"
-                color="darkblue"
-                round
-                dark
-                small
-              >
-                KNOW MORE
-                <v-icon class="pl-2" size="16">
-                  mdi-arrow-right-bold-circle-outline
-                </v-icon>
-              </v-btn>
-            </div>
             <v-layout
               row
               wrap
-              class="pt-5 mt-5 text-xs-right hidden-md-and-down"
+              class="pt-5 mt-5 text-xs-right hidden-md-and-down text-xs-right"
             >
-              <v-flex xs12 class="pt-5 mt-5">Sanyanee Thawinvongrak</v-flex>
+              <v-flex xs12 class="pt-5 mt-5 title">- 1993</v-flex>
+              <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
               <v-flex xs12>DEVELOPER</v-flex>
             </v-layout>
           </v-flex>
         </v-layout>
       </v-flex>
-      <v-flex xs2 sm1 lg1>
-        <v-layout
-          row
-          wrap
-          fill-height
-          :align-center="!$vuetify.breakpoint.xs"
-          :align-end="$vuetify.breakpoint.xs"
-        >
-          <v-flex xs12 style="z-index: 1;" class="hidden-md-and-down">
-            <img
-              class="bg-img-desktop"
-              :src="
-                doGetImage(
-                  'home%2Fhome',
-                  '8146bd85-9d4f-48ca-a693-4fb7c696e959'
-                )
-              "
-            />
-          </v-flex>
-        </v-layout>
+      <v-flex xs12 lg4 class="text-xs-right hidden-md-and-down">
+        <img
+          width="505.3px"
+          :src="
+            doGetImage(
+              'home%2Fhome',
+              '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
+            )
+          "
+        />
       </v-flex>
-      <v-flex xs3 sm6 lg5 class="bg-color"></v-flex>
     </v-layout>
   </transition>
 </template>
@@ -126,37 +134,9 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.bg-style
-  right: 0
+.title-mobile
+  margin-top: -35px
 
-.bg-img
-  border-top: 7px solid #ffffff
-  border-right: 7px solid #ffffff
-  border-bottom: 7px solid #ffffff
-  @extend .bg-style
-
-.bg-img-desktop
-  width: 400%
-  @extend .bg-img
-
-.bg-img-mobile
-  @extend .bg-img
-
-@media only screen and (max-width: 599px)
-  .bg-img-mobile
-    width: 200%
-
-@media only screen and (min-width: 600px)
-  .bg-img-mobile
-    width: 300%
-
-.bg-color
-  background: #e0b265
-  z-index: 0
-  @extend .bg-style
-
-.line
-  border-width: thin 0px 2px 0
-  border-color: #5f5e5e
-  width: 60px
+.button-mobile
+  margin-top: -30px
 </style>
