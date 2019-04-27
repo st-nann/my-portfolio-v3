@@ -8,7 +8,7 @@
       <main class="ma-0">
         <Sidebar></Sidebar>
         <Loading v-if="loading"></Loading>
-        <router-view v-else></router-view>
+        <router-view v-else style="margin-top: 65px;"></router-view>
       </main>
     </template>
   </v-app>
@@ -79,8 +79,8 @@ img.logo
 .font-size-24
   font-size: 24px
 
-.font-size-55
-  font-size: 55px
+.font-size-65
+  font-size: 65px
 
 .font-size-112
   font-size: 112px
