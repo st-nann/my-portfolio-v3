@@ -1,37 +1,51 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <v-card class="grey lighten-3 grey--text text--darken-3" height="400px">
-        <v-layout row wrap>
-          <v-flex xs12>
-            <p class="display-1 pt-5"><b>WHO AM I</b></p>
-          </v-flex>
-          <v-flex xs10 offset-xs1>
-            <v-divider class="grey lighten-1"></v-divider>
-          </v-flex>
-        </v-layout>
-        <v-layout row wrap>
-          <v-flex xs3>
+      <v-card class="white" :height="$vuetify.breakpoint.xs ? '550px' : ($vuetify.breakpoint.sm ? '500' : '400px')">
+        <v-layout row wrap class="py-5">
+          <v-flex xs12 md2 lg3 :class="{ 'text-xs-right': $vuetify.breakpoint.mdAndUp }">
             <v-icon
-              class="display-4 pt-4 text-xs-right rotate-icon icon-left-style"
+              class="display-4"
+              :class="{ 'pt-1': $vuetify.breakpoint.mdAndUp }"
+              color="lightgrey"
             >
-              format_quote
+              mdi-format-quote-open
             </v-icon>
           </v-flex>
-          <v-flex xs6 class="headline pt-5 text-xs-center text-style">
-            <span class="display-3"> H</span> ello My name is
-            <span class="light-blue--text text--darken-4">
+          <v-flex
+            xs10
+            offset-xs1
+            md8
+            offset-md0
+            lg6
+            offset-lg0
+            class="text-xs-center"
+            :class="{
+              'mt-1 pt-5 headline': $vuetify.breakpoint.mdAndUp,
+              'title': $vuetify.breakpoint.smAndDown
+            }"
+          >
+            <span class="display-3"> H</span>ello My name is
+            <span class="cinnamon--text">
               Sanyanee Thawinvongrak (Nan).
             </span>
-            <p class="subheading sub-content-style">
+            <p class="font-weight-thin subheading">
               I'm a web developer. I graduated from King Mongkut's Institute of
               Technology Ladkrabang in Bachelor Degree (Second Class Honors).
               Faculty of Science, Department of Computer Science.
             </p>
           </v-flex>
-          <v-flex xs3 class="pt-5">
-            <v-icon class="display-4 pt-5 mt-5 text-xs-left icon-right-style">
-              format_quote
+          <v-flex
+            xs12
+            md2
+            lg3
+            :class="{
+              'pt-5 mt-5': $vuetify.breakpoint.mdAndUp,
+              'text-xs-right': $vuetify.breakpoint.smAndDown
+            }"
+          >
+            <v-icon class="display-4" :class="{ 'pt-4 mt-5': $vuetify.breakpoint.mdAndUp }" color="lightgrey">
+              mdi-format-quote-close
             </v-icon>
           </v-flex>
         </v-layout>
@@ -39,38 +53,3 @@
     </v-flex>
   </v-layout>
 </template>
-
-<style lang="stylus" scoped>
-.rotate-icon
-  transform: rotate(180deg)
-
-@media only screen and (max-width: 768px)
-  .text-style
-    margin-top: -30px !important
-
-  .icon-right-style
-    margin-top: 90px !important
-
-@media only screen and (max-width: 414px)
-  .text-style
-    font-size: 20px !important
-
-  .sub-content-style
-    font-size: 10px !important
-    line-height: 2
-
-  .icon-right-style
-    margin-top: 90px !important
-
-@media only screen and (max-width: 375px)
-  .text-style
-    font-size: 15px !important
-    line-height: 1.3 !important
-
-  .icon-left-style
-    font-size: 80px !important
-
-  .icon-right-style
-    font-size: 80px !important
-    margin-top: 120px !important
-</style>
