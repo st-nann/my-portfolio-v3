@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build --mode",
+    "build:production": "vue-cli-service build --mode production",
     "inspect": "vue-cli-service inspect --mode",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
