@@ -33,11 +33,6 @@
     </v-flex>
     <v-flex xs12>
       <WhoAmI></WhoAmI>
-      <!-- <v-layout row wrap>
-        <v-flex sm12 md12>
-          <Footers></Footers>
-        </v-flex>
-      </v-layout> -->
     </v-flex>
   </v-layout>
 </template>
@@ -46,12 +41,10 @@
 import data from '@/services/data/AboutMe'
 import { getImageFromStore } from '@/services/functions/Services'
 import WhoAmI from '@/views/main/aboutme/WhoAmI'
-import Footers from '@/components/base/Footer'
 
 export default {
   components: {
-    WhoAmI,
-    Footers
+    WhoAmI
   },
   computed: {
     items() {

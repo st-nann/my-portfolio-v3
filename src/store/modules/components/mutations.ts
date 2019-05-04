@@ -10,12 +10,12 @@ const mutations: MutationTree<State> = {
       Vue.set(state, 'loading', false)
     }, 1000)
   },
-  [mutation_type.TOGGLE_SIDEBAR](state: State): void {
+  [mutation_type.TOGGLE_SIDEBAR](state: State, page: string): void {
     if (state.toggle_sidebar) {
       Vue.set(state, 'toggle_sidebar', false)
     }
     setTimeout(function() {
-      Vue.set(state, 'toggle_sidebar', !state.toggle_sidebar)
+      Vue.set(state, 'toggle_sidebar', page === 'home' ? false : !state.toggle_sidebar)
     }, 100)
   },
   [mutation_type.SNACKBAR](state: State, data: object): void {

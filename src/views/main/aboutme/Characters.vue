@@ -1,10 +1,17 @@
 <template>
-  <v-layout row wrap :class="{ 'pa-4': $vuetify.breakpoint.smAndDown, 'ma-3 pa-5': $vuetify.breakpoint.mdAndUp }">
+  <v-layout
+    row
+    wrap
+    :class="{
+      'pa-4': $vuetify.breakpoint.smAndDown,
+      'ma-3 pa-5': $vuetify.breakpoint.mdAndUp
+    }"
+  >
     <v-flex
       xs12
       sm4
       :class="{
-        'title': $vuetify.breakpoint.xs,
+        title: $vuetify.breakpoint.xs,
         'display-1': $vuetify.breakpoint.smAndDown,
         'display-2': $vuetify.breakpoint.mdAndUp
       }"
@@ -19,11 +26,11 @@
           <v-hover class="clickable">
             <v-card
               slot-scope="{ hover }"
-              class="mx-auto ma-1"
+              class="mx-auto ma-1 card-image"
               max-width="100%"
             >
               <v-img
-                :aspect-ratio="2/3"
+                :aspect-ratio="2 / 3"
                 :src="doGetImage(item.image.name, item.image.token)"
               >
                 <v-expand-transition>
@@ -31,8 +38,8 @@
                     v-if="hover"
                     class="d-flex transition-fast-in-fast-out darkblue darken-4 v-card--reveal white--text"
                     :class="{
-                      'caption': $vuetify.breakpoint.smAndDown,
-                      'title': $vuetify.breakpoint.mdAndUp
+                      caption: $vuetify.breakpoint.smAndDown,
+                      title: $vuetify.breakpoint.mdAndUp
                     }"
                     style="height: 100%;"
                   >
@@ -83,4 +90,7 @@ export default {
   opacity: .5
   position: absolute
   width: 100%
+
+.card-image
+  border-radius: 3px
 </style>

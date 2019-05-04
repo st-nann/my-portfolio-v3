@@ -27,7 +27,15 @@
         st.sanyanee@hotmail.com
       </v-flex>
       <v-flex xs12 class="pt-2">
-        <v-btn color="cinnamon" :to="{ path: '/' }" append round outline small>
+        <v-btn
+          color="cinnamon"
+          @click.native="updateToggleSidebar('home')"
+          :to="{ path: '/' }"
+          append
+          round
+          outline
+          small
+        >
           Home
         </v-btn>
       </v-flex>
@@ -79,17 +87,21 @@
       </v-flex>
     </v-layout>
     <v-layout row wrap class="text-xs-center mx-3">
-      <v-flex xs12>
-        <span class="font-size-10 grey--text">
-          <v-icon size="10" color="grey">mdi-alpha-c-circle-outline</v-icon>
-          Portfolio website v2.0.0 (2019)
-        </span>
+      <v-flex xs12 class="font-size-10 grey--text">
+        <div>
+          Portfolio website v2.0.0
+        </div>
+        <div>
+          <span class="caption">&copy;</span>
+          {{ new Date().getFullYear() }} Sanyanee Thawinvongrak
+        </div>
       </v-flex>
     </v-layout>
   </v-navigation-drawer>
 </template>
 
 <script>
+import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
 import data from '@/services/data/Base'
 import { getImageFromStore } from '@/services/functions/Services'
@@ -112,6 +124,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions('components', ['updateToggleSidebar']),
     doGetImage(name, token) {
       return getImageFromStore(name, token)
     }
