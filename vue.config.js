@@ -10,6 +10,9 @@ process.env.VUE_APP_LOGO_NOTEXT_BLACK = getImageFromStorse(process.env.VUE_APP_L
 process.env.VUE_APP_LOGO_NOTEXT_WHITE = getImageFromStorse(process.env.VUE_APP_LOGO_NOTEXT_WHITE_NAME, process.env.VUE_APP_LOGO_NOTEXT_WHITE_TOKEN)
 
 module.exports = {
+    configureWebpack: {
+        mode: process.env.VUE_APP_MODE
+    },
     pages: {
         index: {
             entry: 'src/main.ts',
