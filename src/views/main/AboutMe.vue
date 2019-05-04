@@ -1,6 +1,6 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs10 offset-xs1 class="my-3">
+  <v-layout row wrap class="pa-3">
+    <v-flex xs12 class="mb-3">
       <v-layout row wrap>
         <v-flex xs12 class="elevation-24">
           <v-carousel
@@ -26,12 +26,12 @@
     </v-flex>
     <v-flex xs12>
       <WhoAmI></WhoAmI>
-      <MyInfo></MyInfo>
-      <v-layout row wrap>
+      <!-- <MyInfo></MyInfo> -->
+      <!-- <v-layout row wrap>
         <v-flex sm12 md12>
           <Footers></Footers>
         </v-flex>
-      </v-layout>
+      </v-layout> -->
     </v-flex>
   </v-layout>
 </template>

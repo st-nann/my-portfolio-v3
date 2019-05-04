@@ -29,7 +29,7 @@ export default class Resource {
     }
     const completePathFn = params => this.baseURL + options.pathFn(params)
     this.actions[options.action] = {
-      requestFn: (params = {}, data = {}) => {
+      requestFn: (params = {}, data = {}, option = {}) => {
         let queryParams
         // use action specific queryParams if set
         if (options.queryParams !== undefined) {
@@ -38,7 +38,7 @@ export default class Resource {
         } else {
           queryParams = this.queryParams
         }
-        const requestConfig = Object.assign({}, options.requestConfig)
+        const requestConfig = Object.assign(option, options.requestConfig)
         const paramsSerializer =
           options.requestConfig['paramsSerializer'] !== undefined ||
           this.axios['defaults']['paramsSerializer'] !== undefined
