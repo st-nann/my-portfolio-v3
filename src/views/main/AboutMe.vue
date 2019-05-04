@@ -1,5 +1,12 @@
 <template>
-  <v-layout row wrap class="pa-3">
+  <v-layout
+    row
+    wrap
+    :class="{
+      'pa-5': $vuetify.breakpoint.smAndUp,
+      'pa-3': $vuetify.breakpoint.xs
+    }"
+  >
     <v-flex xs12 class="mb-3">
       <v-layout row wrap>
         <v-flex xs12 class="elevation-24">
@@ -26,7 +33,6 @@
     </v-flex>
     <v-flex xs12>
       <WhoAmI></WhoAmI>
-      <!-- <MyInfo></MyInfo> -->
       <!-- <v-layout row wrap>
         <v-flex sm12 md12>
           <Footers></Footers>
@@ -40,13 +46,11 @@
 import data from '@/services/data/AboutMe'
 import { getImageFromStore } from '@/services/functions/Services'
 import WhoAmI from '@/views/main/aboutme/WhoAmI'
-import MyInfo from '@/views/main/aboutme/MyInfo'
 import Footers from '@/components/base/Footer'
 
 export default {
   components: {
     WhoAmI,
-    MyInfo,
     Footers
   },
   computed: {

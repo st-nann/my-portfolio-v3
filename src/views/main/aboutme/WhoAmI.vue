@@ -1,9 +1,14 @@
 <template>
   <v-layout row wrap>
     <v-flex xs12>
-      <v-card class="white" :height="$vuetify.breakpoint.xs ? '550px' : ($vuetify.breakpoint.sm ? '500' : '400px')">
+      <v-card color="white">
         <v-layout row wrap class="py-5">
-          <v-flex xs12 md2 lg3 :class="{ 'text-xs-right': $vuetify.breakpoint.mdAndUp }">
+          <v-flex
+            xs12
+            md2
+            lg3
+            :class="{ 'text-xs-right': $vuetify.breakpoint.mdAndUp }"
+          >
             <v-icon
               class="display-4"
               :class="{ 'pt-1': $vuetify.breakpoint.mdAndUp }"
@@ -22,7 +27,7 @@
             class="text-xs-center"
             :class="{
               'mt-1 pt-5 headline': $vuetify.breakpoint.mdAndUp,
-              'title': $vuetify.breakpoint.smAndDown
+              title: $vuetify.breakpoint.smAndDown
             }"
           >
             <span class="display-3"> H</span>ello My name is
@@ -44,12 +49,28 @@
               'text-xs-right': $vuetify.breakpoint.smAndDown
             }"
           >
-            <v-icon class="display-4" :class="{ 'pt-4 mt-5': $vuetify.breakpoint.mdAndUp }" color="lightgrey">
+            <v-icon
+              class="display-4"
+              :class="{ 'pt-4 mt-5': $vuetify.breakpoint.mdAndUp }"
+              color="lightgrey"
+            >
               mdi-format-quote-close
             </v-icon>
           </v-flex>
         </v-layout>
+        <v-divider class="mx-4"></v-divider>
+        <Characters></Characters>
       </v-card>
     </v-flex>
   </v-layout>
 </template>
+
+<script>
+import Characters from '@/views/main/aboutme/Characters'
+
+export default {
+  components: {
+    Characters
+  }
+}
+</script>
