@@ -1,12 +1,12 @@
 <template>
   <v-layout row wrap class="pa-1 ma-3">
     <v-flex xs12 md10 offset-md1>
-      <v-card class="px-5 py-4 text-xs-left blue-grey darken-1 mobile">
+      <v-card class="px-5 py-4 mobile">
         <v-container grid-list-md>
           <v-layout row wrap>
-            <v-flex xs12 md12 class="mb-4 white--text">
-              <span class="display-2 mobile-title">| </span>
-              <span class="display-1">Skill</span>
+            <v-flex xs12 md12 class="mb-4">
+              <span class="headline mobile-title">| </span>
+              <span class="headline">Skill</span>
             </v-flex>
           </v-layout>
         </v-container>

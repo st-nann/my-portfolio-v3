@@ -11,7 +11,7 @@
       </a>
     </v-toolbar-title>
     <v-divider class="ml-3 mr-3 hidden-xs-only" inset vertical></v-divider>
-    <span class="font-size-24 font-weight-bold hidden-xs-only">Sanyanee</span>
+    <span class="headline font-weight-bold hidden-xs-only">Sanyanee</span>
     <v-spacer class="hidden-xs-only"></v-spacer>
     <v-toolbar-items v-for="(item, index) in menu" :key="index">
       <v-btn

@@ -66,7 +66,7 @@
                 <v-layout row wrap>
                   <v-flex xs12 class="subheading">1993 -</v-flex>
                   <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
-                  <v-flex xs12>DEVELOPER</v-flex>
+                  <v-flex xs12>DEVELOPER & UX DEVELOPER</v-flex>
                 </v-layout>
               </v-flex>
               <v-flex xs5 class="text-xs-right">
@@ -94,7 +94,7 @@
             >
               <v-flex xs12 class="pt-5 mt-5 title">- 1993</v-flex>
               <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
-              <v-flex xs12>DEVELOPER</v-flex>
+              <v-flex xs12>WEB DEVELOPER & UX DEVELOPER</v-flex>
             </v-layout>
           </v-flex>
         </v-layout>
