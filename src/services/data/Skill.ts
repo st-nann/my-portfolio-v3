@@ -5,17 +5,17 @@ module.exports = {
   os: [
     {
       name: 'Windows',
-      value: 90,
+      value: 95,
       // image: require('../src/img/icon/skill/os/windows.png')
     },
     {
       name: 'Linux',
-      value: 60,
+      value: 80,
       // image: require('../src/img/icon/skill/os/linux.png')
     },
     {
       name: 'IOS',
-      value: 50,
+      value: 80,
       // image: require('../src/img/icon/skill/os/ios.svg')
     }
   ],
@@ -36,7 +36,7 @@ module.exports = {
         },
         {
           name: 'JAVA SCRIPT',
-          value: 90
+          value: 95
         },
         {
           name: 'CSS (CSS, SASS)',
@@ -48,7 +48,7 @@ module.exports = {
         },
         {
           name: 'PHP',
-          value: 30
+          value: 50
         }
       ],
       general: [
@@ -62,7 +62,7 @@ module.exports = {
         },
         {
           name: 'JAPANESE',
-          value: 60
+          value: 70
         }
       ]
     }
@@ -72,7 +72,7 @@ module.exports = {
       frontend: [
         {
           name: 'VUE.JS (VUE, VUEX)',
-          value: 90
+          value: 95
         },
         {
           name: 'VUETIFY',
@@ -85,16 +85,16 @@ module.exports = {
       ],
       backend: [
         {
-          name: 'PHP LARAVEL',
-          value: 80
-        },
-        {
           name: 'BACKPACK ADMIN',
           value: 90
         },
         {
-          name: 'KOA.JS',
-          value: 60
+          name: 'NODE.JS',
+          value: 80
+        },
+        {
+          name: 'TYPESCRIPT',
+          value: 50  
         }
       ]
     }
@@ -129,14 +129,6 @@ module.exports = {
           // image: require('../src/img/icon/skill/tool/photoshop.svg')
         },
         {
-          name: 'Adobe illustrator',
-          // image: require('../src/img/icon/skill/tool/illustrator.svg')
-        },
-        {
-          name: 'Adobe After Effect',
-          // image: require('../src/img/icon/skill/tool/afterEffects.svg')
-        },
-        {
           name: 'Microsoft Visio',
           // image: require('../src/img/icon/skill/tool/MicrosoftVisio.svg')
         }
@@ -152,6 +144,18 @@ module.exports = {
         },
         {
           name: 'Microsoft Visual Studio',
+          // image: require('../src/img/icon/skill/tool/MicrosoftVisualStudio.png')
+        },
+        {
+          name: 'VSCODE',
+          // image: require('../src/img/icon/skill/tool/MicrosoftVisualStudio.png')
+        },
+        {
+          name: 'Atom',
+          // image: require('../src/img/icon/skill/tool/MicrosoftVisualStudio.png')
+        },
+        {
+          name: 'Sublime',
           // image: require('../src/img/icon/skill/tool/MicrosoftVisualStudio.png')
         },
         {
@@ -171,6 +175,10 @@ module.exports = {
         {
           name: 'GitHub',
           // image: require('../src/img/icon/skill/tool/GitHub.svg')
+        },
+        {
+          name: 'Travis',
+          // image: require('../src/img/icon/skill/tool/GitHub.svg')
         }
       ],
       virtual_machine: [
@@ -188,6 +196,10 @@ module.exports = {
         }
       ],
       schedule: [
+        {
+          name: 'Jira',
+          // image: require('../src/img/icon/skill/tool/asana.png')
+        },
         {
           name: 'Asana',
           // image: require('../src/img/icon/skill/tool/asana.png')
@@ -219,6 +231,10 @@ module.exports = {
         {
           name: 'MySQL Workbench',
           // image: require('../src/img/icon/skill/tool/MySQL.png')
+        },
+        {
+          name: 'Mongo DB',
+          // image: require('../src/img/icon/skill/tool/MySQL.png')
         }
       ],
       network: [
@@ -243,24 +259,12 @@ module.exports = {
       ],
       other: [
         {
-          name: 'XAMPP',
-          // image: require('../src/img/icon/skill/tool/xampp.svg')
-        },
-        {
           name: 'jMeter',
           // image: require('../src/img/icon/skill/tool/jmeter.svg')
         },
         {
           name: 'Microsoft Office',
           // image: require('../src/img/icon/skill/tool/MicrosoftOffice.svg')
-        },
-        {
-          name: 'Weka',
-          // image: require('../src/img/icon/skill/tool/Weka.png')
-        },
-        {
-          name: 'KnowledgeTree',
-          // image: require('../src/img/icon/skill/tool/knowledgetree.png')
         }
       ]
     }
