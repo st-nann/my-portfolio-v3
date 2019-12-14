@@ -58,6 +58,9 @@ export default {
 .application
   font-family: 'Didact Gothic', sans-serif !important
 
+a
+  text-decoration: none
+
 .clickable
   cursor: pointer
 
@@ -75,9 +78,6 @@ img.logo
 
 .font-size-10
   font-size: 10px
-
-.font-size-24
-  font-size: 24px
 
 .font-size-65
   font-size: 65px

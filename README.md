@@ -2,6 +2,7 @@
 
 ## ENV BUILD
 ``` bash
+MODE                            string      build mode
 NODE_ENV                        string      environment build
 DEBUG                           boolean     debug log
 TITLE                           string      title website
