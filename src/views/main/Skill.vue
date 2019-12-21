@@ -1,30 +1,22 @@
 <template>
-  <v-layout row wrap class="pa-1 ma-3">
+  <v-layout row wrap class="pa-4">
     <v-flex xs12 md10 offset-md1>
-      <v-card class="px-5 py-4 mobile">
-        <v-container grid-list-md>
-          <v-layout row wrap>
-            <v-flex xs12 md12 class="mb-4">
-              <span class="headline mobile-title">| </span>
-              <span class="headline">Skill</span>
-            </v-flex>
-          </v-layout>
-        </v-container>
-        <v-container grid-list-md>
+      <v-card class="px-4 pt-4 pb-5 elevation-8">
+        <v-container grid-list-md :class="{ 'pa-0': $vuetify.breakpoint.xs }">
           <v-layout row wrap>
             <v-flex xs12 md12>
               <OperatingSystem></OperatingSystem>
             </v-flex>
-            <v-flex xs12 md6>
+            <v-flex xs12 lg6>
               <Languages></Languages>
             </v-flex>
-            <v-flex xs12 md6>
-              <Framework></Framework>
+            <v-flex xs12 lg6>
+              <Frameworks></Frameworks>
             </v-flex>
-            <v-flex xs12 md4>
+            <v-flex xs12 lg4>
               <Library></Library>
             </v-flex>
-            <v-flex xs12 md8>
+            <v-flex xs12 lg8>
               <Tools></Tools>
             </v-flex>
           </v-layout>
@@ -37,7 +29,7 @@
 <script>
 import OperatingSystem from '@/views/main/skill/os/OperatingSystem'
 import Languages from '@/views/main/skill/languages/Languages'
-import Framework from '@/views/main/skill/framework/Framework'
+import Frameworks from '@/views/main/skill/frameworks/Frameworks'
 import Library from '@/views/main/skill/library/Library'
 import Tools from '@/views/main/skill/tools/Tools'
 
@@ -50,7 +42,7 @@ export default {
   components: {
     OperatingSystem,
     Languages,
-    Framework,
+    Frameworks,
     Library,
     Tools
   }
