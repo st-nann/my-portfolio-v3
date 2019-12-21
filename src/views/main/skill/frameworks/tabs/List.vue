@@ -1,17 +1,17 @@
 <template>
   <div>
-    <v-layout row wrap v-for="(item, index) in general" :key="index">
-      <v-flex xs12 sm4 md4>
-        <p class="subheadline pl-4 mobile-content mb-1">{{ item.name }}</p>
+    <v-layout row wrap v-for="(item, index) in lists" :key="index">
+      <v-flex xs12 sm4>
+        <p class="caption pl-4 mobile-content mb-1">{{ item.name }}</p>
       </v-flex>
-      <v-flex xs9 sm6 md6>
+      <v-flex xs9 sm6>
         <v-progress-linear
           v-model="value[index]"
-          color="teal lighten-1"
+          color="cinnamon lighten-1"
           class="my-2 ml-4"
         ></v-progress-linear>
       </v-flex>
-      <v-flex xs3 sm2 md2>
+      <v-flex xs3 sm2>
         <p class="mb-0 caption text-xs-center">{{ item.value }} %</p>
       </v-flex>
     </v-layout>
@@ -23,30 +23,27 @@ import _ from 'lodash'
 import data from '@/services/data/Skill'
 
 export default {
+  props: ['title', 'selected'],
   data() {
     return {
       value: []
     }
   },
   computed: {
-    general() {
-      let listPrograming = []
-      _.forEach(data.languages, function(item) {
-        listPrograming = item.general
+    lists() {
+      const title = _.lowerCase(this.title)
+      const lists = _.head(data[title])[this.selected]
+      _.forEach(lists, item => {
+        this.animationLoop(item.value)
       })
-      return listPrograming
+      return lists
     }
-  },
-  created() {
-    let self = this
-    _.forEach(this.general, function(item) {
-      self.animationLoop(item.value)
-    })
   },
   methods: {
     animationLoop(value) {
+      const self = this
       setTimeout(() => {
-        return this.value.push(value)
+        return self.value.push(value)
       }, 300)
     }
   }

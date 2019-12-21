@@ -87,4 +87,38 @@ img.logo
 
 .text-decoration
   border-bottom: 1.5px solid black
+
+.card-border
+  border: 1px solid #dddddd !important
+  border-radius: 5px
+
+.bg-round.v-btn-toggle
+  opacity: .9 !important
+  background: #3f52ad !important
+  border-radius: 50px
+  padding: 4px
+
+.btn-active.v-btn--active
+  opacity: .8 !important
+  border-radius: 50px !important
+  color: #2f3369 !important
+  background-color: #ffffff !important
+  border-color: #d6eff8 !important
+
+.btn-menu-opacity.v-btn:before
+  background-color: #3f52ad
+  color: #3f52ad
+  opacity: .2
+
+.menu
+  top: 0
+  right: 0
+  position: absolute
+
+.v-progress-linear
+  border-radius: 50px
+
+canvas
+  width: 100% !important
+  height: 300px !important
 </style>

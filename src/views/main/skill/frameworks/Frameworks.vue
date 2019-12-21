@@ -1,19 +1,19 @@
 <template>
-  <v-card class="my-2 pa-2 card-border" height="100%" flat>
+  <v-card class="my-2 pa-2 card-border card-size" height="100%" flat>
     <TitleMenu
       ref="menu"
-      default="design"
+      default="frontend"
       :title="title"
-      :menu="menu"
+      :tabs="frameworks"
     ></TitleMenu>
-    <Lists keyName="tools" :category="selected"></Lists>
+    <List :title="title" :selected="selected"></List>
   </v-card>
 </template>
 
 <script>
 import data from '@/services/data/Skill'
-import TitleMenu from '@/components/title/Menu'
-import Lists from '@/components/data/List'
+import TitleMenu from '@/components/title/Toggle'
+import List from '@/views/main/skill/frameworks/tabs/List'
 
 export default {
   data() {
@@ -23,14 +23,14 @@ export default {
   },
   components: {
     TitleMenu,
-    Lists
+    List
   },
   computed: {
     title() {
-      return 'Tools'
+      return 'Frameworks'
     },
-    menu() {
-      return data.menu.tools
+    frameworks() {
+      return data.menu.frameworks
     }
   },
   mounted () {
@@ -46,19 +46,13 @@ export default {
 <style lang="stylus" scoped>
 @media only screen and (max-width: 414px)
   .mobile
-    margin-top: -10px !important
-    margin-bottom: 10px !important
-    margin-left: 0px !important
-    margin-right: 0px !important
+    margin: 0px 0px !important
 
   .card-size
-    height: 370px !important
+    height: 440px !important
 
 @media only screen and (min-width: 1024px) and (max-width: 1099px)
   .mobile
     margin-left: 0px !important
     margin-right: 0px !important
-
-  .card-size
-    height: 350px !important
 </style>

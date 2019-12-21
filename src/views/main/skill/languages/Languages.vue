@@ -1,60 +1,74 @@
 <template>
-  <v-card class="my-2 pa-2 elevation-3 card-size" height="100%">
+ <v-card class="my-2 pa-2 card-border" height="100%" flat>
+    <TitleMenu
+      ref="menu"
+      default="programing"
+      :title="title"
+      :tabs="languages"
+    ></TitleMenu>
     <v-layout row wrap>
-      <v-flex xs12 sm3 md4>
-        <v-card-text class="headline mx-2 mobile mb-3">Languages</v-card-text>
-      </v-flex>
-      <v-flex xs12 sm9 md8 class="text-xs-right mobile mt-3">
-        <v-btn
-          class="my-0 mobile"
-          @click.native="selected = 'Programing'"
-          color="info"
-          flat
-        >
-          Programing
-        </v-btn>
-        <v-btn
-          class="my-0 mobile"
-          @click.native="selected = 'General'"
-          color="info"
-          flat
-        >
-          General
-        </v-btn>
+      <v-flex xs12>
+        <RadarChart :chartData="chartData"></RadarChart>
       </v-flex>
     </v-layout>
-    <Programing v-if="selected === 'Programing'"></Programing>
-    <General v-else-if="selected === 'General'"></General>
   </v-card>
 </template>
 
 <script>
-import Programing from '@/views/main/skill/languages/tabs/Programing'
-import General from '@/views/main/skill/languages/tabs/General'
+import data from '@/services/data/Skill'
+import TitleMenu from '@/components/title/Toggle'
+import RadarChart from '@/components/chart/Radar'
 
 export default {
   data() {
     return {
-      selected: 'Programing'
+      selected: null
     }
   },
   components: {
-    Programing,
-    General
+    TitleMenu,
+    RadarChart
+  },
+  computed: {
+    title() {
+      return 'Languages'
+    },
+    languages() {
+      return data.menu.languages
+    },
+    chartData() {
+      const title = _.lowerCase(this.title)
+      let label = []
+      let value = []
+      let datasets = {}
+      _.forEach(data[title], item => {
+        _.forEach(item[this.selected], res => {
+          label.push(res.name)
+          value.push(res.value)
+        })
+      })
+      return {
+        labels: label,
+        datasets: [
+          {
+            label: 'languages',
+            fill: true,
+            backgroundColor: 'rgb(255, 214, 51, .2)',
+            borderColor: 'rgb(255, 153, 51, .6)',
+            borderWidth: '1px',
+            borderCapStyle: 'round',
+            data: value
+          }
+        ]
+      }
+    }
+  },
+  mounted () {
+    this.$watch(
+      () => {
+        this.selected = this.$refs.menu.selected
+      }
+    )
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-@media only screen and (max-width: 414px)
-  .mobile
-    margin: 0px 0px !important
-
-  .card-size
-    height: 550px !important
-
-@media only screen and (min-width: 1024px) and (max-width: 1099px)
-  .mobile
-    margin-left: 0px !important
-    margin-right: 0px !important
-</style>
