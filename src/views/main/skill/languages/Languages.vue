@@ -1,5 +1,5 @@
 <template>
- <v-card class="my-2 pa-2 card-border" height="100%" flat>
+  <v-card class="my-2 pa-2 card-border" height="100%" flat>
     <TitleMenu
       ref="menu"
       default="programing"
@@ -63,12 +63,10 @@ export default {
       }
     }
   },
-  mounted () {
-    this.$watch(
-      () => {
-        this.selected = this.$refs.menu.selected
-      }
-    )
+  mounted() {
+    this.$watch(() => {
+      this.selected = this.$refs.menu.selected
+    })
   }
 }
 </script>

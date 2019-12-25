@@ -10,7 +10,10 @@
           v-bind:value="value[index]"
           class="light-blue--text text--lighten-3"
         >
-          <img :src="doGetImage(item.image.name, item.image.token)" width="65px"/>
+          <img
+            :src="doGetImage(item.image.name, item.image.token)"
+            width="65px"
+          />
         </v-progress-circular>
         <v-card-text class="caption mb-1">
           {{ item.name }} ({{ item.value }}%)

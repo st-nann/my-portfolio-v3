@@ -41,19 +41,19 @@
 </template>
 
 <script>
-  export default {
-    props: ['title', 'menu', 'default'],
-    data() {
-      return {
-        item: _.find(this.menu, { value: this.default }),
-        selected: this.default
-      }
-    },
-    methods: {
-      doCheangeMenu(item) {
-        this.selected = item.value
-        this.item = item
-      }
+export default {
+  props: ['title', 'menu', 'default'],
+  data() {
+    return {
+      item: _.find(this.menu, { value: this.default }),
+      selected: this.default
+    }
+  },
+  methods: {
+    doCheangeMenu(item) {
+      this.selected = item.value
+      this.item = item
     }
   }
+}
 </script>

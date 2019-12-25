@@ -35,7 +35,8 @@ module.exports = {
       datetime: 'Nov 2015 – Dec 2015',
       title: 'Freelance',
       subtitle: '',
-      description: 'Set up share file with samba on Linux server. And Set up and Monitoring share file with webdav of apache on Windows server 2008 R2'
+      description:
+        'Set up share file with samba on Linux server. And Set up and Monitoring share file with webdav of apache on Windows server 2008 R2'
     },
     {
       id: 'year_2015',
@@ -55,7 +56,7 @@ module.exports = {
       id: 'year_2013',
       datetime: 'Nov 2013 – Feb 2014',
       title: 'Data Mining Application',
-      subtitle: 'King Mongkut\'s Institute of Technology Ladkrabang',
+      subtitle: "King Mongkut's Institute of Technology Ladkrabang",
       description: 'Project in Artificial Intelligence (AI) subject.'
     }
   ],

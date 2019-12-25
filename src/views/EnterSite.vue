@@ -11,7 +11,8 @@
             offset-lg2
             :class="{
               'ml-3 pr-2': $vuetify.breakpoint.xs,
-              'ml-5 pr-3': $vuetify.breakpoint.mdAndDown && !$vuetify.breakpoint.xs
+              'ml-5 pr-3':
+                $vuetify.breakpoint.mdAndDown && !$vuetify.breakpoint.xs
             }"
           >
             <div

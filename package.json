@@ -15,6 +15,7 @@
     "pw": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
   },
   "dependencies": {
+    "@types/chart.js": "^2.9.7",
     "@types/lodash": "^4.14.123",
     "axios": "^0.18.0",
     "chart.js": "^2.9.3",

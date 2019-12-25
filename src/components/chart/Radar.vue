@@ -6,7 +6,7 @@ export default {
   props: ['chartData'],
   watch: {
     chartData: {
-      handler () {
+      handler() {
         this.$data._chart.update()
         this.renderChart(this.chartData, this.options)
       },
@@ -30,7 +30,7 @@ export default {
       }
     }
   },
-  mounted () {
+  mounted() {
     this.renderChart(this.chartData, this.options)
   }
 }

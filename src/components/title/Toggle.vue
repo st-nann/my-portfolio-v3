@@ -13,15 +13,11 @@
       md8
       class="ma-3"
       :class="{
-        'menu': $vuetify.breakpoint.smAndUp,
+        menu: $vuetify.breakpoint.smAndUp,
         'text-xs-center': $vuetify.breakpoint.xs
       }"
     >
-      <v-btn-toggle
-        v-model="selected"
-        class="bg-round elevation-0"
-        dark
-      >
+      <v-btn-toggle v-model="selected" class="bg-round elevation-0" dark>
         <v-btn
           v-for="(item, index) in tabs"
           :key="index"

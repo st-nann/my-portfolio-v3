@@ -37,7 +37,9 @@
                         </p>
                         <div class="grey--text text--darken-1 small mt-2">
                           <p class="mb-0">{{ item.description }}</p>
-                          <a v-if="item.link" :href="item.link" target="_blank">view</a>
+                          <a v-if="item.link" :href="item.link" target="_blank">
+                            view
+                          </a>
                         </div>
                       </v-card>
                     </v-flex>
@@ -73,7 +75,7 @@ import data from '@/services/data/Experience'
 import { getImageFromStore } from '@/services/functions/Services'
 
 export default {
-  data () {
+  data() {
     return {
       target: 'year_2016'
     }
@@ -93,7 +95,7 @@ export default {
     doGetImage(name, token) {
       return getImageFromStore(name, token)
     },
-    doScroll: function (target) {
+    doScroll: function(target) {
       this.target = target
       this.$vuetify.goTo(`#${target}`, { offset: 75 })
     }
