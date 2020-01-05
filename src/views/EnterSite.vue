@@ -20,7 +20,8 @@
               :class="{
                 'font-size-65': $vuetify.breakpoint.xs,
                 'font-size-112': $vuetify.breakpoint.smAndUp,
-                'title-mobile text-xs-right font-weight-bold': $vuetify.breakpoint.mdAndDown,
+                'title-mobile text-xs-right font-weight-bold':
+                  $vuetify.breakpoint.mdAndDown,
                 'mt-5 pt-5 font-weight-regular': $vuetify.breakpoint.lgAndUp
               }"
             >
@@ -29,7 +30,7 @@
             <div
               class="pl-1"
               :class="{
-                'caption': $vuetify.breakpoint.xs,
+                caption: $vuetify.breakpoint.xs,
                 'text-xs-right': $vuetify.breakpoint.mdAndDown
               }"
             >
@@ -104,10 +105,7 @@
         <img
           width="505.3px"
           :src="
-            doGetImage(
-              'home%2Fhome',
-              '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
-            )
+            doGetImage('home%2Fhome', '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2')
           "
         />
       </v-flex>

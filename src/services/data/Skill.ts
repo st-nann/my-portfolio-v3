@@ -126,7 +126,7 @@ module.exports = {
         },
         {
           name: 'TYPESCRIPT',
-          value: 50  
+          value: 50
         }
       ],
       testing: [

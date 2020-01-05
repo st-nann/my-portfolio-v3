@@ -21,7 +21,8 @@ module.exports = {
       datetime: '1 Jun 2016 – 31 Oct 2016',
       title: 'Junior System Analyst (Junior SA)',
       subtitle: 'Tech Logistic Enterprise Company Limited.',
-      description: 'Create System Requirement Specification (SRS) Document, Software Specification Document, Database Structure and User Interface Design (UI Design).'
+      description:
+        'Create System Requirement Specification (SRS) Document, Software Specification Document, Database Structure and User Interface Design (UI Design).'
     },
     {
       id: 'year_2016',
@@ -43,7 +44,8 @@ module.exports = {
       datetime: 'Aug 2015 – Dec 2015',
       title: 'Cooperative Education',
       subtitle: 'Fusionware Company Limited.',
-      description: 'Field of Software Testing and Developing about Batch Master Data by Condition in JAVA Language (AIS Outsource). Project’s Name: การพัฒนาส่วนปรับปรุงข้อมูลโปรโมชั่น และทดสอบระบบบูรณาการข้อมูลสำหรับศูนย์บริการข้อมูลลูกค้า (The Development of Promotion-Updating Batch Process and System Integration Test for Consolidation Portal System on Customer Contract Center)'
+      description:
+        'Field of Software Testing and Developing about Batch Master Data by Condition in JAVA Language (AIS Outsource). Project’s Name: การพัฒนาส่วนปรับปรุงข้อมูลโปรโมชั่น และทดสอบระบบบูรณาการข้อมูลสำหรับศูนย์บริการข้อมูลลูกค้า (The Development of Promotion-Updating Batch Process and System Integration Test for Consolidation Portal System on Customer Contract Center)'
     },
     {
       id: 'year_2015',
