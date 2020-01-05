@@ -8,7 +8,8 @@ module.exports = {
       name: 'stickerLine',
       title: 'Scorpio Diary',
       subtitle: 'スコーピオ ダイアリー',
-      description: 'Scorpio Diary is a sticker character. It made for sale on LINE application.'
+      description:
+        'Scorpio Diary is a sticker character. It made for sale on LINE application.'
       // image: require('@/assets/images/stickerLine.svg')
     }
   ],
@@ -19,7 +20,7 @@ module.exports = {
       title: 'Portfolio Website',
       subtitle: 'ポートフォリオ',
       description:
-        'Portfolio Website is website about my profile. In the website contains my experience, my skill and my works.',
+        'Portfolio Website is website about my profile. In the website contains my experience, my skill and my works.'
       // image: require('../src/img/image/portfolio.svg')
     }
   ]

@@ -1,113 +1,99 @@
 <template>
-  <v-layout row wrap class="pa-4 mobile">
-    <v-flex xs10 offset-xs1 sm10 offset-sm1 md10 offset-md1 xl8 offset-xl2>
-      <v-layout row wrap>
-        <v-flex xs12 sm5 md4 class="pr-0 mt-3 modify-padding">
-          <v-card
-            class="pa-4 text-xs-left blue-grey darken-3 white--text"
-            height="505px"
-          >
-            <v-layout row wrap>
-              <v-flex xs12 md12>
-                <span class="display-2">| </span>
-                <span class="display-1">Contacts</span>
+  <v-layout row wrap class="pa-4">
+    <v-flex xs12 sm10 offset-sm1>
+      <v-card>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <v-card
+              color="darkblue"
+              :height="$vuetify.breakpoint.xs ? 200 : 450"
+              flat
+            >
+              <v-img
+                :src="doGetImage(cover.name, cover.token)"
+                width="100%"
+                :height="$vuetify.breakpoint.xs ? 200 : 450"
+              />
+            </v-card>
+          </v-flex>
+          <v-flex xs12 class="pa-4">
+            <v-layout row wrap align-center>
+              <v-flex xs12 sm2 class="hidden-md-and-down">
+                <img :src="logo" width="90" />
               </v-flex>
-            </v-layout>
-            <v-layout row wrap class="text-xs-center">
-              <v-flex xs12 md12>
-                <!-- <img class="image-style mt-5 mb-4" src="~@/assets/images/profile.svg"/> -->
-              </v-flex>
-              <v-flex xs12 md12>
-                <p class="title">Sanyanee Thawinvongrak</p>
-                <p class="body-2 mb-5">「サンヤニー」</p>
-              </v-flex>
-            </v-layout>
-          </v-card>
-        </v-flex>
-        <v-flex xs12 sm7 md8 lg8 class="pl-0 mt-3 modify-padding">
-          <v-card class="text-xs-left pa-5" height="505px">
-            <v-layout row wrap class="pt-5 mobile-padding-top">
-              <v-flex xs12 md12 class="pt-4">
-                <div v-for="(item, index) in contacts_detail" :key="index">
-                  <v-layout row wrap class="pb-3">
-                    <v-flex xs12 sm5 md3>
-                      <!-- <img class="image-position mr-2" :src="item.icon" width="20px"/> {{item.title}} : -->
-                    </v-flex>
-                    <v-flex xs12 sm7 md9>
-                      <a
-                        v-if="
-                          item.title === 'Github' ||
-                            item.title === 'LinkedIn' ||
-                            item.title === 'Blog'
-                        "
-                        class="black--text text-wrap"
-                        style="text-decoration: none;"
-                        :href="item.description"
-                        target="_blank"
-                      >
-                        {{ item.description }}
-                      </a>
-                      <span v-else class="text-wrap">
-                        {{ item.description }}
-                      </span>
-                    </v-flex>
-                  </v-layout>
+              <v-flex xs12 sm8 class="text-truncate">
+                <div v-for="(item, index) in contact" :key="index">
+                  <v-icon
+                    :size="12"
+                    style="vertical-align: baseline !important;"
+                  >
+                    mdi-{{ item.icon }}
+                  </v-icon>
+                  <a
+                    v-if="item.type === 'link'"
+                    class="grey--text text--darken-2 caption font-weight-thin"
+                    style="text-decoration: none;"
+                    :href="item.description"
+                    target="_blank"
+                  >
+                    {{ item.description }}
+                    <v-icon
+                      :size="9"
+                      style="vertical-align: middle !important;"
+                    >
+                      mdi-open-in-new
+                    </v-icon>
+                  </a>
+                  <span
+                    v-else
+                    class="grey--text text--darken-2 caption font-weight-thin"
+                  >
+                    {{ item.description }}
+                  </span>
                 </div>
               </v-flex>
-              <v-flex xs12 md12 class="text-xs-right pt-5 signature">
-                <!-- <img src="~@/img/image/signature.svg" width="200px"/> -->
-              </v-flex>
+              <v-spacer></v-spacer>
+              <v-divider vertical class="mx-3 hidden-xs-only"></v-divider>
+              <img
+                :class="{
+                  'mt-2': $vuetify.breakpoint.xs
+                }"
+                :src="doGetImage(qrcode.name, qrcode.token)"
+                :width="$vuetify.breakpoint.xs ? '45px' : '100px'"
+              />
             </v-layout>
-          </v-card>
-        </v-flex>
-      </v-layout>
+          </v-flex>
+        </v-layout>
+      </v-card>
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+import data from '@/services/data/Contact'
+import { getImageFromStore } from '@/services/functions/Services'
+
 export default {
-  data() {
-    return {
-      contacts_detail: [
-        // { icon: require('@/img/icon/email.svg'), title: 'E-mail', description: 'st.sanyanee@hotmail.com' },
-        // { icon: require('@/img/icon/tel.svg'), title: 'Tel', description: '081-415-9698' },
-        // { icon: require('@/img/icon/blog-icon.png'), title: 'Blog', description: 'https://medium.com/st-sanyanee' },
-        // { icon: require('@/img/icon/github.svg'), title: 'Github', description: 'https://github.com/st-nann' },
-        // { icon: require('@/img/icon/linkedin.svg'), title: 'LinkedIn', description: ' https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144' }
-      ]
+  computed: {
+    logo() {
+      return process.env.VUE_APP_LOGO_NOTEXT_BLACK
+        ? process.env.VUE_APP_LOGO_NOTEXT_BLACK
+        : ''
+    },
+    cover() {
+      return data.cover
+    },
+    contact() {
+      return data.contact
+    },
+    qrcode() {
+      return data.qrcode
+    }
+  },
+  methods: {
+    doGetImage(name, token) {
+      return getImageFromStore(name, token)
     }
   }
 }
 </script>
-
-<style lang="stylus" scoped>
-.image-style
-  width: 183px
-  border-radius: 50%
-
-.card
-  border-radius: 0px
-
-.image-position
-  vertical-align: text-bottom
-
-.text-wrap
-  word-wrap: break-word
-
-@media only screen and (max-width: 768px)
-  .signature
-    padding-top: 0px !important
-
-  .mobile-padding-top
-    padding-top: 5px !important
-
-@media only screen and (max-width: 414px)
-  .modify-padding
-    padding-left: 4px !important
-    padding-right: 4px !important
-
-@media only screen and (max-width: 320px)
-  .mobile
-    padding: 0px 0px !important
-</style>

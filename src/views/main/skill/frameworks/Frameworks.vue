@@ -33,12 +33,10 @@ export default {
       return data.menu.frameworks
     }
   },
-  mounted () {
-    this.$watch(
-      () => {
-        this.selected = this.$refs.menu.selected
-      }
-    )
+  mounted() {
+    this.$watch(() => {
+      this.selected = this.$refs.menu.selected
+    })
   }
 }
 </script>
