@@ -1,4 +1,11 @@
 module.exports = {
+  aboutme: {
+    fullname: 'Sanyanee Thawinvongrak',
+    position: 'DEVELOPER & UX DEVELOPER & TECHNICAL LEADER',
+    birthday: {
+      year: '1993'
+    }
+  },
   carousel: [
     {
       name: 'aboutme%2Fcarousel%2Fcarousel-001',

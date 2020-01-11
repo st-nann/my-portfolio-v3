@@ -2,7 +2,7 @@
   <transition name="fade">
     <v-layout row wrap>
       <v-flex xs12 lg8>
-        <img class="ma-2 logo" :src="logo" />
+        <v-img class="ma-2 logo" :src="logo" :lazy-src="logo" />
         <v-layout row wrap>
           <v-flex
             xs12
@@ -52,10 +52,16 @@
                 </v-icon>
               </v-btn>
             </div>
-            <img
+            <v-img
               class="bg-img-mobile hidden-lg-and-up"
               width="100%"
               :src="
+                doGetImage(
+                  'home%2Fhome',
+                  '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
+                )
+              "
+              :lazy-src="
                 doGetImage(
                   'home%2Fhome',
                   '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
@@ -66,9 +72,11 @@
             <v-layout row wrap class="pl-1 pb-2 font-size-10 hidden-lg-and-up">
               <v-flex xs7>
                 <v-layout row wrap>
-                  <v-flex xs12 class="subheading">1993 -</v-flex>
-                  <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
-                  <v-flex xs12>DEVELOPER & UX DEVELOPER</v-flex>
+                  <v-flex xs12 class="subheading">
+                    {{ aboutme.birthday.year }} -
+                  </v-flex>
+                  <v-flex xs12>{{ aboutme.fullname }}</v-flex>
+                  <v-flex xs12>{{ aboutme.position }}</v-flex>
                 </v-layout>
               </v-flex>
               <v-flex xs5 class="text-xs-right">
@@ -94,17 +102,22 @@
               wrap
               class="pt-5 mt-5 text-xs-right hidden-md-and-down text-xs-right"
             >
-              <v-flex xs12 class="pt-5 mt-5 title">- 1993</v-flex>
-              <v-flex xs12>Sanyanee Thawinvongrak</v-flex>
-              <v-flex xs12>WEB DEVELOPER & UX DEVELOPER</v-flex>
+              <v-flex xs12 class="pt-5 mt-5 title">
+                - {{ aboutme.birthday.year }}
+              </v-flex>
+              <v-flex xs12>{{ aboutme.fullname }}</v-flex>
+              <v-flex xs12>{{ aboutme.position }}</v-flex>
             </v-layout>
           </v-flex>
         </v-layout>
       </v-flex>
       <v-flex xs12 lg4 class="text-xs-right hidden-md-and-down">
-        <img
+        <v-img
           width="505.3px"
           :src="
+            doGetImage('home%2Fhome', '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2')
+          "
+          :lazy-src="
             doGetImage('home%2Fhome', '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2')
           "
         />
@@ -114,6 +127,7 @@
 </template>
 
 <script>
+import data from '@/services/data/AboutMe'
 import { getImageFromStore } from '@/services/functions/Services'
 
 export default {
@@ -122,6 +136,9 @@ export default {
       return process.env.VUE_APP_LOGO_BLACK
         ? process.env.VUE_APP_LOGO_BLACK
         : ''
+    },
+    aboutme() {
+      return data.aboutme
     }
   },
   methods: {

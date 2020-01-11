@@ -1,11 +1,11 @@
 <template>
-  <v-card class="my-2 pa-2 card-border" height="100%" flat>
-    <TitleMenu
+  <v-card class="my-2 pa-2 card-border card-frame" height="100%" flat>
+    <TitleMenuToggle
       ref="menu"
       default="programing"
       :title="title"
       :tabs="languages"
-    ></TitleMenu>
+    ></TitleMenuToggle>
     <v-layout row wrap>
       <v-flex xs12>
         <RadarChart :chartData="chartData"></RadarChart>
@@ -16,7 +16,7 @@
 
 <script>
 import data from '@/services/data/Skill'
-import TitleMenu from '@/components/title/Toggle'
+import TitleMenuToggle from '@/components/title/Toggle'
 import RadarChart from '@/components/chart/Radar'
 
 export default {
@@ -26,7 +26,7 @@ export default {
     }
   },
   components: {
-    TitleMenu,
+    TitleMenuToggle,
     RadarChart
   },
   computed: {

@@ -1,6 +1,6 @@
 <template>
   <v-layout row wrap class="mb-2">
-    <v-flex xs12 order-xs2 sm3 order-sm1 md4>
+    <v-flex v-if="title" xs12 order-xs2 sm3 order-sm1 md4>
       <v-card-text class="title mx-0 pa-3">
         {{ title }}
       </v-card-text>
@@ -8,12 +8,12 @@
     <v-flex
       xs12
       order-xs1
-      sm9
+      :sm9="!disabled_class_menu"
       order-sm2
-      md8
+      :md8="!disabled_class_menu"
       class="ma-3"
       :class="{
-        menu: $vuetify.breakpoint.smAndUp,
+        menu: $vuetify.breakpoint.smAndUp && !disabled_class_menu,
         'text-xs-center': $vuetify.breakpoint.xs
       }"
     >
@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  props: ['default', 'title', 'tabs'],
+  props: ['default', 'title', 'tabs', 'disabled_class_menu'],
   data() {
     return {
       selected: this.default

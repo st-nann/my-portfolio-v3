@@ -117,7 +117,7 @@ module.exports = {
       ],
       backend: [
         {
-          name: 'BACKPACK ADMIN',
+          name: 'BACKPACK ADMIN (PHP)',
           value: 90
         },
         {

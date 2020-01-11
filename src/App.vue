@@ -88,9 +88,14 @@ img.logo
 .text-decoration
   border-bottom: 1.5px solid black
 
-.card-border
+.card-frame
   border: 1px solid #dddddd !important
+
+.card-border
   border-radius: 5px
+
+.card-lists
+  border-radius: 10px !important
 
 .bg-round.v-btn-toggle
   opacity: .9 !important
@@ -118,7 +123,27 @@ img.logo
 .v-progress-linear
   border-radius: 50px
 
+.v-dialog, .border-card-title
+  border-radius: 15px !important
+
+.search.v-text-field.v-text-field--enclosed>.v-input__control>.v-input__slot
+  border-radius: 50px !important
+
 canvas
   width: 100% !important
   height: 300px !important
+
+::-webkit-scrollbar-track
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important
+  border-radius: 5px !important
+  background-color: #F5F5F5 !important
+
+::-webkit-scrollbar
+  width: 5px !important
+  background-color: #F5F5F5 !important
+
+::-webkit-scrollbar-thumb
+  border-radius: 5px !important
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3) !important
+  background-color: #a0a0a0 !important
 </style>

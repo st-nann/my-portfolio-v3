@@ -1,18 +1,18 @@
 <template>
-  <v-card class="my-2 pa-2 card-border card-size" height="100%" flat>
-    <TitleMenu
+  <v-card class="my-2 pa-2 card-border card-frame card-size" height="100%" flat>
+    <TitleMenuToggle
       ref="menu"
       default="frontend"
       :title="title"
       :tabs="frameworks"
-    ></TitleMenu>
+    ></TitleMenuToggle>
     <List :title="title" :selected="selected"></List>
   </v-card>
 </template>
 
 <script>
 import data from '@/services/data/Skill'
-import TitleMenu from '@/components/title/Toggle'
+import TitleMenuToggle from '@/components/title/Toggle'
 import List from '@/views/main/skill/frameworks/tabs/List'
 
 export default {
@@ -22,7 +22,7 @@ export default {
     }
   },
   components: {
-    TitleMenu,
+    TitleMenuToggle,
     List
   },
   computed: {

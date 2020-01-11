@@ -77,8 +77,9 @@
       <v-flex xs11>
         <v-layout row wrap>
           <v-flex xs4 v-for="(item, index) in images" :key="index">
-            <img
+            <v-img
               :src="doGetImage(item.name, item.token)"
+              :lazy-src="doGetImage(item.name, item.token)"
               width="74"
               :height="toggle_sidebar ? '97%' : ''"
             />
@@ -134,7 +135,7 @@ export default {
 
 <style lang="stylus">
 .avatar.v-avatar img
-    border-radius: unset
-    height: 95px
-    width: 95px
+  border-radius: unset
+  height: 95px
+  width: 95px
 </style>
