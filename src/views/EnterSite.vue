@@ -2,7 +2,7 @@
   <transition name="fade">
     <v-layout row wrap>
       <v-flex xs12 lg8>
-        <v-img class="ma-2 logo" :src="logo" :lazy-src="logo" />
+        <img class="ma-2 logo" :src="logo" />
         <v-layout row wrap>
           <v-flex
             xs12

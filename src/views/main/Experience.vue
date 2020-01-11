@@ -63,9 +63,9 @@
                             item.link.type === 'website'
                               ? item.link.route
                               : doGetFile(
-                                  item.link.name,
-                                  item.link.extension,
-                                  item.link.token
+                                  item.link.route.name,
+                                  item.link.route.extension,
+                                  item.link.route.token
                                 )
                           "
                           target="_blank"

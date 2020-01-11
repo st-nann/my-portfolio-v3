@@ -85,8 +85,8 @@ module.exports = {
         display_text: 'Resume',
         route: {
           name: 'resume%2FResume%20(English)',
-          extension: 'docx',
-          token: 'd3b5ad75-12c3-4c30-97b3-3fa1e8e35ec4'
+          extension: 'pdf',
+          token: 'a5922f64-39b2-46bf-bf90-59bc31127364'
         },
         type: 'file'
       }
