@@ -1,7 +1,7 @@
 <template>
   <v-layout row wrap class="pa-4">
     <v-flex xs12 sm10 offset-sm1>
-      <v-card>
+      <v-card class="elevation-8">
         <v-layout row wrap>
           <v-flex xs12>
             <v-card
@@ -19,7 +19,7 @@
           <v-flex xs12 class="pa-4">
             <v-layout row wrap align-center>
               <v-flex xs12 sm2 class="hidden-md-and-down">
-                <img :src="logo" width="90" />
+                <v-img :src="logo" :lazy-src="logo" width="90" />
               </v-flex>
               <v-flex xs12 sm8 class="text-truncate">
                 <div v-for="(item, index) in contact" :key="index">
@@ -36,7 +36,9 @@
                     :href="item.description"
                     target="_blank"
                   >
-                    {{ item.description }}
+                    {{
+                      item.display_text ? item.display_text : item.description
+                    }}
                     <v-icon
                       :size="9"
                       style="vertical-align: middle !important;"
@@ -54,11 +56,12 @@
               </v-flex>
               <v-spacer></v-spacer>
               <v-divider vertical class="mx-3 hidden-xs-only"></v-divider>
-              <img
+              <v-img
                 :class="{
                   'mt-2': $vuetify.breakpoint.xs
                 }"
                 :src="doGetImage(qrcode.name, qrcode.token)"
+                :lazy-src="doGetImage(qrcode.name, qrcode.token)"
                 :width="$vuetify.breakpoint.xs ? '45px' : '100px'"
               />
             </v-layout>

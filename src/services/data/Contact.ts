@@ -27,6 +27,12 @@ module.exports = {
       description:
         'https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144',
       type: 'link'
+    },
+    {
+      icon: 'instagram',
+      display_text: 'mukashi1911',
+      description: 'https://www.instagram.com/mukashi1911/?hl=th',
+      type: 'link'
     }
   ],
   qrcode: {

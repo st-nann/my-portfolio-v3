@@ -1,5 +1,5 @@
 <template>
-  <v-card class="my-2 pa-2 card-border" height="100%" flat>
+  <v-card class="my-2 pa-2 card-border card-frame" height="100%" flat>
     <TitleMenu :title="title"></TitleMenu>
     <Lists category="library"></Lists>
   </v-card>

@@ -7,7 +7,7 @@
     <v-spacer class="hidden-sm-and-up"></v-spacer>
     <v-toolbar-title class="ml-0">
       <a href="/">
-        <img class="mt-2 logo" :src="logo" />
+        <v-img class="mt-2 logo" :src="logo" :lazy-src="logo" />
       </a>
     </v-toolbar-title>
     <v-divider class="ml-3 mr-3 hidden-xs-only" inset vertical></v-divider>

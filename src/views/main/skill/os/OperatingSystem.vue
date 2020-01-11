@@ -1,5 +1,5 @@
 <template>
-  <v-card class="pa-2 card-border" flat>
+  <v-card class="pa-2 card-border card-frame" flat>
     <v-card-text class="title mx-2 mb-3">Operating System (OS)</v-card-text>
     <v-layout row wrap class="text-xs-center">
       <v-flex xs12 sm4 v-for="(item, index) in os" :key="index">
@@ -10,8 +10,9 @@
           v-bind:value="value[index]"
           class="light-blue--text text--lighten-3"
         >
-          <img
+          <v-img
             :src="doGetImage(item.image.name, item.image.token)"
+            :lazy-src="doGetImage(item.image.name, item.image.token)"
             width="65px"
           />
         </v-progress-circular>
