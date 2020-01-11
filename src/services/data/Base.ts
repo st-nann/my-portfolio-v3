@@ -56,5 +56,11 @@ module.exports = {
       name: 'sidebar%2Fsidebar-006',
       token: '286fe968-e3da-4ec8-98b0-eb2ca6c97600'
     }
-  ]
+  ],
+  error: {
+    notfound: {
+      name: 'base%2Fnotfound',
+      token: '7d35762b-d783-49fe-9e86-88aba849b117'
+    }
+  }
 }
