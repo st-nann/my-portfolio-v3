@@ -10,14 +10,17 @@
       <div slot="body">
         <v-layout row wrap>
           <v-flex xs12 class="caption grey--text text--darken-1">
+            <v-icon class="mr-1" :size="12">mdi-shape-plus</v-icon>
             <span class="font-weight-bold">Category: </span>{{ data.type }}
             <div v-if="data.detail && data.detail.framework">
-              <span class="font-weight-bold">Framework </span>
+              <v-icon class="mr-1" :size="12">mdi-layers</v-icon>
+              <span class="font-weight-bold">Framework: </span>
               <span
                 v-for="(item, key, index) in data.detail.framework"
                 :key="index"
               >
-                <v-icon :size="15">mdi-{{ item.icon }}</v-icon>
+                <!-- <v-icon :size="15">mdi-{{ item.icon }}</v-icon> -->
+                {{ item.text }}
                 <span class="grey--text text--darken-1">({{ key }})</span>
                 <span
                   v-if="Object.keys(data.detail.framework).length - 1 !== index"

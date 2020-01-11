@@ -69,7 +69,7 @@ export default new Router({
     },
     {
       path: '*',
-      meta: { title: 'Error - 404', nolayout: false },
+      meta: { title: 'Error - 404', nolayout: true },
       component: loadComponentBase(`error/404`)
     }
   ]

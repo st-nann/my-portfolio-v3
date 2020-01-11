@@ -9,6 +9,7 @@
             class="search"
             placeholder="Search"
             background-color="lightblue"
+            append-icon="search"
             :height="5"
             single-line
             hide-details
