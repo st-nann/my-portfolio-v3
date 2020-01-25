@@ -19,6 +19,7 @@ module.exports = {
       { text: 'Virtual Machine', value: 'virtual_machine' },
       { text: 'Schedule Work', value: 'schedule' },
       { text: 'API Test', value: 'api' },
+      { text: 'Chatbot', value: 'chatbot' },
       { text: 'Database', value: 'database' },
       { text: 'Network', value: 'network' },
       { text: 'Talk Chanel', value: 'talk' },
@@ -332,6 +333,36 @@ module.exports = {
           image: {
             name: 'skill%2Ftool%2Fpostman',
             token: '6f19af9b-d56e-4e3d-bda1-3f7f52c5e472'
+          }
+        }
+      ],
+      chatbot: [
+        {
+          name: 'LINE Developer',
+          image: {
+            name: 'skill%2Ftool%2Flinedevloper',
+            token: '499b197f-ce6f-4375-b09a-8a0d1eac75af'
+          }
+        },
+        {
+          name: 'LINE Bot Designer',
+          image: {
+            name: 'skill%2Ftool%2Flinebotdesigner',
+            token: '99a05181-b882-48c5-990f-a0cf0de8957b'
+          }
+        },
+        {
+          name: 'Dialogflow',
+          image: {
+            name: 'skill%2Ftool%2Fdialogflow',
+            token: '8236a4f5-97d9-4973-a0f8-aa488e963265'
+          }
+        },
+        {
+          name: 'Rich Menu Maker',
+          image: {
+            name: 'skill%2Ftool%2Frichmenumaker',
+            token: '359993a9-b486-4638-9a21-1b15fcb71cf0'
           }
         }
       ],

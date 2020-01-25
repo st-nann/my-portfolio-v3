@@ -132,6 +132,92 @@ module.exports = {
         }
       },
       link: 'https://portal.nipa.cloud'
+    },
+    {
+      id: 'coding-4',
+      type: 'chatbot',
+      title: 'LINE Chatbot - Juné',
+      subtitle: 'ラインチャットボット - ジュネ',
+      description:
+        'LINE chatbot is chanel for follow up Juné BNK48 that includes portfolio, shudule events, contact, performance, activity & shop and groups of Juné BNK48',
+      detail: {
+        framework: {
+          tools: {
+            icon: 'LINE',
+            text: 'LINE Developer'
+          },
+          design: {
+            icon: 'LINE',
+            text: 'LINE Bot Designer'
+          },
+          api: {
+            icon: 'API AI',
+            text: 'Dialogflow'
+          }
+        }
+      },
+      image: {
+        icon: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20June%2Ficon',
+          token: 'f1578d94-cfc2-4ffd-ad38-d9b6b2bbf47b'
+        },
+        cover: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20June%2Fcover',
+          token: '8fa171d7-01e4-4e2f-be91-fcc94d698195'
+        },
+        qrcode: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20June%2Fqrcode',
+          token: 'f367f1e9-f722-4d53-80c7-6b6a740e37a7'
+        }
+      },
+      link: 'https://line.me/R/ti/p/%40128sooyz#~'
+    },
+    {
+      id: 'coding-',
+      type: 'chatbot',
+      title: 'LINE Chatbot - Jennis',
+      subtitle: 'ラインチャットボット - ジェニス',
+      description:
+        'LINE chatbot is chanel for follow up Jennis BNK48 that includes portfolio, shudule events, contact, performance, activity & shop and groups of Jennis BNK48',
+      detail: {
+        framework: {
+          tools: {
+            icon: 'LINE',
+            text: 'LINE Developer'
+          },
+          design: {
+            icon: 'LINE',
+            text: 'LINE Bot Designer'
+          },
+          api: {
+            icon: 'API AI',
+            text: 'Dialogflow'
+          },
+          richmenu: {
+            icon: 'Rich menu design',
+            text: 'Rich Menu Maker'
+          },
+          testapi: {
+            icon: 'Test API',
+            text: 'Postman'
+          }
+        }
+      },
+      image: {
+        icon: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20jennis%2Ficon',
+          token: '83c8a3cd-f5e2-491c-8fa6-48a6f242c8b5'
+        },
+        cover: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20jennis%2Fcover',
+          token: '03553406-fa68-43a2-9cbe-613befffb568'
+        },
+        qrcode: {
+          name: 'portfolio%2Fcoding%2Fchatbot%20-%20jennis%2Fqrcode',
+          token: '91cf7359-dda5-408f-84e0-becf2431fb9e'
+        }
+      },
+      link: 'https://line.me/R/ti/p/%40489bcbvy#~'
     }
   ],
   design: [
