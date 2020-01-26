@@ -362,7 +362,7 @@ module.exports = {
           name: 'Rich Menu Maker',
           image: {
             name: 'skill%2Ftool%2Frichmenumaker',
-            token: '359993a9-b486-4638-9a21-1b15fcb71cf0'
+            token: 'c058c3ed-0f00-4a05-b871-8605bdc73324'
           }
         }
       ],

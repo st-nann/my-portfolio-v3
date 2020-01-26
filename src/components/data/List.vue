@@ -3,10 +3,8 @@
     <v-flex xs4 v-for="(item, index) in lists" :key="index">
       <img
         :src="doGetImage(item.image.name, item.image.token)"
-        :class="{
-          'mt-1': item.name === 'Lodash'
-        }"
         width="40px"
+        height="40"
       />
       <p class="caption">{{ item.name }}</p>
     </v-flex>
