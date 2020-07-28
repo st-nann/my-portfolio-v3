@@ -1,7 +1,7 @@
 module.exports = {
   aboutme: {
     fullname: 'Sanyanee Thawinvongrak',
-    position: 'DEVELOPER & UX DEVELOPER & TECHNICAL LEADER',
+    position: 'DEVELOPER & UX DEVELOPER',
     birthday: {
       year: '1993'
     }
