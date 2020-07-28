@@ -17,16 +17,11 @@ module.exports = {
         {
           position: 'Cloud Developer (Frontend / Backend)',
           description:
-            'Develop and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend).'
+            'Develop and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend). And Job Assignment, Review Code, Scum master and Control Overall of work team.'
         },
         {
           position: 'UX Developer',
           description: 'Design and Consult about website.'
-        },
-        {
-          position: 'Technical Leader',
-          description:
-            'Job Assignment, Review Code, Scum master and Control Overall of work team.'
         }
       ],
       link: {
