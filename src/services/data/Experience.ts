@@ -81,7 +81,7 @@ module.exports = {
         route: {
           name: 'resume%2FResume%20(English)',
           extension: 'pdf',
-          token: '30036c01-7706-4aec-8b11-21bc0616a43c'
+          token: '8f1c4fb6-2be7-4f8d-9cdf-276cc056ceaf'
         },
         type: 'file'
       }
