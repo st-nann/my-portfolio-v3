@@ -68,8 +68,16 @@ module.exports = {
           value: 100
         },
         {
-          name: 'JAVA SCRIPT',
+          name: 'JAVASCRIPT',
           value: 95
+        },
+        {
+          name: 'TYPESCRIPT',
+          value: 80
+        },
+        {
+          name: 'GOLANG',
+          value: 30
         },
         {
           name: 'CSS (CSS, SASS)',
@@ -80,7 +88,7 @@ module.exports = {
           value: 95
         },
         {
-          name: 'PHP',
+          name: 'PHP (LARAVEL)',
           value: 50
         }
       ],
@@ -108,8 +116,20 @@ module.exports = {
           value: 95
         },
         {
+          name: 'NUXT.JS (VUE SSR)',
+          value: 80
+        },
+        {
+          name: 'NEXT.JS (REACT SSR)',
+          value: 60
+        },
+        {
           name: 'VUETIFY',
           value: 100
+        },
+        {
+          name: 'MATERIAL UI',
+          value: 90
         },
         {
           name: 'BOOTSTRAP',
@@ -118,8 +138,12 @@ module.exports = {
       ],
       backend: [
         {
-          name: 'BACKPACK ADMIN (PHP)',
+          name: 'BACKPACK ADMIN (PHP LARAVEL)',
           value: 90
+        },
+        {
+          name: 'PHP LARAVEL',
+          value: 80
         },
         {
           name: 'NODE.JS',
@@ -127,7 +151,7 @@ module.exports = {
         },
         {
           name: 'TYPESCRIPT',
-          value: 50
+          value: 80
         }
       ],
       testing: [
