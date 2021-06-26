@@ -8,10 +8,44 @@ module.exports = {
   },
   experience: [
     {
+      id: 'year_2021',
+      datetime: '16 Mar 2021 – Present',
+      title: 'Senior Programmer (Frontend / Backend)',
+      subtitle: '[Ascend] EGG Digital Company Limited. (เอ้ก ดิจิทัล)',
+      detail: [
+        {
+          position: 'Senior Programmer (Frontend)',
+          description:
+            'Develop EGG POS Website Manager with Next.js Framework and Material Framework (CSS). And Develop EGG POS Website CMS with PHP Laravel Framework.'
+        },
+        {
+          position: 'Senior Programmer (Backend)',
+          description:
+            'Develop Microservice Backend with PHP Laravel Framework. And Develop Report and Product Worker with PHP Laravel Framework and Node.js Framework.'
+        }
+      ]
+    },
+    {
+      id: 'year_2020',
+      datetime: '1 Nov 2020 – 15 Feb 2021',
+      title: 'Senior Programmer (Frontend / Backend)',
+      subtitle: '3DS Interactive Company Limited. (ทรีดีเอส อินเตอร์แอคทีฟ)',
+      detail: [
+        {
+          position: 'Senior Programmer (Frontend)',
+          description: 'Develop Builder E-mail Template Plugin with Vue.js Framework. and Vuetify Framework.'
+        },
+        {
+          position: 'Senior Programmer (Backend)',
+          description: 'Develop Script for Generate E-Mail Template with Golang.'
+        }
+      ]
+    },
+    {
       id: 'year_2016',
-      datetime: '1 Nov 2016 – Present',
+      datetime: '1 Nov 2016 – 31 Oct 2020',
       title:
-        'Cloud Developer (Frontend / Backend and UX Developer / Technical Leader)',
+        'Cloud Developer (Frontend / Backend and UX Developer)',
       subtitle: 'Nipa Technology Company Limited. (นิภา เทคโนโลยี)',
       detail: [
         {
@@ -110,6 +144,14 @@ module.exports = {
     }
   ],
   preriod: [
+    {
+      id: 'year_2021',
+      year: '2021'
+    },
+    {
+      id: 'year_2020',
+      year: '2020'
+    },
     {
       id: 'year_2016',
       year: '2016'
