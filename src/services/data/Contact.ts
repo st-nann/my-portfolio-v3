@@ -3,8 +3,7 @@
  */
 module.exports = {
   cover: {
-    name: 'contact%2Fcontact',
-    token: '545be2bc-7891-442c-b9f1-95758d1d18ef'
+    name: 'contact%2Fcontact'
   },
   contact: [
     {
@@ -36,7 +35,6 @@ module.exports = {
     }
   ],
   qrcode: {
-    name: 'contact%2Fcontact-qrcode',
-    token: '70b8df2f-9bae-4edc-8d6c-5f5c3c37727c'
+    name: 'contact%2Fcontact-qrcode'
   }
 }

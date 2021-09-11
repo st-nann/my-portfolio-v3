@@ -13,8 +13,8 @@
           >
             <v-card color="offwhite" class="elevation-5 border-card-title">
               <v-img
-                :src="doGetImage(title.name, title.token)"
-                :lazy-src="doGetImage(title.name, title.token)"
+                :src="doGetImage(title.name)"
+                :lazy-src="doGetImage(title.name)"
                 width="100%"
               />
             </v-card>
@@ -33,8 +33,10 @@
                     </v-flex>
                     <v-flex xs8 class="border-card">
                       <v-card class="px-3 pb-3 pt-1" flat>
-                        <p class="mb-0 subheading grey--text text--darken-2">
-                          <b>{{ item.title }}</b>
+                        <p
+                          class="mb-0 subheading grey--text text--darken-2 font-weight-bold"
+                        >
+                          {{ item.title }}
                         </p>
                         <p
                           v-if="item.subtitle"
@@ -64,8 +66,7 @@
                               ? item.link.route
                               : doGetFile(
                                   item.link.route.name,
-                                  item.link.route.extension,
-                                  item.link.route.token
+                                  item.link.route.extension
                                 )
                           "
                           target="_blank"
@@ -103,15 +104,12 @@
 
 <script>
 import data from '@/services/data/Experience'
-import {
-  getImageFromStore,
-  getFileFromStore
-} from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   data() {
     return {
-      target: 'year_2021'
+      target: `year_${new Date().getFullYear()}`
     }
   },
   computed: {
@@ -126,11 +124,11 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     },
-    doGetFile(name, extension, token) {
-      return getFileFromStore(name, extension, token)
+    doGetFile(name, extension) {
+      return getFileFromStore(name, extension)
     },
     doScroll: function(target) {
       this.target = target

@@ -12,8 +12,8 @@
         <v-flex xs12>
           <v-card class="border-card-title">
             <v-img
-              :src="doGetImage(cover.name, cover.token)"
-              :lazy-src="doGetImage(cover.name, cover.token)"
+              :src="doGetImage(cover.name)"
+              :lazy-src="doGetImage(cover.name)"
               width="100%"
             />
           </v-card>
@@ -28,7 +28,7 @@
 
 <script>
 import data from '@/services/data/Portfolio'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 import TitleMenuToggle from '@/components/title/Toggle'
 import List from '@/views/main/portfolio/List'
 
@@ -56,8 +56,8 @@ export default {
     })
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

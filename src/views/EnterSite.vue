@@ -114,12 +114,8 @@
       <v-flex xs12 lg4 class="text-xs-right hidden-md-and-down">
         <v-img
           width="505.3px"
-          :src="
-            doGetImage('home%2Fhome', '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2')
-          "
-          :lazy-src="
-            doGetImage('home%2Fhome', '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2')
-          "
+          :src="doGetImage('home%2Fhome')"
+          :lazy-src="doGetImage('home%2Fhome')"
         />
       </v-flex>
     </v-layout>
@@ -128,7 +124,7 @@
 
 <script>
 import data from '@/services/data/AboutMe'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   computed: {
@@ -142,8 +138,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }
