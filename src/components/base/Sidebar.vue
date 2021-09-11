@@ -78,8 +78,8 @@
         <v-layout row wrap>
           <v-flex xs4 v-for="(item, index) in images" :key="index">
             <v-img
-              :src="doGetImage(item.name, item.token)"
-              :lazy-src="doGetImage(item.name, item.token)"
+              :src="doGetImage(item.name)"
+              :lazy-src="doGetImage(item.name)"
               width="74"
               :height="toggle_sidebar ? '97%' : ''"
             />
@@ -90,7 +90,7 @@
     <v-layout row wrap class="text-xs-center mx-3">
       <v-flex xs12 class="font-size-10 grey--text">
         <div>
-          Portfolio website v2.0.0
+          Portfolio website v3.0.0
         </div>
         <div>
           <span class="caption">&copy;</span>
@@ -102,10 +102,9 @@
 </template>
 
 <script>
-import Vue from 'vue'
 import { mapState, mapActions } from 'vuex'
 import data from '@/services/data/Base'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   data() {
@@ -126,8 +125,8 @@ export default {
   },
   methods: {
     ...mapActions('components', ['updateToggleSidebar']),
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

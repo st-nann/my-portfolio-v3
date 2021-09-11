@@ -2,8 +2,8 @@
   <v-card class="card-modal">
     <v-img
       v-if="image"
-      :src="doGetImage(image.name, image.token)"
-      :lazy-src="doGetImage(image.name, image.token)"
+      :src="doGetImage(image.name)"
+      :lazy-src="doGetImage(image.name)"
     />
     <v-card-title class="pb-0">
       <div class="subheading font-weight-bold">{{ title }}</div>
@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   props: [
@@ -42,8 +42,8 @@ export default {
     'disable'
   ],
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     },
     doClickOk: function(event) {
       this.okCallback(event)

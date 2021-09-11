@@ -2,8 +2,9 @@
   <v-layout row wrap align-center>
     <v-flex xs12 lg6>
       <img
-        :src="doGetImage(error.notfound.name, error.notfound.token)"
+        :src="doGetImage(error.notfound.name)"
         width="100%"
+        alt="icon"
       />
     </v-flex>
     <v-flex xs11 lg5 offset-xs1 class="mb-5">
@@ -30,7 +31,7 @@
 
 <script>
 import data from '@/services/data/Base'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   computed: {
@@ -39,8 +40,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

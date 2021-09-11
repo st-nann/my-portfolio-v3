@@ -1,6 +1,6 @@
 {
-  "name": "my-portfolio-v2",
-  "version": "2.0.0",
+  "name": "my-portfolio-v3",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --open",

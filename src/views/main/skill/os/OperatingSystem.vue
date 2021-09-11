@@ -11,8 +11,8 @@
           class="light-blue--text text--lighten-3"
         >
           <v-img
-            :src="doGetImage(item.image.name, item.image.token)"
-            :lazy-src="doGetImage(item.image.name, item.image.token)"
+            :src="doGetImage(item.image.name)"
+            :lazy-src="doGetImage(item.image.name)"
             width="65px"
           />
         </v-progress-circular>
@@ -27,7 +27,7 @@
 <script>
 import _ from 'lodash'
 import data from '@/services/data/Skill'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   data() {
@@ -53,8 +53,8 @@ export default {
         return self.value.push(value)
       }, 300)
     },
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }
