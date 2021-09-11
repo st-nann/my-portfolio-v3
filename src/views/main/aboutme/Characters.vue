@@ -29,10 +29,7 @@
               class="mx-auto ma-1 card-image"
               max-width="100%"
             >
-              <v-img
-                :aspect-ratio="2 / 3"
-                :src="doGetImage(item.image.name, item.image.token)"
-              >
+              <v-img :aspect-ratio="2 / 3" :src="doGetImage(item.image.name)">
                 <v-expand-transition>
                   <div
                     v-if="hover"
@@ -63,7 +60,7 @@
 
 <script>
 import data from '@/services/data/AboutMe'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 export default {
   computed: {
     items() {
@@ -71,8 +68,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

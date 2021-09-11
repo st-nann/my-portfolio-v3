@@ -2,9 +2,10 @@
   <v-layout row wrap class="text-xs-center">
     <v-flex xs4 v-for="(item, index) in lists" :key="index">
       <img
-        :src="doGetImage(item.image.name, item.image.token)"
+        :src="doGetImage(item.image.name)"
         width="40px"
         height="40"
+        alt="icon"
       />
       <p class="caption">{{ item.name }}</p>
     </v-flex>
@@ -14,7 +15,7 @@
 <script>
 import _ from 'lodash'
 import data from '@/services/data/Skill'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   props: ['category', 'keyName'],
@@ -26,8 +27,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

@@ -3,8 +3,7 @@
  */
 module.exports = {
   title: {
-    name: 'experience%2Fexprerience',
-    token: 'cf9e8941-bd0d-419e-ac50-ee9a4b5aac0f'
+    name: 'experience%2Fexprerience'
   },
   experience: [
     {
@@ -16,12 +15,12 @@ module.exports = {
         {
           position: 'Senior Programmer (Frontend)',
           description:
-            'Develop EGG POS Website Manager with Next.js Framework and Material Framework (CSS). And Develop EGG POS Website CMS with PHP Laravel Framework.'
+            'Develop EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Develop Report Worker with Javascript.'
         },
         {
           position: 'Senior Programmer (Backend)',
           description:
-            'Develop Microservice Backend with PHP Laravel Framework. And Develop Report and Product Worker with PHP Laravel Framework and Node.js Framework.'
+            'Develop Microservice Backend with PHP Laravel. And Develop Report and Product Worker with PHP Laravel and Node.js.'
         }
       ]
     },
@@ -33,19 +32,20 @@ module.exports = {
       detail: [
         {
           position: 'Senior Programmer (Frontend)',
-          description: 'Develop Builder E-mail Template Plugin with Vue.js Framework. and Vuetify Framework.'
+          description:
+            'Develop Builder E-mail Template Plugin with Vue.js Framework. and Vuetify.'
         },
         {
           position: 'Senior Programmer (Backend)',
-          description: 'Develop Script for Generate E-Mail Template with Golang.'
+          description:
+            'Develop Script for Generate E-Mail Template with Golang.'
         }
       ]
     },
     {
       id: 'year_2016',
       datetime: '1 Nov 2016 – 31 Oct 2020',
-      title:
-        'Cloud Developer (Frontend / Backend and UX Developer)',
+      title: 'Cloud Developer (Frontend / Backend and UX Developer)',
       subtitle: 'Nipa Technology Company Limited. (นิภา เทคโนโลยี)',
       detail: [
         {
@@ -114,8 +114,7 @@ module.exports = {
         display_text: 'Resume',
         route: {
           name: 'resume%2FResume%20(English)',
-          extension: 'pdf',
-          token: '8f1c4fb6-2be7-4f8d-9cdf-276cc056ceaf'
+          extension: 'pdf'
         },
         type: 'file'
       }

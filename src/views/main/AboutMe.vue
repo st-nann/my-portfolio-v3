@@ -24,7 +24,7 @@
             <v-carousel-item
               v-for="(item, index) in items"
               :key="index"
-              :src="doGetImage(item.name, item.token)"
+              :src="doGetImage(item.name)"
               class="carousel-item offwhite"
             ></v-carousel-item>
           </v-carousel>
@@ -39,7 +39,7 @@
 
 <script>
 import data from '@/services/data/AboutMe'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 import WhoAmI from '@/views/main/aboutme/WhoAmI'
 
 export default {
@@ -52,8 +52,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }

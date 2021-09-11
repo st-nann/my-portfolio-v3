@@ -73,12 +73,8 @@
                   <v-flex xs12>
                     <v-img
                       class="portfolio-image"
-                      :src="
-                        doGetImage(item.image.icon.name, item.image.icon.token)
-                      "
-                      :lazy-src="
-                        doGetImage(item.image.icon.name, item.image.icon.token)
-                      "
+                      :src="doGetImage(item.image.icon.name)"
+                      :lazy-src="doGetImage(item.image.icon.name)"
                       width="60px"
                     />
                   </v-flex>
@@ -96,7 +92,7 @@
 <script>
 import _ from 'lodash'
 import data from '@/services/data/Portfolio'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 import PortfolioDetail from '@/views/main/portfolio/modal/Detail'
 
 export default {
@@ -110,27 +106,26 @@ export default {
   },
   computed: {
     lists() {
-      return this.selected
-        ? this.search === ''
-          ? data[this.selected]
-          : _.filter(data[this.selected], item => {
-              return _.includes(
-                _.lowerCase(item.title),
-                _.lowerCase(this.search)
-              )
-            })
-        : []
+      if (this.selected) {
+        if (this.search === '') {
+          return data[this.selected]
+        }
+        return _.filter(data[this.selected], item =>
+          _.includes(_.lowerCase(item.title), _.lowerCase(this.search))
+        )
+      }
+      return []
     }
   },
   components: {
     PortfolioDetail
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     },
-    doOpenModal(data) {
-      this.data = data
+    doOpenModal(item) {
+      this.data = item
       this.$refs.detail.modal = true
     }
   }

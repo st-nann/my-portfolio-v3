@@ -48,10 +48,8 @@
           </v-flex>
           <v-flex v-if="data.image" xs12 class="my-2 text-xs-center">
             <v-img
-              :src="doGetImage(data.image.qrcode.name, data.image.qrcode.token)"
-              :lazy-src="
-                doGetImage(data.image.qrcode.name, data.image.qrcode.token)
-              "
+              :src="doGetImage(data.image.qrcode.name)"
+              :lazy-src="doGetImage(data.image.qrcode.name)"
               :width="70"
             />
           </v-flex>
@@ -62,7 +60,7 @@
 </template>
 
 <script>
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 import Modal from '@/components/base/Modal'
 
 export default {
@@ -76,8 +74,8 @@ export default {
     Modal
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     },
     closeModal() {
       this.modal = false

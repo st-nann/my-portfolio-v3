@@ -10,7 +10,7 @@
               flat
             >
               <v-img
-                :src="doGetImage(cover.name, cover.token)"
+                :src="doGetImage(cover.name)"
                 width="100%"
                 :height="$vuetify.breakpoint.xs ? 200 : 450"
               />
@@ -60,8 +60,8 @@
                 :class="{
                   'mt-2': $vuetify.breakpoint.xs
                 }"
-                :src="doGetImage(qrcode.name, qrcode.token)"
-                :lazy-src="doGetImage(qrcode.name, qrcode.token)"
+                :src="doGetImage(qrcode.name)"
+                :lazy-src="doGetImage(qrcode.name)"
                 :width="$vuetify.breakpoint.xs ? '45px' : '100px'"
               />
             </v-layout>
@@ -74,7 +74,7 @@
 
 <script>
 import data from '@/services/data/Contact'
-import { getImageFromStore } from '@/services/functions/Services'
+import { getFileFromStore } from '@/services/functions/Services'
 
 export default {
   computed: {
@@ -94,8 +94,8 @@ export default {
     }
   },
   methods: {
-    doGetImage(name, token) {
-      return getImageFromStore(name, token)
+    doGetImage(name) {
+      return getFileFromStore(name)
     }
   }
 }
