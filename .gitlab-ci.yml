@@ -44,7 +44,7 @@ build:
     - install
   artifacts:
     paths:
-      - build
+      - dist
 
 deploy:
   stage: deploy
