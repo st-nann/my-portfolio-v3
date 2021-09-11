@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --open",
-    "build": "vue-cli-service build --mode",
+    "build": "npx cross-env NODE_ENV=development vue-cli-service build --mode development",
+    "build:staging": "npx cross-env NODE_ENV=staging vue-cli-service build --mode staging",
+    "build:production": "npx cross-env NODE_ENV=production vue-cli-service build --mode production",
     "inspect": "vue-cli-service inspect --mode",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
@@ -13,12 +15,14 @@
     "pw": "onchange 'src/**/*.js' -- prettier --write {{changed}}"
   },
   "dependencies": {
+    "@types/chart.js": "^2.9.7",
     "@types/lodash": "^4.14.123",
     "axios": "^0.18.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.3",
     "moment": "^2.24.0",
     "numeral": "^2.0.6",
     "vue": "^2.6.6",
+    "vue-chartjs": "^3.5.0",
     "vue-class-component": "^6.0.0",
     "vue-clipboard2": "^0.3.0",
     "vue-property-decorator": "^7.0.0",

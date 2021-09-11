@@ -3,17 +3,17 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-// function loadApp() {
-//   return () => import(`@/App.vue`)
-// }
+function loadApp() {
+  return () => import(`@/App.vue`)
+}
 
-// function loadComponent(component: string) {
-//   return () => import(`@/components/${component}.vue`)
-// }
+function loadComponentBase(component: string) {
+  return () => import(`@/components/base/${component}.vue`)
+}
 
-// function loadMainView(view: string) {
-//   return () => import(`@/views/main/${view}.vue`)
-// }
+function loadMainView(view: string) {
+  return () => import(`@/views/main/${view}.vue`)
+}
 
 export default new Router({
   mode: 'history',
@@ -21,65 +21,56 @@ export default new Router({
   routes: [
     {
       path: '/',
-      meta: { nolayout: true },
-      component: function(reslove) {
-        return require(['@/App.vue'], reslove)
-      }
+      meta: { title: 'Enter site', nolayout: true },
+      component: () => import(`@/views/EnterSite.vue`)
+    },
+    {
+      path: '/aboutme',
+      meta: { title: 'About me', nolayout: false },
+      component: loadMainView('AboutMe')
+    },
+    {
+      path: '/experience',
+      meta: { title: 'Experience', nolayout: false },
+      component: loadMainView('Experience')
+    },
+    {
+      path: '/skill',
+      meta: { title: 'Skill', nolayout: false },
+      component: loadMainView('Skill')
+    },
+    {
+      path: '/portfolio',
+      meta: { title: 'Portfolio', nolayout: false },
+      component: loadMainView('Portfolio'),
+      children: [
+        {
+          path: 'design',
+          meta: {
+            title: 'Portfolio - Design',
+            nolayout: false
+          },
+          component: loadMainView(`Portfolio`)
+        },
+        {
+          path: 'coding',
+          meta: {
+            title: 'Portfolio - Coding',
+            nolayout: false
+          },
+          component: loadMainView(`Portfolio`)
+        }
+      ]
+    },
+    {
+      path: '/contacts',
+      meta: { title: 'Contacts', nolayout: false },
+      component: loadMainView(`Contacts`)
+    },
+    {
+      path: '*',
+      meta: { title: 'Error - 404', nolayout: true },
+      component: loadComponentBase(`error/404`)
     }
-    // {
-    //   path: '/',
-    //   meta: { nolayout: true },
-    //   component: function (reslove) {
-    //     return require(['@/views/EnterSite'], reslove)
-    //   }
-    // },
-    // {
-    //   path: '/aboutme',
-    //   meta: {nolayout: false},
-    //   component: loadMainView('AboutMe')
-    // },
-    // {
-    //   path: '/experience',
-    //   meta: {nolayout: false},
-    //   component: loadMainView('Experience')
-    // },
-    // {
-    //   path: '/skill',
-    //   meta: {nolayout: false},
-    //   component: loadMainView('Skill')
-    // },
-    // {
-    //   path: '/portfolio',
-    //   meta: {nolayout: false},
-    //   component: loadMainView('Portfolio'),
-    //   children: [
-    //     {
-    //       path: 'design',
-    //       meta: {
-    //         title: 'Portfolio - Design',
-    //         nolayout: false
-    //       },
-    //       component: loadMainView(`Portfolio`)
-    //     },
-    //     {
-    //       path: 'coding',
-    //       meta: {
-    //         title: 'Portfolio - Coding',
-    //         nolayout: false
-    //       },
-    //       component: loadMainView(`Portfolio`)
-    //     }
-    //   ]
-    // },
-    // {
-    //   path: '/contacts',
-    //   meta: {nolayout: false},
-    //   component: loadMainView(`Contacts`)
-    // },
-    // {
-    //   path: '*',
-    //   meta: {nolayout: true},
-    //   component: loadComponent(`error/404`)
-    // }
   ]
 })

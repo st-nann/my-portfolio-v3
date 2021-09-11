@@ -101,11 +101,11 @@ class StoreCreator {
     const actions = this.resource.actions
     Object.keys(actions).forEach(action => {
       const { dispatchString, commitString, requestFn } = actions[action]
-      storeActions[dispatchString] = ({ commit }, { params = {}, data = {} }) =>
+      storeActions[dispatchString] = ({ commit }, { params = {}, data = {}, options = {} }) =>
         __awaiter(this, void 0, void 0, function*() {
           yield Promise.resolve(0)
           commit(commitString)
-          return requestFn(params, data).then(
+          return requestFn(params, data, options).then(
             response => {
               commit(`${commitString}_${this.successSuffix}`, response)
               return Promise.resolve(response)
