@@ -1,4 +1,4 @@
-image: node:10.15
+image: node:latest
 
 cache:
   key: node_modules
@@ -25,13 +25,12 @@ build:
   only:
     - master
   script:
-    - yarn lint
     - yarn build:production
   dependencies:
     - install
   artifacts:
     paths:
-      - dist
+      - build
 
 deploy:
   stage: deploy
