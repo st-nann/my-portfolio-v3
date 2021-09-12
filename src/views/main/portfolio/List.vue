@@ -1,8 +1,8 @@
 <template>
-  <v-layout row wrap class="px-1 py-3">
-    <v-flex xs12>
-      <v-layout row wrap align-center class="mt-4">
-        <v-flex xs12 order-xs2 sm6 order-sm1 lg4>
+  <v-row class="px-1 py-3">
+    <v-col cols="12">
+      <v-row align-center>
+        <v-col cols="12" xs="12" order-xs-2 sm="6" order-sm-1 lg="4">
           <v-text-field
             id="search"
             v-model="search"
@@ -10,21 +10,22 @@
             placeholder="Search"
             background-color="lightblue"
             append-icon="search"
-            :height="5"
+            :height="30"
             single-line
             hide-details
             solo
             flat
           />
-        </v-flex>
+        </v-col>
         <v-spacer></v-spacer>
-        <v-flex
-          xs12
-          order-xs1
-          sm6
-          order-sm2
-          lg8
-          class="text-xs-right px-2 pb-2"
+        <v-col
+          cols="12"
+          xs="12"
+          order-xs-1
+          sm="6"
+          order-sm-2
+          lg="8"
+          class="text-right px-2 pb-2"
         >
           <div
             class="clickable font-weight-bold lightblue--text text--darken-4"
@@ -32,17 +33,25 @@
           >
             {{ see_all ? 'hidden' : 'see all' }}
           </div>
-        </v-flex>
-      </v-layout>
+        </v-col>
+      </v-row>
       <div
         v-if="lists.length === 0"
-        class="grey--text text--darken-2 text-xs-center"
+        class="grey--text text--darken-2 text-center"
       >
         no data available
       </div>
       <v-container v-else class="px-0" grid-list-lg fluid>
-        <v-layout row wrap :class="{ 'px-3': $vuetify.breakpoint.smAndUp }">
-          <v-flex v-for="(item, index) in lists" :key="index" xs12 sm4 md3 lg2>
+        <v-row :class="{ 'px-3': $vuetify.breakpoint.smAndUp }" dense>
+          <v-col
+            v-for="(item, index) in lists"
+            :key="index"
+            cols="12"
+            xs="12"
+            sm="4"
+            md="3"
+            lg="2"
+          >
             <v-hover v-if="see_all ? true : index < 6">
               <v-card
                 slot-scope="{ hover }"
@@ -55,38 +64,38 @@
                 @click="doOpenModal(item)"
                 flat
               >
-                <v-layout row wrap>
-                  <v-flex xs12>
-                    <div class="subheading font-weight-bold">
+                <v-row row>
+                  <v-col cols="12">
+                    <div class="text-subtitle-1 font-weight-bold">
                       {{ item.title }}
                     </div>
-                    <div class="caption grey--text text--darken-1">
+                    <div class="text-body-2 grey--text text--darken-1">
                       {{ item.subtitle }}
                     </div>
-                    <div class="caption my-2 grey--text text--darken-2">
+                    <div class="text-body-2 my-2 grey--text text--darken-2">
                       <v-icon color="grey darken-2" :size="10">
                         mdi-shape-plus
                       </v-icon>
                       {{ item.type }}
                     </div>
-                  </v-flex>
-                  <v-flex xs12>
+                  </v-col>
+                  <v-col cols="12">
                     <v-img
                       class="portfolio-image"
                       :src="doGetImage(item.image.icon.name)"
                       :lazy-src="doGetImage(item.image.icon.name)"
                       width="60px"
                     />
-                  </v-flex>
-                </v-layout>
+                  </v-col>
+                </v-row>
               </v-card>
             </v-hover>
-          </v-flex>
-        </v-layout>
+          </v-col>
+        </v-row>
       </v-container>
       <PortfolioDetail ref="detail" :data="data"></PortfolioDetail>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -8,8 +8,8 @@
       button="Close"
     >
       <div slot="body">
-        <v-layout row wrap>
-          <v-flex xs12 class="caption grey--text text--darken-1">
+        <v-row dense>
+          <v-col cols="12" class="text-body-2 grey--text text--darken-1">
             <v-icon class="mr-1" :size="12">mdi-shape-plus</v-icon>
             <span class="font-weight-bold">Category: </span>{{ data.type }}
             <div v-if="data.detail && data.detail.framework">
@@ -45,15 +45,15 @@
                 </v-icon>
               </a>
             </div>
-          </v-flex>
-          <v-flex v-if="data.image" xs12 class="my-2 text-xs-center">
+          </v-col>
+          <v-col cols="12" v-if="data.image" class="text-center px-0">
             <v-img
               :src="doGetImage(data.image.qrcode.name)"
               :lazy-src="doGetImage(data.image.qrcode.name)"
               :width="70"
             />
-          </v-flex>
-        </v-layout>
+          </v-col>
+        </v-row>
       </div>
     </Modal>
   </v-dialog>

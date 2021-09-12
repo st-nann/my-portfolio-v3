@@ -1,0 +1,20 @@
+// FONT
+$body-font-family: 'Didact Gothic', sans-serif; /* edit from 'Roboto', sans-serif */
+$font-size-root: 14px; /* edit from 16px */
+
+// BUTTON
+$button-font-size: 13px; /* edit from 14px */
+$button-border-radius: 1px; /* edit from 2px */
+$button-small-height: 26px; /* edit from 28px */
+$button-text-transform: none; /* edit from uppercase */
+
+// CARD
+$card-border-radius: 4px; /* edit from 2px */
+
+// TAB
+$tab-text-transform: none; /* edit from uppercase */
+
+// LIST
+$list-item-dense-single-height: 38px; /* edit from 40px */
+
+@import '~vuetify/src/styles/main.sass';

@@ -1,9 +1,9 @@
 <template>
-  <v-layout row wrap class="pa-4">
-    <v-flex xs12 sm10 offset-sm1>
+  <v-row class="pb-8 px-4">
+    <v-col cols="12" xs="12" sm="10" offset-sm="1">
       <v-card class="elevation-8">
-        <v-layout row wrap>
-          <v-flex xs12>
+        <v-row no-gutters>
+          <v-col cols="12">
             <v-card
               color="darkblue"
               :height="$vuetify.breakpoint.xs ? 200 : 450"
@@ -15,14 +15,18 @@
                 :height="$vuetify.breakpoint.xs ? 200 : 450"
               />
             </v-card>
-          </v-flex>
-          <v-flex xs12 class="pa-4">
-            <v-layout row wrap align-center>
-              <v-flex xs12 sm2 class="hidden-md-and-down">
+          </v-col>
+          <v-col cols="12" class="pa-4">
+            <v-row align="center">
+              <v-col cols="12" xs="12" sm="2" class="hidden-md-and-down">
                 <v-img :src="logo" :lazy-src="logo" width="90" />
-              </v-flex>
-              <v-flex xs12 sm8 class="text-truncate">
-                <div v-for="(item, index) in contact" :key="index">
+              </v-col>
+              <v-col cols="12" xs="12" sm="8" class="text-truncate">
+                <div
+                  v-for="(item, index) in contact"
+                  :key="index"
+                  class="word-wrap"
+                >
                   <v-icon
                     :size="12"
                     style="vertical-align: baseline !important;"
@@ -31,7 +35,7 @@
                   </v-icon>
                   <a
                     v-if="item.type === 'link'"
-                    class="grey--text text--darken-2 caption font-weight-thin"
+                    class="grey--text text--darken-2 text-body-2 font-weight-thin"
                     style="text-decoration: none;"
                     :href="item.description"
                     target="_blank"
@@ -48,28 +52,29 @@
                   </a>
                   <span
                     v-else
-                    class="grey--text text--darken-2 caption font-weight-thin"
+                    class="grey--text text--darken-2 text-body-2 font-weight-thin"
                   >
                     {{ item.description }}
                   </span>
                 </div>
-              </v-flex>
+              </v-col>
               <v-spacer></v-spacer>
               <v-divider vertical class="mx-3 hidden-xs-only"></v-divider>
               <v-img
                 :class="{
-                  'mt-2': $vuetify.breakpoint.xs
+                  'ma-2': $vuetify.breakpoint.xs
                 }"
                 :src="doGetImage(qrcode.name)"
                 :lazy-src="doGetImage(qrcode.name)"
-                :width="$vuetify.breakpoint.xs ? '45px' : '100px'"
+                :width="$vuetify.breakpoint.xs ? 100 : 130"
+                :max-width="$vuetify.breakpoint.xs ? 100 : 130"
               />
-            </v-layout>
-          </v-flex>
-        </v-layout>
+            </v-row>
+          </v-col>
+        </v-row>
       </v-card>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -100,3 +105,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.v-card > :last-child:not(.v-btn):not(.v-chip):not(.v-avatar) {
+  border-bottom-left-radius: none !important;
+  border-bottom-right-radius: none !important;
+}
+</style>

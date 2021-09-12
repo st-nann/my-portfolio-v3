@@ -1,28 +1,33 @@
 <template>
-  <v-layout
-    row
-    wrap
+  <v-row
     :class="{
       'pa-4': $vuetify.breakpoint.smAndDown,
       'ma-3 pa-5': $vuetify.breakpoint.mdAndUp
     }"
   >
-    <v-flex
-      xs12
-      sm4
+    <v-col
+      cols="12"
+      xs="12"
+      sm="4"
       :class="{
-        title: $vuetify.breakpoint.xs,
-        'display-1': $vuetify.breakpoint.smAndDown,
-        'display-2': $vuetify.breakpoint.mdAndUp
+        'text-h4': $vuetify.breakpoint.xs,
+        'text-h5': $vuetify.breakpoint.smAndDown,
+        'text-h3': $vuetify.breakpoint.mdAndUp
       }"
     >
       <div>My</div>
       <div>Characters</div>
       <v-divider class="my-3 line"></v-divider>
-    </v-flex>
-    <v-flex xs12 sm8>
-      <v-layout row wrap>
-        <v-flex xs6 sm4 v-for="(item, index) in items" :key="index">
+    </v-col>
+    <v-col cols="12" xs="12" sm="8">
+      <v-row>
+        <v-col
+          cols="12"
+          xs="6"
+          sm="4"
+          v-for="(item, index) in items"
+          :key="index"
+        >
           <v-hover class="clickable">
             <v-card
               slot-scope="{ hover }"
@@ -35,8 +40,8 @@
                     v-if="hover"
                     class="d-flex transition-fast-in-fast-out darkblue darken-4 v-card--reveal white--text"
                     :class="{
-                      caption: $vuetify.breakpoint.smAndDown,
-                      title: $vuetify.breakpoint.mdAndUp
+                      'text-body-2': $vuetify.breakpoint.smAndDown,
+                      'text-h5': $vuetify.breakpoint.mdAndUp
                     }"
                     style="height: 100%;"
                   >
@@ -46,16 +51,16 @@
               </v-img>
               <v-card-text
                 v-if="$vuetify.breakpoint.mdAndDown"
-                class="text-xs-center pa-2"
+                class="text-center pa-2"
               >
-                <div class="font-weight-bold caption">{{ item.name }}</div>
+                <div class="font-weight-bold text-body-2">{{ item.name }}</div>
               </v-card-text>
             </v-card>
           </v-hover>
-        </v-flex>
-      </v-layout>
-    </v-flex>
-  </v-layout>
+        </v-col>
+      </v-row>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

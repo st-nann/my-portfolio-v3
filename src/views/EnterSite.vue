@@ -1,28 +1,28 @@
 <template>
   <transition name="fade">
-    <v-layout row wrap>
-      <v-flex xs12 lg8>
-        <img class="ma-2 logo" :src="logo" />
-        <v-layout row wrap>
-          <v-flex
-            xs12
-            offset-xs0
-            lg8
-            offset-lg2
+    <v-row no-gutters>
+      <v-col cols="12" xs="12" lg="8">
+        <img class="ma-2 logo" :src="logo" alt="logo" />
+        <div class="d-flex">
+          <v-col
+            cols="12"
+            xs="12"
+            offset-xs="0"
+            lg="8"
+            offset-lg="2"
             :class="{
-              'ml-3 pr-2': $vuetify.breakpoint.xs,
-              'ml-5 pr-3':
+              'pl-8 pr-3': $vuetify.breakpoint.xs,
+              'pl-15 pr-6':
                 $vuetify.breakpoint.mdAndDown && !$vuetify.breakpoint.xs
             }"
           >
             <div
-              class="black--text"
               :class="{
                 'font-size-65': $vuetify.breakpoint.xs,
                 'font-size-112': $vuetify.breakpoint.smAndUp,
-                'title-mobile text-xs-right font-weight-bold':
+                'title-mobile text-right font-weight-bold':
                   $vuetify.breakpoint.mdAndDown,
-                'mt-5 pt-5 font-weight-regular': $vuetify.breakpoint.lgAndUp
+                'mt-12 pt-12 font-weight-regular': $vuetify.breakpoint.lgAndUp
               }"
             >
               sanyanee
@@ -30,8 +30,8 @@
             <div
               class="pl-1"
               :class="{
-                caption: $vuetify.breakpoint.xs,
-                'text-xs-right': $vuetify.breakpoint.mdAndDown
+                'text-body-2': $vuetify.breakpoint.xs,
+                'text-right': $vuetify.breakpoint.mdAndDown
               }"
             >
               サンヤーネィ・タビンボンラック
@@ -42,8 +42,8 @@
                 append
                 :to="{ path: '/aboutme' }"
                 color="cinnamon"
-                outline
-                round
+                outlined
+                rounded
                 dark
               >
                 KNOW MORE
@@ -53,72 +53,55 @@
               </v-btn>
             </div>
             <v-img
-              class="bg-img-mobile hidden-lg-and-up"
+              class="hidden-lg-and-up"
+              :src="doGetImage('home%2Fhome')"
+              :lazy-src="doGetImage('home%2Fhome')"
               width="100%"
-              :src="
-                doGetImage(
-                  'home%2Fhome',
-                  '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
-                )
-              "
-              :lazy-src="
-                doGetImage(
-                  'home%2Fhome',
-                  '51d79b5e-e9a3-4414-ab6a-8c77bdfae8e2'
-                )
-              "
-              style="z-index: 1;"
             />
-            <v-layout row wrap class="pl-1 pb-2 font-size-10 hidden-lg-and-up">
-              <v-flex xs7>
-                <v-layout row wrap>
-                  <v-flex xs12 class="subheading">
-                    {{ aboutme.birthday.year }} -
-                  </v-flex>
-                  <v-flex xs12>{{ aboutme.fullname }}</v-flex>
-                  <v-flex xs12>{{ aboutme.position }}</v-flex>
-                </v-layout>
-              </v-flex>
-              <v-flex xs5 class="text-xs-right">
+            <v-row class="font-size-10 hidden-lg-and-up" no-gutters>
+              <v-col cols="12" xs="7">
+                <v-row no-gutters>
+                  <v-col cols="12" class="text-h5">
+                    - {{ aboutme.birthday.year }}
+                  </v-col>
+                  <v-col cols="12">{{ aboutme.fullname }}</v-col>
+                  <v-col cols="12">{{ aboutme.position }}</v-col>
+                </v-row>
+              </v-col>
+              <v-col cols="12" xs="5" class="text-right">
                 <v-divider vertical></v-divider>
                 <v-btn
                   class="button-mobile mx-0"
                   append
                   :to="{ path: '/aboutme' }"
                   color="cinnamon"
-                  flat
-                  dark
-                  small
+                  text
                 >
                   KNOW MORE
                   <v-icon class="pl-2" size="16">
                     mdi-arrow-right-bold-circle-outline
                   </v-icon>
                 </v-btn>
-              </v-flex>
-            </v-layout>
-            <v-layout
-              row
-              wrap
-              class="pt-5 mt-5 text-xs-right hidden-md-and-down text-xs-right"
-            >
-              <v-flex xs12 class="pt-5 mt-5 title">
+              </v-col>
+            </v-row>
+            <v-row class="pt-15 mt-15 text-right hidden-md-and-down" no-gutters>
+              <v-col cols="12" class="pt-10 mt-10 text-h5 font-weight-thin">
                 - {{ aboutme.birthday.year }}
-              </v-flex>
-              <v-flex xs12>{{ aboutme.fullname }}</v-flex>
-              <v-flex xs12>{{ aboutme.position }}</v-flex>
-            </v-layout>
-          </v-flex>
-        </v-layout>
-      </v-flex>
-      <v-flex xs12 lg4 class="text-xs-right hidden-md-and-down">
+              </v-col>
+              <v-col cols="12">{{ aboutme.fullname }}</v-col>
+              <v-col cols="12">{{ aboutme.position }}</v-col>
+            </v-row>
+          </v-col>
+        </div>
+      </v-col>
+      <v-col cols="12" xs="12" lg="4" class="text-right hidden-md-and-down">
         <v-img
           width="505.3px"
           :src="doGetImage('home%2Fhome')"
           :lazy-src="doGetImage('home%2Fhome')"
         />
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </transition>
 </template>
 
@@ -150,5 +133,5 @@ export default {
   margin-top: -35px
 
 .button-mobile
-  margin-top: -30px
+  margin-top: -40px
 </style>

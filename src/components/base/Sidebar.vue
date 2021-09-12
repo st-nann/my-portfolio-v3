@@ -1,57 +1,63 @@
 <template>
   <v-navigation-drawer
     :value="toggle_sidebar"
+    :width="300"
     height="100%"
+    app
     persistent
     absolute
     temporary
     clipped
     enable-resize-watcher
   >
-    <v-layout row wrap class="text-xs-center mx-3">
-      <v-flex xs12 class="pt-4">
+    <v-row class="text-center mx-3" no-gutters>
+      <v-col cols="12" class="pt-8">
         <v-avatar class="elevation-7 avatar" color="offwhite" size="150">
           <img :src="logo" alt="avatar" />
         </v-avatar>
-      </v-flex>
-      <v-flex xs12 class="pt-3 font-weight-bold subheading">
+      </v-col>
+      <v-col cols="12" class="pt-3 font-weight-bold text-h6">
         Sanyanee Thawinvongrak
-      </v-flex>
-      <v-flex xs12 class="font-weigh-medium grey--text text--darken-3 caption">
+      </v-col>
+      <v-col
+        cols="12"
+        class="font-weigh-medium grey--text text--darken-3 text-text-body-2"
+      >
         ネン・サンヤーネィ・タビンボンラック
-      </v-flex>
-      <v-flex
-        xs12
-        class="font-size-10 font-weigh-thin grey--text text--darken-1 caption"
+      </v-col>
+      <v-col
+        cols="12"
+        class="font-size-10 font-weigh-thin grey--text text--darken-1 text-text-body-2"
       >
         st.sanyanee@hotmail.com
-      </v-flex>
-      <v-flex xs12 class="pt-2">
+      </v-col>
+      <v-col cols="12" class="pt-2">
         <v-btn
           color="cinnamon"
+          class="px-8"
           @click.native="updateToggleSidebar('home')"
           :to="{ path: '/' }"
           append
-          round
-          outline
+          rounded
+          outlined
           small
         >
           Home
         </v-btn>
-      </v-flex>
-      <v-flex xs12 class="pa-3">
+      </v-col>
+      <v-col cols="12" class="pa-3">
         <v-divider></v-divider>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
     <v-list dense class="hidden-lg-and-up">
-      <v-list-tile
+      <v-list-item
         v-for="(item, index) in menu"
         :key="index"
         :to="{ path: item.route }"
         append
       >
-        <v-list-tile-content class="mx-5">
-          <v-list-tile-title class="grey--text text--darken-1">
+        <v-list-item-content class="mx-5">
+          <v-list-item-title class="grey--text text--darken-1">
             <v-icon
               class="pr-1"
               :class="{
@@ -69,35 +75,35 @@
             >
               {{ item.name }}
             </span>
-          </v-list-tile-title>
-        </v-list-tile-content>
-      </v-list-tile>
+          </v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
     </v-list>
-    <v-layout row wrap justify-space-around class="pa-4">
-      <v-flex xs11>
-        <v-layout row wrap>
-          <v-flex xs4 v-for="(item, index) in images" :key="index">
+    <v-row justify-space-around class="pa-4">
+      <v-col cols="12" xs="11">
+        <v-row no-gutters>
+          <v-col xs="4" v-for="(item, index) in images" :key="index">
             <v-img
               :src="doGetImage(item.name)"
               :lazy-src="doGetImage(item.name)"
               width="74"
               :height="toggle_sidebar ? '97%' : ''"
             />
-          </v-flex>
-        </v-layout>
-      </v-flex>
-    </v-layout>
-    <v-layout row wrap class="text-xs-center mx-3">
-      <v-flex xs12 class="font-size-10 grey--text">
+          </v-col>
+        </v-row>
+      </v-col>
+    </v-row>
+    <v-row class="text-center mx-3">
+      <v-col cols="12" class="font-size-10 grey--text">
         <div>
           Portfolio website v3.0.0
         </div>
         <div>
-          <span class="caption">&copy;</span>
+          <span class="text-body-2">&copy;</span>
           {{ new Date().getFullYear() }} Sanyanee Thawinvongrak
         </div>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-navigation-drawer>
 </template>
 
