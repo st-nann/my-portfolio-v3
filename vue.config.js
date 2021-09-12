@@ -39,7 +39,7 @@ module.exports = {
       output: {
         publicPath:
           process.env.VUE_APP_NODE_ENV === 'production'
-            ? '/My-Portfolio-v3'
+            ? '/my-portfolio-v3'
             : ''
       }
     }
