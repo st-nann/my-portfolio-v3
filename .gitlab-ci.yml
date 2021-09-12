@@ -19,6 +19,8 @@ github:
   script:
     - git clone --bare https://gitlab.com/my-portfolio-exprerience/my-portfolio-v3.git
     - cd my-portfolio-v3.git
+    - git config --global user.email "$GITHUB_PRIVATE_EMAIL"
+    - git reset --soft HEAD~1
     - git push --mirror https://$GITHUB_ACCESS_TOKEN@github.com/$GITHUB_USERNAME/my-portfolio-v3.git
     - cd ..
     - rm -rf my-portfolio-v3.git
