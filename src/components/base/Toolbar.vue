@@ -1,33 +1,30 @@
 <template>
-  <v-toolbar class="white" fixed light flat>
-    <v-toolbar-side-icon
-      class="black--text"
-      @click.native.stop="updateToggleSidebar()"
-    ></v-toolbar-side-icon>
+  <v-app-bar app fixed light flat color="white">
+    <v-app-bar-nav-icon @click.native.stop="updateToggleSidebar()" />
     <v-spacer class="hidden-sm-and-up"></v-spacer>
-    <v-toolbar-title class="ml-0">
+    <v-toolbar-title>
       <a href="/">
-        <img class="mt-2 logo" :src="logo" />
+        <img class="mt-2 logo" :src="logo" alt="image" />
       </a>
     </v-toolbar-title>
-    <v-divider class="ml-3 mr-3 hidden-xs-only" inset vertical></v-divider>
-    <span class="headline font-weight-bold hidden-xs-only">Sanyanee</span>
+    <v-divider class="mx-4 hidden-xs-only" inset vertical></v-divider>
+    <h2 class="hidden-xs-only">Sanyanee</h2>
     <v-spacer class="hidden-xs-only"></v-spacer>
-    <v-toolbar-items v-for="(item, index) in menu" :key="index">
-      <v-btn
-        class="menu font-weight-bold hidden-md-and-down"
-        append
-        :to="{ path: item.route }"
-        color="black"
-        :ripple="false"
-        flat
-      >
-        <span :class="{ 'text-decoration': $route.path === item.route }">
-          {{ item.name }}
-        </span>
-      </v-btn>
-    </v-toolbar-items>
-  </v-toolbar>
+    <v-btn
+      v-for="(item, index) in menu"
+      :key="index"
+      class="menu font-weight-bold hidden-md-and-down"
+      append
+      :to="{ path: item.route }"
+      color="black"
+      :ripple="false"
+      text
+    >
+      <span :class="{ 'text-decoration': $route.path === item.route }">
+        {{ item.name }}
+      </span>
+    </v-btn>
+  </v-app-bar>
 </template>
 
 <script>

@@ -6,7 +6,7 @@
       :title="title"
       :tabs="frameworks"
     ></TitleMenuToggle>
-    <List :title="title" :selected="selected"></List>
+    <List class="px-3" :title="title" :selected="selected"></List>
   </v-card>
 </template>
 

@@ -1,20 +1,20 @@
 <template>
   <div>
-    <v-layout row wrap v-for="(item, index) in lists" :key="index">
-      <v-flex xs12 sm4>
-        <p class="caption pl-4 mobile-content mb-1">{{ item.name }}</p>
-      </v-flex>
-      <v-flex xs9 sm6>
+    <v-row v-for="(item, index) in lists" :key="index" no-gutters>
+      <v-col cols="12" xs="12" sm="4">
+        <p class="text-body-2 pl-4 mobile-content mb-1">{{ item.name }}</p>
+      </v-col>
+      <v-col cols="12" xs="9" sm="6">
         <v-progress-linear
           v-model="value[index]"
           color="cinnamon lighten-1"
           class="my-2 ml-4"
         ></v-progress-linear>
-      </v-flex>
-      <v-flex xs3 sm2>
-        <p class="mb-0 caption text-xs-center">{{ item.value }} %</p>
-      </v-flex>
-    </v-layout>
+      </v-col>
+      <v-col cols="12" xs="3" sm="2">
+        <p class="mb-0 text-body-2 text-center">{{ item.value }} %</p>
+      </v-col>
+    </v-row>
   </div>
 </template>
 

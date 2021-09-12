@@ -6,11 +6,11 @@
       :title="title"
       :tabs="languages"
     ></TitleMenuToggle>
-    <v-layout row wrap>
-      <v-flex xs12>
+    <v-row class="px-3">
+      <v-col cols="12">
         <RadarChart :chartData="chartData"></RadarChart>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 
@@ -40,7 +40,6 @@ export default {
       const title = _.lowerCase(this.title)
       let label = []
       let value = []
-      let datasets = {}
       _.forEach(data[title], item => {
         _.forEach(item[this.selected], res => {
           label.push(res.name)

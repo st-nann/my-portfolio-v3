@@ -1,29 +1,33 @@
 <template>
-  <v-layout row wrap class="pa-4">
-    <v-flex xs12 md10 offset-md1>
-      <TitleMenuToggle
-        class="text-xs-center"
-        ref="menu"
-        default="coding"
-        :tabs="categories"
-        :disabled_class_menu="true"
-      ></TitleMenuToggle>
-      <v-layout row wrap>
-        <v-flex xs12>
-          <v-card class="border-card-title">
-            <v-img
-              :src="doGetImage(cover.name)"
-              :lazy-src="doGetImage(cover.name)"
-              width="100%"
-            />
-          </v-card>
-        </v-flex>
-      </v-layout>
-      <transition name="fade">
-        <List :selected="selected"></List>
-      </transition>
-    </v-flex>
-  </v-layout>
+  <v-row class="pb-8 px-4">
+    <v-col cols="12" xs="12" md="10" offset-md="1">
+      <v-card class="px-4 pt-10 pb-15 elevation-8">
+        <v-container grid-list-md :class="{ 'pa-0': $vuetify.breakpoint.xs }">
+          <TitleMenuToggle
+            class="text-center"
+            ref="menu"
+            default="coding"
+            :tabs="categories"
+            :disabled_class_menu="true"
+          ></TitleMenuToggle>
+          <v-row>
+            <v-col cols="12">
+              <v-card class="border-card-title" flat>
+                <v-img
+                  :src="doGetImage(cover.name)"
+                  :lazy-src="doGetImage(cover.name)"
+                  width="100%"
+                />
+              </v-card>
+            </v-col>
+          </v-row>
+          <transition name="fade">
+            <List :selected="selected"></List>
+          </transition>
+        </v-container>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
