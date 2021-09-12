@@ -1,13 +1,13 @@
 <template>
-  <v-card class="pa-2 card-border card-frame" flat>
-    <v-card-text class="title mx-2 mb-3">Operating System (OS)</v-card-text>
-    <v-layout row wrap class="text-xs-center">
-      <v-flex xs12 sm4 v-for="(item, index) in os" :key="index">
+  <v-card class="my-2 pa-2 card-border card-frame" flat>
+    <v-card-text class="text-h5 pa-3">Operating System (OS)</v-card-text>
+    <v-row class="text-center">
+      <v-col cols="12" xs="12" sm="4" v-for="(item, index) in os" :key="index">
         <v-progress-circular
-          v-bind:size="140"
-          v-bind:width="14"
-          v-bind:rotate="-90"
-          v-bind:value="value[index]"
+          :size="140"
+          :width="14"
+          :rotate="-90"
+          :value="value[index]"
           class="light-blue--text text--lighten-3"
         >
           <v-img
@@ -16,11 +16,11 @@
             width="65px"
           />
         </v-progress-circular>
-        <v-card-text class="caption mb-1">
+        <v-card-text class="text-body-2 mb-1">
           {{ item.name }} ({{ item.value }}%)
         </v-card-text>
-      </v-flex>
-    </v-layout>
+      </v-col>
+    </v-row>
   </v-card>
 </template>
 

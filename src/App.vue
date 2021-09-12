@@ -1,14 +1,16 @@
 <template>
-  <v-app id="app" style="height:auto">
+  <v-app>
     <template v-if="nolayout">
       <router-view></router-view>
     </template>
     <template v-else>
+      <Sidebar></Sidebar>
       <Toolbar></Toolbar>
-      <main class="ma-0">
-        <Sidebar></Sidebar>
-        <Loading v-if="loading"></Loading>
-        <router-view v-else style="margin-top: 65px;"></router-view>
+      <main>
+        <v-container fluid>
+          <Loading v-if="loading"></Loading>
+          <router-view v-else style="margin-top: 65px;"></router-view>
+        </v-container>
       </main>
     </template>
   </v-app>
@@ -49,14 +51,11 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import '~vuetify/src/stylus/main'
+<style lang="sass">
+@import '~vuetify/src/styles/main.sass'
 
 #app
   background: #ffffff
-
-.application
-  font-family: 'Didact Gothic', sans-serif !important
 
 a
   text-decoration: none
@@ -103,6 +102,9 @@ img.logo
   border-radius: 50px
   padding: 4px
 
+.v-btn
+  text-transform: none !important
+
 .btn-active.v-btn--active
   opacity: .8 !important
   border-radius: 50px !important
@@ -123,8 +125,11 @@ img.logo
 .v-progress-linear
   border-radius: 50px
 
-.v-dialog, .border-card-title
+.v-dialog
   border-radius: 15px !important
+
+.border-card-title
+  border-radius: 5px !important
 
 .search.v-text-field.v-text-field--enclosed>.v-input__control>.v-input__slot
   border-radius: 50px !important
@@ -132,6 +137,12 @@ img.logo
 canvas
   width: 100% !important
   height: 300px !important
+
+.word-wrap
+  white-space: nowrap
+  width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
 
 ::-webkit-scrollbar-track
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3) !important

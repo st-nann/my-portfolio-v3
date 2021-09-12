@@ -1,43 +1,46 @@
 <template>
-  <v-layout row wrap>
-    <v-flex xs6>
-      <v-card-text class="title mx-0 pa-3">
+  <v-row align="center">
+    <v-col xs="6">
+      <v-card-text class="text-h5 mx-0 pa-3">
         {{ title }}
       </v-card-text>
-    </v-flex>
-    <v-flex
+    </v-col>
+    <v-col
       v-if="menu"
-      xs6
-      :class="{
-        'menu ma-3': $vuetify.breakpoint.smAndUp,
-        'text-xs-right pt-3': $vuetify.breakpoint.xs
-      }"
+      xs="6"
+      :class="[
+        'text-right',
+        {
+          'menu ma-3': $vuetify.breakpoint.smAndUp,
+          'pt-3': $vuetify.breakpoint.xs
+        }
+      ]"
     >
       <v-menu offset-y>
-        <v-btn
-          slot="activator"
-          class="ma-0 caption font-weight-medium btn-menu-opacity"
-          color="#3f52ad"
-          flat
-          round
-          small
-        >
-          {{ item.text }}
-          <v-icon color="#3f52ad" :size="15">keyboard_arrow_down</v-icon>
-        </v-btn>
+        <template v-slot:activator="{ on }">
+          <v-btn
+            v-on="on"
+            class="ma-0 text-body-2 font-weight-medium btn-menu-opacity elevation-0 lightpurple--text"
+            rounded
+            small
+          >
+            {{ item.text }}
+            <v-icon color="lightpurple" :size="15">keyboard_arrow_down</v-icon>
+          </v-btn>
+        </template>
         <v-list class="clickable" dense>
-          <v-list-tile
+          <v-list-item
             v-for="(item, index) in menu"
             :key="index"
-            class="caption"
+            class="text-body-2"
             @click.native="doCheangeMenu(item)"
           >
-            <v-list-tile-title>{{ item.text }}</v-list-tile-title>
-          </v-list-tile>
+            <v-list-item-title>{{ item.text }}</v-list-item-title>
+          </v-list-item>
         </v-list>
       </v-menu>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

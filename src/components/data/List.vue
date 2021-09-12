@@ -1,15 +1,15 @@
 <template>
-  <v-layout row wrap class="text-xs-center">
-    <v-flex xs4 v-for="(item, index) in lists" :key="index">
+  <v-row class="text-center px-3">
+    <v-col xs="4" lg="4" v-for="(item, index) in lists" :key="index">
       <img
         :src="doGetImage(item.image.name)"
         width="40px"
         height="40"
         alt="icon"
       />
-      <p class="caption">{{ item.name }}</p>
-    </v-flex>
-  </v-layout>
+      <p class="text-body-2">{{ item.name }}</p>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -1,29 +1,29 @@
 <template>
-  <v-layout row wrap class="pa-4">
-    <v-flex xs12 md10 offset-md1>
-      <v-card class="px-4 pt-4 pb-5 elevation-8">
+  <v-row class="pb-8 px-4">
+    <v-col cols="12" xs="12" md="10" offset-md="1">
+      <v-card class="px-4 pt-10 pb-15 elevation-8">
         <v-container grid-list-md :class="{ 'pa-0': $vuetify.breakpoint.xs }">
-          <v-layout row wrap>
-            <v-flex xs12 md12>
+          <v-row>
+            <v-col cols="12">
               <OperatingSystem></OperatingSystem>
-            </v-flex>
-            <v-flex xs12 lg6>
+            </v-col>
+            <v-col cols="12" xs="12" lg="6">
               <Languages></Languages>
-            </v-flex>
-            <v-flex xs12 lg6>
+            </v-col>
+            <v-col cols="12" xs="12" lg="6">
               <Frameworks></Frameworks>
-            </v-flex>
-            <v-flex xs12 lg4>
+            </v-col>
+            <v-col cols="12" xs="12" lg="4">
               <Library></Library>
-            </v-flex>
-            <v-flex xs12 lg8>
+            </v-col>
+            <v-col cols="12" xs="12" lg="8">
               <Tools></Tools>
-            </v-flex>
-          </v-layout>
+            </v-col>
+          </v-row>
         </v-container>
       </v-card>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
