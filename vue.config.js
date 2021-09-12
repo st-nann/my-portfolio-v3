@@ -1,3 +1,5 @@
+const path = require('path')
+
 process.env.VUE_APP_VERSION = require('./package.json').version
 
 function getImageFromStorse(name) {
@@ -20,6 +22,30 @@ process.env.VUE_APP_LOGO_NOTEXT_WHITE = getImageFromStorse(
 )
 
 module.exports = {
+  chainWebpack(config) {
+    config
+      .entry('app')
+      .clear()
+      .add('./src/main.ts')
+      .end()
+    config.resolve.alias
+      // .set('~', path.join(__dirname, './src'))
+      .set('@', path.join(__dirname, './src'))
+    // .set('#', path.join(__dirname, './src/modules'))
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        sassOptions: {
+          includePaths: [path.resolve(__dirname, 'src/')],
+          indentedSyntax: true
+        },
+        prependData: '@import "~@/assets/sass/main.scss"'
+      }
+    }
+  },
+  assetsDir: '@/assets/',
+  transpileDependencies: ['vuetify'],
   configureWebpack: {
     mode: process.env.VUE_APP_MODE
   },
@@ -39,7 +65,7 @@ module.exports = {
       output: {
         publicPath:
           process.env.VUE_APP_NODE_ENV === 'production'
-            ? '/My-Portfolio-v3'
+            ? '/my-portfolio-v3'
             : ''
       }
     }

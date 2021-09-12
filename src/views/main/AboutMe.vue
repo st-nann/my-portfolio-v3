@@ -1,17 +1,16 @@
 <template>
-  <v-layout
-    row
-    wrap
+  <v-row
     :class="{
-      'pa-5': $vuetify.breakpoint.smAndUp,
-      'pa-3': $vuetify.breakpoint.xs
+      'pt-3 px-15': $vuetify.breakpoint.smAndUp,
+      'pb-6 px-6': $vuetify.breakpoint.xs
     }"
   >
-    <v-flex xs12 class="mb-3">
-      <v-layout row wrap>
-        <v-flex xs12 class="elevation-24">
+    <v-col cols="12" class="mb-3">
+      <v-row no-gutters>
+        <v-col cols="12" class="elevation-24">
           <v-carousel
             class="elevation-0"
+            :show-arrows="false"
             :interval="8000"
             :touch="{
               left: () => swipe('Left'),
@@ -28,13 +27,13 @@
               class="carousel-item offwhite"
             ></v-carousel-item>
           </v-carousel>
-        </v-flex>
-      </v-layout>
-    </v-flex>
-    <v-flex xs12>
+        </v-col>
+      </v-row>
+    </v-col>
+    <v-col cols="12">
       <WhoAmI></WhoAmI>
-    </v-flex>
-  </v-layout>
+    </v-col>
+  </v-row>
 </template>
 
 <script>

@@ -10,7 +10,7 @@ TITLE                           string      title website
 FAVICON_NAME                    string      favicon\'s location name on firebase storage
 LOGO_BLACK_NAME                 string      black logo\'s location name on firebase storage
 LOGO_WHITE_NAME                 string      white logo\'s location name on firebase storage
-LOGO_NOTEXT_BLACK_NAME          string      black logo(no text)\'s location name on firebase storage
+LOGO_NOTEXT_BLACK_NAME          string      black logo (no text)\'s location name on firebase storage
 LOGO_NOTEXT_WHITE_NAME          string      white logo\'s location name on firebase storage
 ```
 
