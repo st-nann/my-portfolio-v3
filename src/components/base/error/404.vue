@@ -1,11 +1,7 @@
 <template>
   <v-layout row wrap align-center>
     <v-flex xs12 lg6>
-      <img
-        :src="doGetImage(error.notfound.name)"
-        width="100%"
-        alt="icon"
-      />
+      <img :src="doGetImage(error.notfound.name)" width="100%" alt="icon" />
     </v-flex>
     <v-flex xs11 lg5 offset-xs1 class="mb-5">
       <v-card-text>
