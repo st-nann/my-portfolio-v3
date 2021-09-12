@@ -6,9 +6,19 @@ cache:
     - node_modules
 
 stages:
+  - github
   - install
   - build
   - deploy
+
+github:
+  stage: github
+  script:
+    - git clone --bare https://gitlab.com/my-portfolio-exprerience/my-portfolio-v3.git
+    - cd my-portfolio-v3.git
+    - git push --mirror https://$GITHUB_USERNAME@github.com/st-nann/my-portfolio-v3.git
+    - cd ..
+    - rm -rf my-portfolio-v3.git
 
 install:
   stage: install
