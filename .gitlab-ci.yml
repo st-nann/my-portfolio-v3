@@ -6,18 +6,9 @@ cache:
     - node_modules
 
 stages:
-  - github
   - install
   - build
   - deploy
-
-github:
-  stage: github
-  only:
-    - master
-  script:
-    - git remote add github https://github.com/st-nann/my-portfolio-v3.git
-    - git push --set-upstream github $BRANCH_NAME
 
 install:
   stage: install
