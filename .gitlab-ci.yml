@@ -6,7 +6,6 @@ cache:
     - node_modules
 
 stages:
-  - mirror_github
   - install
   - build
   - deploy
