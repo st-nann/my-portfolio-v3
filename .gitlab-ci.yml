@@ -17,8 +17,7 @@ github:
     - master
   script:
     - git remote add github https://github.com/st-nann/my-portfolio-v3.git
-    - git push github development
-    - git push github master
+    - git push
 
 install:
   stage: install
