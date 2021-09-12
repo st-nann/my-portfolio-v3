@@ -13,6 +13,9 @@ stages:
 
 github:
   stage: github
+  only:
+    - development
+    - master
   script:
     - git clone --bare https://gitlab.com/my-portfolio-exprerience/my-portfolio-v3.git
     - cd my-portfolio-v3.git
