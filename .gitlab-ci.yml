@@ -6,6 +6,7 @@ cache:
     - node_modules
 
 stages:
+  - github
   - install
   - build
   - deploy
