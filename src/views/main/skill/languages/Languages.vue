@@ -8,7 +8,7 @@
     ></TitleMenuToggle>
     <v-row class="px-3">
       <v-col cols="12">
-        <RadarChart :chartData="chartData"></RadarChart>
+        <RadarChart :chartData="chartData" :level="level"></RadarChart>
       </v-col>
     </v-row>
   </v-card>
@@ -30,6 +30,9 @@ export default {
     RadarChart
   },
   computed: {
+    level() {
+      return data.level
+    },
     title() {
       return 'Languages'
     },
@@ -52,6 +55,7 @@ export default {
           {
             label: 'languages',
             fill: true,
+            barPercentage: 1,
             backgroundColor: 'rgb(255, 214, 51, .2)',
             borderColor: 'rgb(255, 153, 51, .6)',
             borderWidth: '1px',

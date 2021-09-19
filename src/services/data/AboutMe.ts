@@ -13,6 +13,26 @@ module.exports = {
     { name: 'aboutme%2Fcarousel%2Fcarousel-004' },
     { name: 'aboutme%2Fcarousel%2Fcarousel-005' }
   ],
+  interests: [
+    {
+      name: 'Senior Frontend Developer',
+      image: {
+        name: 'aboutme%2Finterest%2FFrontend'
+      }
+    },
+    {
+      name: 'Backend Developer',
+      image: {
+        name: 'aboutme%2Finterest%2FBackend'
+      }
+    },
+    {
+      name: 'Fullstack Developer',
+      image: {
+        name: 'aboutme%2Finterest%2FFullstack'
+      }
+    }
+  ],
   characters: [
     {
       name: 'Developer',
