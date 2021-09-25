@@ -1,3 +1,4 @@
+
 image: node:latest
 
 cache:
@@ -11,8 +12,8 @@ stages:
   - build
   - deploy
 
-github:
-  stage: github-push
+github-push:
+  stage: github
   only:
     - master
   script:
