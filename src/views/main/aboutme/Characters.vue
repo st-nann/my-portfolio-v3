@@ -8,7 +8,7 @@
     <v-col
       cols="12"
       xs="12"
-      sm="4"
+      lg="4"
       :class="{
         'text-h4': $vuetify.breakpoint.xs,
         'text-h5': $vuetify.breakpoint.smAndDown,
@@ -19,13 +19,13 @@
       <div>Characters</div>
       <v-divider class="my-3 line"></v-divider>
     </v-col>
-    <v-col cols="12" xs="12" sm="8">
+    <v-col cols="12" xs="12" lg="8">
       <v-row>
         <v-col
           cols="12"
           xs="6"
           sm="4"
-          v-for="(item, index) in items"
+          v-for="(item, index) in characters"
           :key="index"
         >
           <v-hover class="clickable">
@@ -38,7 +38,7 @@
                 <v-expand-transition>
                   <div
                     v-if="hover"
-                    class="d-flex transition-fast-in-fast-out darkblue darken-4 v-card--reveal white--text"
+                    class="d-flex transition-fast-in-fast-out white v-card--reveal white--text"
                     :class="{
                       'text-body-2': $vuetify.breakpoint.smAndDown,
                       'text-h5': $vuetify.breakpoint.mdAndUp
@@ -68,7 +68,7 @@ import data from '@/services/data/AboutMe'
 import { getFileFromStore } from '@/services/functions/Services'
 export default {
   computed: {
-    items() {
+    characters() {
       return data ? data.characters : []
     }
   },

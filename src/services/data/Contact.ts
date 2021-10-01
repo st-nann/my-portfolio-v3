@@ -22,6 +22,16 @@ module.exports = {
       type: 'link'
     },
     {
+      icon: 'gitlab',
+      description: 'https://gitlab.com/users/st-nann/groups',
+      type: 'link'
+    },
+    {
+      icon: 'bitbucket',
+      description: 'https://bitbucket.org/st-nann/workspace/projects/',
+      type: 'link'
+    },
+    {
       icon: 'linkedin-box',
       description:
         'https://www.linkedin.com/in/sanyanee-thawinvongrak-628229144',

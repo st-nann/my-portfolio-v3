@@ -6,14 +6,21 @@
       :title="title"
       :tabs="frameworks"
     ></TitleMenuToggle>
-    <List class="px-3" :title="title" :selected="selected"></List>
+    <v-row class="px-3">
+      <v-col cols="12">
+        <ProgressBarHorizontal :chartData="chartData" :level="level" />
+      </v-col>
+    </v-row>
+    <!-- <List class="px-3" :title="title" :selected="selected"></List> -->
   </v-card>
 </template>
 
 <script>
 import data from '@/services/data/Skill'
+import base from '@/services/data/Base'
 import TitleMenuToggle from '@/components/title/Toggle'
-import List from '@/views/main/skill/frameworks/tabs/List'
+import ProgressBarHorizontal from '@/components/chart/ProgressBarHorizontal'
+// import List from '@/views/main/skill/frameworks/tabs/List'
 
 export default {
   data() {
@@ -23,14 +30,49 @@ export default {
   },
   components: {
     TitleMenuToggle,
-    List
+    ProgressBarHorizontal
+    // List
   },
   computed: {
+    level() {
+      return data.level
+    },
     title() {
       return 'Frameworks'
     },
     frameworks() {
       return data.menu.frameworks
+    },
+    backgroundColor() {
+      return base.chart.backgroundColor
+    },
+    borderColor() {
+      return base.chart.borderColor
+    },
+    chartData() {
+      const title = _.lowerCase(this.title)
+      let label = []
+      let value = []
+      _.forEach(data[title], item => {
+        _.forEach(item[this.selected], res => {
+          label.push(res.name)
+          value.push(res.value)
+        })
+      })
+      return {
+        labels: label,
+        datasets: [
+          {
+            label: 'frameworks',
+            fill: true,
+            barPercentage: 1,
+            backgroundColor: this.backgroundColor,
+            borderColor: this.borderColor,
+            borderWidth: 1,
+            data: value
+          }
+        ]
+      }
     }
   },
   mounted() {
