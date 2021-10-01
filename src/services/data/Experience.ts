@@ -8,9 +8,23 @@ module.exports = {
   experience: [
     {
       id: 'year_2021',
+      datetime: '06 Jun 2021 – 31 Aug 2021',
+      title: 'Freelance',
+      subtitle:
+        'ระบบบริหารจัดการบริบาลผู้สูงอายุของเครือข่ายวิสาหกิจชุมชน (Clinical Research Associate Management System - CRA)',
+      detail: [
+        {
+          position: 'Freelancer',
+          description:
+            'Develop Clinical Research Associate Management System frontend with Vue.js and Vuetify (CSS) and backend with Node.js.'
+        }
+      ]
+    },
+    {
+      id: 'year_2021',
       datetime: '16 Mar 2021 – Present',
       title: 'Senior Programmer (Frontend / Backend)',
-      subtitle: '[Ascend] EGG Digital Company Limited. (เอ้ก ดิจิทัล)',
+      subtitle: 'EGG Digital Company Limited. (เอ้ก ดิจิทัล) - Ascend Commerce',
       detail: [
         {
           position: 'Senior Programmer (Frontend)',
