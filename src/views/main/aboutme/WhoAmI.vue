@@ -70,6 +70,8 @@
           </v-col>
         </v-row>
         <v-divider class="mx-4"></v-divider>
+        <Interest></Interest>
+        <v-divider class="mx-4"></v-divider>
         <Characters></Characters>
       </v-card>
     </v-col>
@@ -77,10 +79,12 @@
 </template>
 
 <script>
+import Interest from '@/views/main/aboutme/Interest'
 import Characters from '@/views/main/aboutme/Characters'
 
 export default {
   components: {
+    Interest,
     Characters
   }
 }

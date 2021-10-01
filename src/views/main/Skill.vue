@@ -4,9 +4,9 @@
       <v-card class="px-4 pt-10 pb-15 elevation-8">
         <v-container grid-list-md :class="{ 'pa-0': $vuetify.breakpoint.xs }">
           <v-row>
-            <v-col cols="12">
+            <!-- <v-col cols="12">
               <OperatingSystem></OperatingSystem>
-            </v-col>
+            </v-col> -->
             <v-col cols="12" xs="12" lg="6">
               <Languages></Languages>
             </v-col>
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import OperatingSystem from '@/views/main/skill/os/OperatingSystem'
+// import OperatingSystem from '@/views/main/skill/os/OperatingSystem'
 import Languages from '@/views/main/skill/languages/Languages'
 import Frameworks from '@/views/main/skill/frameworks/Frameworks'
 import Library from '@/views/main/skill/library/Library'
@@ -40,7 +40,7 @@ export default {
     }
   },
   components: {
-    OperatingSystem,
+    // OperatingSystem,
     Languages,
     Frameworks,
     Library,
