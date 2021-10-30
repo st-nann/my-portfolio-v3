@@ -27,7 +27,7 @@ github-push:
     - cd ..
     - rm -rf my-portfolio-v3.git
 
-  sonarqube:
+sonarqube:
   stage: sonarqube
   image: 
     name: sonarsource/sonar-scanner-cli:latest
