@@ -8,6 +8,7 @@ cache:
 
 stages:
   - github
+  - sonarqube
   - install
   - build
   - deploy
@@ -25,6 +26,24 @@ github-push:
     - git push --mirror https://$MIRROR_USERNAME:$BITBUCKET_ACCESS_TOKEN@bitbucket.org/$MIRROR_USERNAME/my-portfolio-v3.git
     - cd ..
     - rm -rf my-portfolio-v3.git
+
+sonarqube:
+  stage: sonarqube
+  only:
+    - master
+  image:
+    name: sonarsource/sonar-scanner-cli:latest
+    entrypoint: [""]
+  variables:
+    SONAR_USER_HOME: "${CI_PROJECT_DIR}/.sonar"  # Defines the location of the analysis task cache
+    GIT_DEPTH: "0"  # Tells git to fetch all the branches of the project, required by the analysis task
+  script:
+    - sonar-scanner -Dsonar.qualitygate.wait=true
+  cache:
+    key: "${CI_JOB_NAME}"
+    paths:
+      - .sonar/cache
+  allow_failure: true
 
 install:
   stage: install
