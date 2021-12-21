@@ -29,12 +29,12 @@ module.exports = {
         {
           position: 'Senior Programmer (Frontend)',
           description:
-            'Develop EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Develop Report Worker with Javascript.'
+            'Develop EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Develop Report Worker with Javascript. Node.js Service test with jest.js and PHP Service test with phpunit.'
         },
         {
           position: 'Senior Programmer (Backend)',
           description:
-            'Develop Microservice Backend with PHP Laravel. And Develop Report and Product Worker with PHP Laravel and Node.js.'
+            'Develop Microservice Backend with PHP Laravel. And Develop Report and Product Worker with PHP Laravel and Node.js. Node.js Service test with jest.js and PHP Service test with phpunit.'
         }
       ]
     },
