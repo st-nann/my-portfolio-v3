@@ -93,7 +93,11 @@ module.exports = {
         { name: 'PHP LARAVEL', value: 3 },
         { name: 'TYPESCRIPT', value: 3 }
       ],
-      testing: [{ name: 'ROBOT', value: 1 }]
+      testing: [
+        { name: 'Jest.js', value: 3 },
+        { name: 'phpUnit', value: 3 },
+        { name: 'ROBOT', value: 1 }
+      ]
     }
   ],
   library: [
