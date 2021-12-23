@@ -10,20 +10,20 @@
     <v-divider class="mx-4 hidden-xs-only" inset vertical></v-divider>
     <h2 class="hidden-xs-only">Sanyanee</h2>
     <v-spacer class="hidden-xs-only"></v-spacer>
-    <v-toolbar-items v-for="(item, index) in menu" :key="index">
-      <v-btn
-        class="menu font-weight-bold hidden-md-and-down"
-        append
-        :to="{ path: item.route }"
-        color="black"
-        :ripple="false"
-        text
-      >
-        <span :class="{ 'text-decoration': $route.path === item.route }">
-          {{ item.name }}
-        </span>
-      </v-btn>
-    </v-toolbar-items>
+    <v-btn
+      v-for="(item, index) in menu"
+      :key="index"
+      class="menu font-weight-bold hidden-md-and-down"
+      append
+      :to="{ path: item.route }"
+      color="black"
+      :ripple="false"
+      text
+    >
+      <span :class="{ 'text-decoration': $route.path === item.route }">
+        {{ item.name }}
+      </span>
+    </v-btn>
   </v-app-bar>
 </template>
 
