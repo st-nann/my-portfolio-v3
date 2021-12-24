@@ -39,9 +39,7 @@ export default {
   },
   computed: {
     logo() {
-      return process.env.VUE_APP_LOGO_BLACK
-        ? process.env.VUE_APP_LOGO_BLACK
-        : ''
+      return process.env.VUE_APP_LOGO_BLACK ?? ''
     }
   },
   methods: {

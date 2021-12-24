@@ -124,9 +124,7 @@ export default {
       toggle_sidebar: state => state.toggle_sidebar
     }),
     logo() {
-      return process.env.VUE_APP_LOGO_NOTEXT_BLACK
-        ? process.env.VUE_APP_LOGO_NOTEXT_BLACK
-        : ''
+      return process.env.VUE_APP_LOGO_NOTEXT_BLACK ?? ''
     }
   },
   methods: {
