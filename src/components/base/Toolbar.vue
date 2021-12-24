@@ -13,7 +13,7 @@
     <v-btn
       v-for="(item, index) in menu"
       :key="index"
-      class="menu font-weight-bold hidden-md-and-down"
+      class="menu-toolbar font-weight-bold hidden-md-and-down"
       append
       :to="{ path: item.route }"
       color="black"
@@ -51,8 +51,8 @@ export default {
 </script>
 
 <style lang="stylus">
-.menu.v-btn--active:before,
-.menu.v-btn:hover:before,
-.menu.v-btn:focus:before
+.menu-toolbar.v-btn--active:before,
+.menu-toolbar.v-btn:hover:before,
+.menu-toolbar.v-btn:focus:before
   background-color: transparent
 </style>
