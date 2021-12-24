@@ -60,7 +60,7 @@ build:
   only:
     - master
   script:
-    - yarn build:production
+    - yarn build:production-gitlab
   dependencies:
     - install
   artifacts:
