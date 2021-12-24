@@ -41,7 +41,7 @@
                     target="_blank"
                   >
                     {{
-                      item.display_text ?? item.description
+                      item.display_text ? item.display_text : item.description
                     }}
                     <v-icon
                       :size="9"
