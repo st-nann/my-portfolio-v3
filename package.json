@@ -7,7 +7,7 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider npx cross-env NODE_ENV=development vue-cli-service build --mode development",
     "build:staging": "NODE_OPTIONS=--openssl-legacy-provider npx cross-env NODE_ENV=staging vue-cli-service build --mode staging",
     "build:production-gitlab": "NODE_OPTIONS=--openssl-legacy-provider npx cross-env NODE_ENV=production vue-cli-service build --mode production",
-    "build:production": "NODE_OPTIONS=--openssl-legacy-provider npx cross-env NODE_ENV=production vue-cli-service build --mode production",
+    "build:production": "npx cross-env NODE_ENV=production vue-cli-service build --mode production",
     "inspect": "vue-cli-service inspect --mode",
     "lint": "vue-cli-service lint",
     "test:e2e": "vue-cli-service test:e2e",
