@@ -5,7 +5,10 @@ module.exports = {
     browser: true
   },
   extends: [
-    "plugin:vue/essential",
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
     "@vue/prettier",
     "@vue/typescript"
   ],
@@ -17,7 +20,7 @@ module.exports = {
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off"
   },
-  parser: "@typescript-eslint/parser",
+  parser: "vue-eslint-parser",
   parserOptions: {
     cmaVersion: 12,
     sourceType: 'module',
