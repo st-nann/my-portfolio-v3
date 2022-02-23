@@ -121,7 +121,7 @@ export default {
   },
   computed: {
     ...mapState('components', {
-      toggle_sidebar: state => state.toggle_sidebar
+      toggle_sidebar: (state) => state.toggle_sidebar
     }),
     logo() {
       return process.env.VUE_APP_LOGO_NOTEXT_BLACK ?? ''

@@ -119,7 +119,7 @@ export default {
         if (this.search === '') {
           return data[this.selected]
         }
-        return _.filter(data[this.selected], item =>
+        return _.filter(data[this.selected], (item) =>
           _.includes(_.lowerCase(item.title), _.lowerCase(this.search))
         )
       }

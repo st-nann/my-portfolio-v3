@@ -91,7 +91,8 @@ module.exports = {
       backend: [
         { name: 'NODE.JS', value: 4 },
         { name: 'PHP LARAVEL', value: 3 },
-        { name: 'TYPESCRIPT', value: 3 }
+        { name: 'TYPESCRIPT', value: 3 },
+        { name: 'NEST.JS', value: 2 }
       ],
       testing: [
         { name: 'Jest.js', value: 3 },

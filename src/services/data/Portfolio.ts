@@ -231,7 +231,7 @@ module.exports = {
       title: 'Mukashi1911',
       subtitle: 'むかし1911 (昔)',
       description:
-        "Mukashi1911 is collection BNK48's members event photography gallery page on Facebook, Instagram (IG) and Twitter",
+        'Mukashi1911 is collection BNK48\'s members event photography gallery page on Facebook, Instagram (IG) and Twitter',
       image: {
         icon: {
           name: 'portfolio%2Fphotography%2Fmukashi1911%2Ficon'
