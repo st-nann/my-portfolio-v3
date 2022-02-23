@@ -10,7 +10,7 @@ stages:
   - github
   - sonarqube
   - install
-  - install_typscript
+  - typescript
   - build
   - deploy
 
@@ -56,8 +56,8 @@ install:
     paths:
       - node_modules
 
-install_typscript:
-  stage: install typescript
+typescript:
+  stage: typescript
   only:
     - master
   script:
