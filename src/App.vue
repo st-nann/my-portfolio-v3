@@ -31,7 +31,7 @@ export default {
   },
   computed: {
     ...mapState('components', {
-      loading: state => state.loading
+      loading: (state) => state.loading
     }),
     nolayout() {
       return this.$route.meta.nolayout
@@ -41,9 +41,6 @@ export default {
     $route(to, from) {
       this.updateLoading()
     }
-  },
-  created() {
-    this.loading
   },
   methods: {
     ...mapActions('components', ['updateLoading'])

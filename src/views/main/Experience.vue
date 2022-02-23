@@ -58,7 +58,7 @@
                               {{ subitem.position }}
                             </span>
                           </p>
-                          <p class="mb-0">{{ subitem.description }}</p>
+                          <p class="mb-0" v-html="subitem.description" />
                         </div>
                         <a
                           v-if="item.link"
@@ -131,7 +131,7 @@ export default {
     doGetFile(name, extension) {
       return getFileFromStore(name, extension)
     },
-    doScroll: function(target) {
+    doScroll(target) {
       this.target = target
       this.$vuetify.goTo(`#${target}`, { offset: 75 })
     }

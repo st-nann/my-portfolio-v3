@@ -1,5 +1,5 @@
-var __awaiter =
-  (this && this.__awaiter) ||
+const __awaiter =
+  (this && (this as any).__awaiter) ||
   function(thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function(resolve, reject) {
       function fulfilled(value) {
@@ -11,7 +11,7 @@ var __awaiter =
       }
       function rejected(value) {
         try {
-          step(generator['throw'](value))
+          step(generator.throw(value))
         } catch (e) {
           reject(e)
         }
@@ -27,10 +27,11 @@ var __awaiter =
     })
   }
 class StoreCreator {
-  successSuffix: string
-  failureSuffix: string
-  resource: any
-  store: { state: any; mutations: {}; actions: {}; getters: {} }
+  public successSuffix: string
+  public failureSuffix: string
+  public resource: any
+  public store: { state: any; mutations: {}; actions: {}; getters: {} }
+
   constructor(resource) {
     this.successSuffix = 'SUCCEEDED'
     this.failureSuffix = 'FAILED'
@@ -38,7 +39,7 @@ class StoreCreator {
     this.store = this.createStore()
   }
 
-  createState() {
+  public createState() {
     const state = Object.assign(
       {
         pending: {},
@@ -47,30 +48,30 @@ class StoreCreator {
       this.resource.state
     )
     const actions = this.resource.actions
-    Object.keys(actions).forEach(action => {
+    Object.keys(actions).forEach((action) => {
       const property = actions[action].property
       state[property] = null
-      state['pending'][property] = false
-      state['error'][property] = null
+      state.pending[property] = false
+      state.error[property] = null
     })
     return state
   }
 
-  createGetter() {
+  public createGetter() {
     return {}
   }
 
-  createMutations() {
+  public createMutations() {
     const mutations = {}
     const actions = this.resource.actions
-    Object.keys(actions).forEach(action => {
+    Object.keys(actions).forEach((action) => {
       const {
         property,
         commitString,
         mutationSuccessFn,
         mutationFailureFn
       } = actions[action]
-      mutations[`${commitString}`] = state => {
+      mutations[`${commitString}`] = (state) => {
         state.pending[property] = true
         state.error[property] = null
       }
@@ -96,21 +97,21 @@ class StoreCreator {
     return mutations
   }
 
-  createActions() {
+  public createActions() {
     const storeActions = {}
     const actions = this.resource.actions
-    Object.keys(actions).forEach(action => {
+    Object.keys(actions).forEach((action) => {
       const { dispatchString, commitString, requestFn } = actions[action]
       storeActions[dispatchString] = ({ commit }, { params = {}, data = {}, options = {} }) =>
         __awaiter(this, void 0, void 0, function*() {
           yield Promise.resolve(0)
           commit(commitString)
           return requestFn(params, data, options).then(
-            response => {
+            (response) => {
               commit(`${commitString}_${this.successSuffix}`, response)
               return Promise.resolve(response)
             },
-            error => {
+            (error) => {
               commit(`${commitString}_${this.failureSuffix}`, error)
               return Promise.reject(error)
             }
@@ -120,7 +121,7 @@ class StoreCreator {
     return storeActions
   }
 
-  createStore() {
+  public createStore() {
     return {
       state: this.createState(),
       mutations: this.createMutations(),

@@ -41,7 +41,7 @@ export default {
     }
   },
   created() {
-    let self = this
+    const self = this
     _.forEach(this.os, function(item) {
       self.animationLoop(item.value)
     })
