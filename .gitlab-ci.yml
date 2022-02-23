@@ -10,7 +10,6 @@ stages:
   - github
   - sonarqube
   - install
-  - typescript
   - build
   - deploy
 
@@ -52,16 +51,6 @@ install:
     - master
   script:
     - yarn install
-  artifacts:
-    paths:
-      - node_modules
-
-typescript:
-  stage: typescript
-  only:
-    - master
-  script:
-    - npm install -g typescript 
   artifacts:
     paths:
       - node_modules
