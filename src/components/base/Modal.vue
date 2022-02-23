@@ -47,7 +47,7 @@ export default {
     doGetImage(name) {
       return getFileFromStore(name)
     },
-    doClickOk: function(event) {
+    doClickOk(event) {
       this.okCallback(event)
     }
   }

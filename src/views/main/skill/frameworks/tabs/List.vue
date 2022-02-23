@@ -33,7 +33,7 @@ export default {
     lists() {
       const title = _.lowerCase(this.title)
       const lists = _.head(data[title])[this.selected]
-      _.forEach(lists, item => {
+      _.forEach(lists, (item) => {
         this.animationLoop(item.value)
       })
       return lists

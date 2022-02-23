@@ -41,10 +41,10 @@ export default {
     },
     chartData() {
       const title = _.lowerCase(this.title)
-      let label = []
-      let value = []
-      _.forEach(data[title], item => {
-        _.forEach(item[this.selected], res => {
+      const label = []
+      const value = []
+      _.forEach(data[title], (item) => {
+        _.forEach(item[this.selected], (res) => {
           label.push(res.name)
           value.push(res.value)
         })

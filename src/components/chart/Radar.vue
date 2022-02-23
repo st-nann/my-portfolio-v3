@@ -29,7 +29,7 @@ export default {
             stepSize: 1,
             fontColor: ['rgba(180, 180, 180, 1)'],
             callback: (value, index, values) => {
-              const found = _.find(this.level, item => item.value === value)
+              const found = _.find(this.level, (item) => item.value === value)
               return found ? found.text : ''
             }
           }

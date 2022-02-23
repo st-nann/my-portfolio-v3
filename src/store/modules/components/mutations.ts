@@ -22,9 +22,9 @@ const mutations: MutationTree<State> = {
       )
     }, 100)
   },
-  [mutation_type.SNACKBAR](state: State, data: object): void {
-    Vue.set(state, 'message', data['txt'])
-    Vue.set(state, 'status', data['type'])
+  [mutation_type.SNACKBAR](state: State, data: { txt: string, type: string}): void {
+    Vue.set(state, 'message', data.txt)
+    Vue.set(state, 'status', data.type)
   }
 }
 

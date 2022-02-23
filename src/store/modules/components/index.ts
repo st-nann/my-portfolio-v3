@@ -4,10 +4,10 @@ import mutations from './mutations'
 import getters from './getters'
 
 const components = {
-  states: states,
-  actions: actions,
-  mutations: mutations,
-  getters: getters,
+  states,
+  actions,
+  mutations,
+  getters,
   namespaced: true
 }
 
