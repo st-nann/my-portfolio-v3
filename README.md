@@ -1,7 +1,7 @@
 ## Sanyanee Thawinvongrak
 
 <a href="https://app.daily.dev/st_nann">
-  <img src="https://api.daily.dev/devcards/651f4a84cfec41b784c3c141b52f2edd.png" align="right" width="300" alt="Sanyanee Thawinvongrak's Dev Card" />
+  <img src="https://api.daily.dev/devcards/651f4a84cfec41b784c3c141b52f2edd.png?r=thh" align="right" width="300" alt="Sanyanee Thawinvongrak's Dev Card" />
 </a>
 
 I am a web developer. I have experience working with Vue.js, Nuxt.js, Next.js, Node.js,Nest.js, PHP, Typescript, Javascript, HTML and CSS. I am passionate about learning Frontend, Backend, Full stack, Cloud and Blockchain Technologies.
