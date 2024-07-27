@@ -11,7 +11,7 @@ module.exports = {
   ],
   menu: {
     languages: [
-      { text: 'Programing', value: 'programing' },
+      { text: 'Programming', value: 'programming' },
       { text: 'General', value: 'general' }
     ],
     frameworks: [
@@ -22,12 +22,13 @@ module.exports = {
     tools: [
       { text: 'Design', value: 'design' },
       { text: 'Editor', value: 'editor' },
-      { text: 'Vision Control', value: 'version_control' },
-      { text: 'Virtual Machine', value: 'virtual_machine' },
+      { text: 'Vision Control', value: 'versionControl' },
+      { text: 'Virtual Machine', value: 'virtualMachine' },
       { text: 'Schedule Work', value: 'schedule' },
       { text: 'API Test', value: 'api' },
       { text: 'Chatbot', value: 'chatbot' },
       { text: 'Database', value: 'database' },
+      { text: 'Queue', value: 'queue' },
       { text: 'Deployment', value: 'deployment' },
       { text: 'Network', value: 'network' },
       // { text: 'Talk Chanel', value: 'talk' },
@@ -59,13 +60,13 @@ module.exports = {
   ],
   languages: [
     {
-      programing: [
+      programming: [
         { name: 'C', value: 3 },
         { name: 'CSS (CSS, SASS)', value: 4 },
-        { name: 'GOLANG', value: 1 },
+        { name: 'GOLANG', value: 4 },
         { name: 'HTML', value: 5 },
-        { name: 'JAVA', value: 3 },
-        { name: 'JAVASCRIPT', value: 4 },
+        { name: 'JAVA', value: 2 },
+        { name: 'JAVASCRIPT', value: 5 },
         { name: 'PHP (LARAVEL)', value: 3 },
         { name: 'SQL', value: 3 },
         { name: 'TYPESCRIPT', value: 3 }
@@ -82,17 +83,18 @@ module.exports = {
       frontend: [
         { name: 'BOOTSTRAP', value: 4 },
         { name: 'MATERIAL UI', value: 4 },
-        { name: 'NEXT.JS (REACT SSR)', value: 2 },
-        { name: 'NUXT.JS (VUE SSR)', value: 3 },
-        { name: 'REACT (QUERY, MOBX)', value: 1 },
+        { name: 'NEXT.JS (REACT SSR)', value: 4 },
+        { name: 'NUXT.JS (VUE SSR)', value: 4 },
+        { name: 'REACT (QUERY, MOBX)', value: 3 },
         { name: 'VUE.JS (VUE, VUEX)', value: 4 },
         { name: 'VUETIFY', value: 5 }
       ],
       backend: [
         { name: 'NODE.JS', value: 4 },
+        { name: 'GOLANG', value: 4 },
         { name: 'PHP LARAVEL', value: 3 },
         { name: 'TYPESCRIPT', value: 3 },
-        { name: 'NEST.JS', value: 2 }
+        { name: 'NEST.JS', value: 3 }
       ],
       testing: [
         { name: 'Jest.js', value: 3 },
@@ -205,7 +207,7 @@ module.exports = {
           }
         }
       ],
-      version_control: [
+      versionControl: [
         {
           name: 'BitBucket',
           image: {
@@ -225,7 +227,7 @@ module.exports = {
           }
         }
       ],
-      virtual_machine: [
+      virtualMachine: [
         {
           name: 'Docker',
           image: {
@@ -307,6 +309,24 @@ module.exports = {
       ],
       database: [
         {
+          name: 'Elasticsearch',
+          image: {
+            name: 'skill%2Ftool%2Felasticsearch'
+          }
+        },
+        {
+          name: 'Kibana',
+          image: {
+            name: 'skill%2Ftool%2Fkibana'
+          }
+        },
+        {
+          name: 'Maria DB',
+          image: {
+            name: 'skill%2Ftool%2Fmariadb'
+          }
+        },
+        {
           name: 'Microsoft SQL Server',
           image: {
             name: 'skill%2Ftool%2Fmicrosoftsqlserver'
@@ -331,9 +351,29 @@ module.exports = {
           }
         },
         {
+          name: 'Postgres',
+          image: {
+            name: 'skill%2Ftool%2Fpostgres'
+          }
+        },
+        {
+          name: 'Redis',
+          image: {
+            name: 'skill%2Ftool%2Fredis'
+          }
+        },
+        {
           name: 'sqldeveloper',
           image: {
             name: 'skill%2Ftool%2Fsqldeveloper'
+          }
+        }
+      ],
+      queue: [
+        {
+          name: 'Kafka',
+          image: {
+            name: 'skill%2Ftool%2Fkafka'
           }
         }
       ],
@@ -345,9 +385,21 @@ module.exports = {
           }
         },
         {
+          name: 'Hostatom',
+          image: {
+            name: 'skill%2Ftool%2Fhostatom'
+          }
+        },
+        {
           name: 'Travis',
           image: {
             name: 'skill%2Ftool%2Ftravis'
+          }
+        },
+        {
+          name: 'Vercel',
+          image: {
+            name: 'skill%2Ftool%2Fvercel'
           }
         }
       ],
@@ -392,6 +444,12 @@ module.exports = {
       //   }
       // ],
       other: [
+        {
+          name: 'Amazon Web Services (AWS)',
+          image: {
+            name: 'skill%2Ftool%2Fjmeter'
+          }
+        },
         {
           name: 'jMeter',
           image: {

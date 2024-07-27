@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       icon: 'instagram',
-      display_text: 'mukashi1911',
+      displayText: 'mukashi1911',
       description: 'https://www.instagram.com/mukashi1911/?hl=th',
       type: 'link'
     }
