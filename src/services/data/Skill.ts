@@ -351,7 +351,7 @@ module.exports = {
           }
         },
         {
-          name: 'Postgres',
+          name: 'PostgresSQL',
           image: {
             name: 'skill%2Ftool%2Fpostgres'
           }

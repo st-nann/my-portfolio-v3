@@ -50,7 +50,7 @@ install:
   only:
     - master
   script:
-    - yarn install
+    - yarn install --cache-folder .yarn
   artifacts:
     paths:
       - node_modules
@@ -75,7 +75,7 @@ deploy:
     - echo -n $GOOGLE_APPLICATION_CREDENTIALS_BASE64 | base64 -d > private-key.json
     - export GOOGLE_APPLICATION_CREDENTIALS="private-key.json"
   script:
-    - npm install yarn@latest -g
+    - yarn version
     - yarn info yarn description
     - yarn global add firebase-tools --cache-folder node_module
     - firebase deploy - only hosting
