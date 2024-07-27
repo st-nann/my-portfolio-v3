@@ -79,7 +79,6 @@ deploy:
   script:
     - yarn info yarn description
     - yarn global add firebase-tools --cache-folder node_modules
-    - firebase login --reauth
     - firebase login --no-localhost --debug
     - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --project $FIREBASE_PROJECT
     # - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY --project $FIREBASE_PROJECT
