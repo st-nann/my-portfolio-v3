@@ -12,7 +12,7 @@ module.exports = {
         {
           position: 'Freelancer',
           description: `<ul>
-            <li>Developed the static website for display wreath content with Wordpress</li>
+            <li>Develop the static website for display wreath content with Wordpress</li>
           </ul>`
         }
       ],
@@ -32,7 +32,7 @@ module.exports = {
         {
           position: 'Freelancer',
           description: `<ul>
-            <li>Developed the immigration detention center - MEDICAL Program admin management system with PHP (Backpack for Laravel framework)</li>
+            <li>Develop the immigration detention center - MEDICAL Program admin management system with PHP (Backpack for Laravel framework)</li>
           </ul>`
         }
       ],
@@ -50,13 +50,13 @@ module.exports = {
       detail: [
         {
           description: `<ul>
-            <li>Developed the Ch3plus website about online streaming content and online shopping system platform with Next.js</li>
-            <li>Developed the CMS admin system for content with the frontend with PHP and the backend with PHP and Golang (Gin Framework). For the Subscription and Point system sections, the frontend was developed with Nuxt.js and the backend with Golang (GRPC).</li>
+            <li>Develop the Ch3plus website about online streaming content and online shopping system platform with Next.js</li>
+            <li>Develop the CMS admin system for content with the frontend with PHP and the backend with PHP and Golang (Gin Framework). The frontend was developed with Nuxt.js and the backend with Golang (GRPC) for the Subscription and Point system sections.</li>
             <li>Developed the content search system with Golang and stored data with Elasticsearch.</li>
-            <li>Developed the queue system for managing large amounts of data using Kafka.</li>
-            <li>Developed the report using Golang (GRPC) and Nest.js.</li>
-            <li>Developed the system for running scheduled crontab using a worker with Golang.</li>
-            <li>Developed the caching system by storing data in Redis.</li>
+            <li>Develop the queue system for managing large amounts of data using Kafka.</li>
+            <li>Develop the report using Golang (GRPC) and Nest.js.</li>
+            <li>Develop the system for running scheduled crontab using a worker with Golang.</li>
+            <li>Develop the caching system by storing data in Redis.</li>
             <li>Stored environment variables that are secrets using AWS Secret Manager's feature.</li>
           </ul>`
         }
@@ -90,8 +90,8 @@ module.exports = {
       detail: [
         {
           description: `<ul>
-            <li>Developed EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Developed Report Worker with Javascript. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
-            <li>Developed Microservice Backend with PHP Laravel. And Developed Report and Product Worker with PHP Laravel and Node.js. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
+            <li>Develop EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Developed Report Worker with Javascript. Node.js Service test with jest.js and PHP Service test with PHPUnit.</li>
+            <li>Develop Microservice Backend with PHP Laravel. And Develop Report and Product Worker with PHP Laravel and Node.js. Node.js Service test with jest.js and PHP Service test with PHPUnit.</li>
             <li>Code Reviewing</li>
           </ul>`
         }
@@ -106,8 +106,8 @@ module.exports = {
         {
           position: 'Senior Programmer (Frontend)',
           description: `<ul>
-            <li>Developed Builder E-mail Template Plugin with Vue.js Framework. and Vuetify. </li>
-            <li>Developed Script for Generate E-Mail Template with Golang.</li>
+            <li>Develop Builder E-mail Template Plugin with Vue.js Framework. and Vuetify. </li>
+            <li>Develop Script for Generate E-Mail Template with Golang.</li>
           </ul>`
         }
       ]
@@ -121,7 +121,7 @@ module.exports = {
         {
           position: 'Cloud Developer (Frontend / Backend)',
           description: `<ul>
-            <li>Developed and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend).</li>
+            <li>Develop and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend).</li>
             <li>Responsible on job assignment, code reviewing, Scum master and controlling overall of work team.</li>
           </ul>`
         },
