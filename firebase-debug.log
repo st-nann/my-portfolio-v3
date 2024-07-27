@@ -1,0 +1,28 @@
+[debug] [2024-07-27T15:18:23.974Z] ----------------------------------------------------------------------
+[debug] [2024-07-27T15:18:23.975Z] Command:       /Users/sanyanee/.nvm/versions/node/v18.18.2/bin/node /Users/sanyanee/.yarn/bin/firebase login --no-localhost
+[debug] [2024-07-27T15:18:23.975Z] CLI Version:   13.14.2
+[debug] [2024-07-27T15:18:23.975Z] Platform:      darwin
+[debug] [2024-07-27T15:18:23.975Z] Node Version:  v18.18.2
+[debug] [2024-07-27T15:18:23.980Z] Time:          Sat Jul 27 2024 22:18:23 GMT+0700 (Indochina Time)
+[debug] [2024-07-27T15:18:23.980Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
+[info] i  To change your data collection preference at any time, run `firebase logout` and log in again. 
+[debug] [2024-07-27T15:18:42.087Z] >>> [apiv2][query] POST https://auth.firebase.tools/attest [none]
+[debug] [2024-07-27T15:18:42.087Z] >>> [apiv2][body] POST https://auth.firebase.tools/attest {"session_id":"73f0d824-30fa-4d78-8556-e19e5ed2d0d9"}
+[debug] [2024-07-27T15:18:42.598Z] <<< [apiv2][status] POST https://auth.firebase.tools/attest 200
+[debug] [2024-07-27T15:18:42.598Z] <<< [apiv2][body] POST https://auth.firebase.tools/attest {"token":"Eyx52VnM9f5n5iEYjsoH85u27Ny0Nxy3jlWTpGeVW2c"}
+[info] 
+[info] To sign in to the Firebase CLI:
+[info] 
+[info] 1. Take note of your session ID:
+[info] 
+[info]    73F0D
+[info] 
+[info] 2. Visit the URL below on any device and follow the instructions to get your code:
+[info] 
+[info]    https://auth.firebase.tools/login?code_challenge=XqrwRz_oWPz9BsA-s1MCeEMvXZ7FdYMHWkNVE0Acn60&session=73f0d824-30fa-4d78-8556-e19e5ed2d0d9&attest=Eyx52VnM9f5n5iEYjsoH85u27Ny0Nxy3jlWTpGeVW2c
+[info] 
+[info] 3. Paste or enter the authorization code below once you have it:
+[info] 
