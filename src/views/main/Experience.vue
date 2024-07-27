@@ -27,7 +27,7 @@
                   <v-row :id="item.id" no-gutters>
                     <v-col cols="3" xs="3" class="text-center">
                       <v-icon>mdi-clock-outline</v-icon>
-                      <p>{{ item.datetime }}</p>
+                      <p>{{ item.dateTime }}</p>
                     </v-col>
                     <v-col cols="1" xs="1">
                       <v-divider class="mt-3 grey lighten-1"></v-divider>
@@ -72,7 +72,7 @@
                           "
                           target="_blank"
                         >
-                          {{ item.link.display_text }}
+                          {{ item.link.displayText }}
                         </a>
                       </v-card>
                     </v-col>
@@ -84,7 +84,7 @@
           <v-col cols="12" lg="2" class="hidden-md-and-down">
             <v-list>
               <v-list-item
-                v-for="(item, index) in preriod"
+                v-for="(item, index) in period"
                 :key="index"
                 :class="{
                   'list-active': target === item.id
@@ -120,8 +120,8 @@ export default {
     experience() {
       return data.experience
     },
-    preriod() {
-      return data.preriod
+    period() {
+      return data.period
     }
   },
   methods: {

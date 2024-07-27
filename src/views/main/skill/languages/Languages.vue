@@ -2,7 +2,7 @@
   <v-card class="my-2 pa-2 card-border card-frame" height="100%" flat>
     <TitleMenuToggle
       ref="menu"
-      default="programing"
+      default="programming"
       :title="title"
       :tabs="languages"
     ></TitleMenuToggle>

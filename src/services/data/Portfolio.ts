@@ -123,6 +123,114 @@ module.exports = {
     },
     {
       id: 'coding-4',
+      type: 'website',
+      title: 'Ch3plus Website',
+      subtitle: 'チャンネル三プラス',
+      description:
+        'Ch3plus website about online streaming content and online shopping',
+      detail: {
+        framework: {
+          frontend: {
+            icon: 'nextjs',
+            text: 'Next.Js'
+          },
+          css: {
+            icon: 'materialUI',
+            text: 'Material UI'
+          },
+          backend: {
+            icon: 'golang',
+            text: 'Golang'
+          }
+        }
+      },
+      image: {
+        icon: {
+          name: 'portfolio%2Fcoding%2Fch3plus%2Ficon'
+        },
+        cover: {
+          name: 'portfolio%2Fcoding%2Fch3plus%2Fcover'
+        },
+        qrcode: {
+          name: 'portfolio%2Fcoding%2Fch3plus%2Fqrcode'
+        }
+      },
+      link: 'https://ch3plus.com'
+    },
+    {
+      id: 'coding-5',
+      type: 'website',
+      title: 'IDC-MED Website',
+      subtitle: 'アイディーシー・エムイーディー',
+      description:
+        'IDC-MED website about the admin of immigration detention center medical program management',
+      detail: {
+        framework: {
+          frontend: {
+            icon: 'php',
+            text: 'PHP Backpack Laravel'
+          },
+          css: {
+            icon: 'php',
+            text: 'PHP Backpack Laravel'
+          },
+          backend: {
+            icon: 'php',
+            text: 'PHP Backpack Laravel'
+          }
+        }
+      },
+      image: {
+        icon: {
+          name: 'portfolio%2Fcoding%2Fidc-med%2Ficon'
+        },
+        cover: {
+          name: 'portfolio%2Fcoding%2Fidc-med%2Fcover'
+        },
+        qrcode: {
+          name: 'portfolio%2Fcoding%2Fidc-med%2Fqrcode'
+        }
+      },
+      link: 'http://203.157.15.173/app/dipq/login'
+    },
+    {
+      id: 'coding-6',
+      type: 'website',
+      title: 'Take a wreath Website',
+      subtitle: 'テークアーリース',
+      description:
+        'Take a wreath website about static website for display wreath content with Wordpress',
+      detail: {
+        framework: {
+          frontend: {
+            icon: 'wordpress',
+            text: 'Wordpress'
+          },
+          css: {
+            icon: 'elementor',
+            text: 'Elementor Kit (Theme)'
+          },
+          backend: {
+            icon: '',
+            text: '-'
+          }
+        }
+      },
+      image: {
+        icon: {
+          name: 'portfolio%2Fcoding%2Ftakeawreath%2Ficon'
+        },
+        cover: {
+          name: 'portfolio%2Fcoding%2Ftakeawreath%2Fcover'
+        },
+        qrcode: {
+          name: 'portfolio%2Fcoding%2Ftakeawreath%2Fqrcode'
+        }
+      },
+      link: 'https://take-awreath.com'
+    },
+    {
+      id: 'coding-7',
       type: 'chatbot',
       title: 'LINE Chatbot - Juné',
       subtitle: 'ラインチャットボット - ジュネ',
@@ -158,7 +266,7 @@ module.exports = {
       link: 'https://line.me/R/ti/p/%40128sooyz#~'
     },
     {
-      id: 'coding-',
+      id: 'coding-8',
       type: 'chatbot',
       title: 'LINE Chatbot - Jennis',
       subtitle: 'ラインチャットボット - ジェニス',
