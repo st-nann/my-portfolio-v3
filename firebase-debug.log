@@ -1,0 +1,10 @@
+[debug] [2024-07-27T16:33:48.186Z] ----------------------------------------------------------------------
+[debug] [2024-07-27T16:33:48.187Z] Command:       /Users/sanyanee/.nvm/versions/node/v18.18.2/bin/node /Users/sanyanee/.yarn/bin/firebase login --interactive
+[debug] [2024-07-27T16:33:48.187Z] CLI Version:   13.14.2
+[debug] [2024-07-27T16:33:48.187Z] Platform:      darwin
+[debug] [2024-07-27T16:33:48.187Z] Node Version:  v18.18.2
+[debug] [2024-07-27T16:33:48.192Z] Time:          Sat Jul 27 2024 23:33:48 GMT+0700 (Indochina Time)
+[debug] [2024-07-27T16:33:48.192Z] ----------------------------------------------------------------------
+[debug] 
+[info] i  Firebase optionally collects CLI and Emulator Suite usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+ 
