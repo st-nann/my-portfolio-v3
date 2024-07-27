@@ -199,12 +199,12 @@ module.exports = {
       title: 'Take a wreath Website',
       subtitle: 'テークアーリース',
       description:
-        'Take a wreath website about static website for display wreath content with Wordpress',
+        'Take a wreath website about static website for display wreath content with WordPress',
       detail: {
         framework: {
           frontend: {
-            icon: 'wordpress',
-            text: 'Wordpress'
+            icon: 'WordPress',
+            text: 'WordPress'
           },
           css: {
             icon: 'elementor',
