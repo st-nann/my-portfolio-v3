@@ -1,5 +1,5 @@
 
-image: node:latest
+image: node:18.18.2
 
 cache:
   key: node_modules
