@@ -12,7 +12,7 @@ module.exports = {
         {
           position: 'Freelancer',
           description: `<ul>
-            <li>Develop the static website for display wreath content with Wordpress</li>
+            <li>Develop the static website called Take a wreath for displaying wreath content with WordPress</li>
           </ul>`
         }
       ],
