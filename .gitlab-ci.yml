@@ -1,5 +1,5 @@
 
-image: node:21
+image: node:20
 
 cache:
   key: node_modules
