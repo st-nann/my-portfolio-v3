@@ -98,7 +98,7 @@ module.exports = {
       ],
       testing: [
         { name: 'Jest.js', value: 3 },
-        { name: 'phpUnit', value: 3 },
+        { name: 'PHPUnit', value: 3 },
         { name: 'ROBOT', value: 1 }
       ]
     }
