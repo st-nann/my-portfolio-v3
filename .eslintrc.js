@@ -16,7 +16,8 @@ module.exports = {
     "vue/no-use-v-if-with-v-for": "off",
     "no-shadow": "off",
     "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off"
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/indent": ["error", 2]
   },
   parser: "vue-eslint-parser",
   parserOptions: {

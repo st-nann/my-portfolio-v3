@@ -4,8 +4,72 @@ module.exports = {
   },
   experience: [
     {
+      id: 'year_2023',
+      dateTime: '01st July 2023 – 15th Sep 2023',
+      title: 'Freelance',
+      subtitle: 'Take a wreath',
+      detail: [
+        {
+          position: 'Freelancer',
+          description: `<ul>
+            <li>Developed the static website for display wreath content with Wordpress</li>
+          </ul>`
+        }
+      ],
+      link: {
+        displayText: 'Take a wreath website',
+        route: 'https://take-awreath.com',
+        type: 'website'
+      }
+    },
+    {
+      id: 'year_2022',
+      dateTime: '01st Nov 2022 – 30th Apr 2024',
+      title: 'Freelance',
+      subtitle:
+        'โปรแกรมเฝ้าระวังป้องกันควบคุมโรคติดต่อ และตรวจรองรับสุขาภิบาลสถานกักตัวคนต่างด้าว (Immigration detention center - MEDICAL Program - IDC-MED)',
+      detail: [
+        {
+          position: 'Freelancer',
+          description: `<ul>
+            <li>Developed the immigration detention center - MEDICAL Program admin management system with PHP (Backpack for Laravel framework)</li>
+          </ul>`
+        }
+      ],
+      link: {
+        displayText: 'IDC-MED website',
+        route: 'http://203.157.15.173/app/dipq/login',
+        type: 'website'
+      }
+    },
+    {
+      id: 'year_2024',
+      dateTime: '01st Jun 2022 – Present',
+      title: 'Software Developer Specialist',
+      subtitle: 'BECi Corporation Ltd. (บริษัท บีอีซีไอ คอร์ปอเรชั่น จำกัด)',
+      detail: [
+        {
+          description: `<ul>
+            <li>Developed the Ch3plus website about online streaming content and online shopping system platform with Next.js</li>
+            <li>Developed the CMS admin system for content with the frontend with PHP and the backend with PHP and Golang (Gin Framework). For the Subscription and Point system sections, the frontend was developed with Nuxt.js and the backend with Golang (GRPC).</li>
+            <li>Developed the content search system with Golang and stored data with Elasticsearch.</li>
+            <li>Developed the queue system for managing large amounts of data using Kafka.</li>
+            <li>Developed the report using Golang (GRPC) and Nest.js.</li>
+            <li>Developed the system for running scheduled crontab using a worker with Golang.</li>
+            <li>Developed the caching system by storing data in Redis.</li>
+            <li>Stored environment variables that are secrets using AWS Secret Manager's feature.</li>
+          </ul>`
+        }
+      ],
+      link: {
+        displayText: 'Ch3plus website',
+        route: 'https://ch3plus.com',
+        type: 'website'
+      }
+    },
+    {
       id: 'year_2021',
-      datetime: '06th Jun 2021 – 31st Aug 2021',
+      dateTime: '06th Jun 2021 – 31st Aug 2021',
       title: 'Freelance',
       subtitle:
         'ระบบบริหารจัดการบริบาลผู้สูงอายุของเครือข่ายวิสาหกิจชุมชน (Clinical Research Associate Management System - CRA)',
@@ -20,14 +84,14 @@ module.exports = {
     },
     {
       id: 'year_2021',
-      datetime: '16th Mar 2021 – Present',
+      dateTime: '16th Mar 2021 – 13th May 2022',
       title: 'Senior Developer (Fullstack)',
       subtitle: 'EGG Digital Company Limited. (เอ้ก ดิจิทัล) - Ascend Commerce',
       detail: [
         {
           description: `<ul>
-            <li>Develop EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Develop Report Worker with Javascript. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
-            <li>Develop Microservice Backend with PHP Laravel. And Develop Report and Product Worker with PHP Laravel and Node.js. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
+            <li>Developed EGG POS Website Manager with Next.js and Material (CSS). And Develop EGG POS Website CMS with PHP Laravel. And Developed Report Worker with Javascript. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
+            <li>Developed Microservice Backend with PHP Laravel. And Developed Report and Product Worker with PHP Laravel and Node.js. Node.js Service test with jest.js and PHP Service test with phpunit.</li>
             <li>Code Reviewing</li>
           </ul>`
         }
@@ -35,30 +99,30 @@ module.exports = {
     },
     {
       id: 'year_2020',
-      datetime: '1st Nov 2020 – 15th Feb 2021',
+      dateTime: '1st Nov 2020 – 15th Feb 2021',
       title: 'Senior Developer (Fullstack)',
       subtitle: '3DS Interactive Company Limited. (ทรีดีเอส อินเตอร์แอคทีฟ)',
       detail: [
         {
           position: 'Senior Programmer (Frontend)',
           description: `<ul>
-            <li>Develop Builder E-mail Template Plugin with Vue.js Framework. and Vuetify. </li>
-            <li>Develop Script for Generate E-Mail Template with Golang.</li>
+            <li>Developed Builder E-mail Template Plugin with Vue.js Framework. and Vuetify. </li>
+            <li>Developed Script for Generate E-Mail Template with Golang.</li>
           </ul>`
         }
       ]
     },
     {
       id: 'year_2016',
-      datetime: '1st Nov 2016 – 31st Oct 2020',
+      dateTime: '1st Nov 2016 – 31st Oct 2020',
       title: 'Cloud Developer (Frontend / Backend and UX Developer)',
       subtitle: 'Nipa Technology Company Limited. (นิภา เทคโนโลยี)',
       detail: [
         {
           position: 'Cloud Developer (Frontend / Backend)',
           description: `<ul>
-            <li>Develop and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend).</li>
-            <li>Responsible on job assignment, code reviewing, Scum master and controling overall of work team.</li>
+            <li>Developed and design user interface (UI) about cloud computing website (NCP) via Openstack API service with Vue.js Framework (Frontend), Node.js (Backend).</li>
+            <li>Responsible on job assignment, code reviewing, Scum master and controlling overall of work team.</li>
           </ul>`
         },
         {
@@ -69,14 +133,14 @@ module.exports = {
         }
       ],
       link: {
-        display_text: 'Nipa cloud Platform (NCP) webite',
+        displayText: 'Nipa cloud Platform (NCP) website',
         route: 'https://portal.nipa.cloud',
         type: 'website'
       }
     },
     {
       id: 'year_2016',
-      datetime: '1st Jun 2016 – 31th Oct 2016',
+      dateTime: '1st Jun 2016 – 31th Oct 2016',
       title: 'Junior System Analyst (Junior SA)',
       subtitle: 'Tech Logistic Enterprise Company Limited.',
       detail: [
@@ -89,7 +153,7 @@ module.exports = {
     },
     {
       id: 'year_2016',
-      datetime: '2th Mar 2016',
+      dateTime: '2th Mar 2016',
       title: 'Teacher Assistance (TA)',
       subtitle: 'Valaya Alongkorn Rajabhat University.',
       detail: [
@@ -102,7 +166,7 @@ module.exports = {
     },
     {
       id: 'year_2015',
-      datetime: 'Nov 2015 – Dec 2015',
+      dateTime: 'Nov 2015 – Dec 2015',
       title: 'Freelance',
       subtitle: '',
       detail: [
@@ -115,7 +179,7 @@ module.exports = {
     },
     {
       id: 'year_2015',
-      datetime: 'Aug 2015 – Dec 2015',
+      dateTime: 'Aug 2015 – Dec 2015',
       title: 'Cooperative Education',
       subtitle: 'Fusionware Company Limited.',
       detail: [
@@ -126,7 +190,7 @@ module.exports = {
         }
       ],
       link: {
-        display_text: 'Resume',
+        displayText: 'Resume',
         route: {
           name: `resume%2FSanyanee's%20Resume`,
           extension: 'pdf'
@@ -136,7 +200,7 @@ module.exports = {
     },
     {
       id: 'year_2015',
-      datetime: 'Jun 2015 – Jul 2015',
+      dateTime: 'Jun 2015 – Jul 2015',
       title: 'Internship',
       subtitle: 'CAT Telecom Public Company Limited.',
       detail: [
@@ -149,7 +213,7 @@ module.exports = {
     },
     {
       id: 'year_2013',
-      datetime: 'Nov 2013 – Feb 2014',
+      dateTime: 'Nov 2013 – Feb 2014',
       title: 'Data Mining Application',
       subtitle: `King Mongkut's Institute of Technology Ladkrabang`,
       detail: [
@@ -161,7 +225,15 @@ module.exports = {
       ]
     }
   ],
-  preriod: [
+  period: [
+    {
+      id: 'year_2024',
+      year: '2024'
+    },
+    {
+      id: 'year_2023',
+      year: '2023'
+    },
     {
       id: 'year_2022',
       year: '2022'
