@@ -73,7 +73,7 @@ deploy:
     - master
   before_script:
     - echo -n $GOOGLE_APPLICATION_CREDENTIALS_BASE64 | base64 -d > private-key.json
-    - export GOOGLE_APPLICATION_CREDENTIALS=private-key.json
+    - export GOOGLE_APPLICATION_CREDENTIAL=private-key.json
     - node -v
     - yarn version
   script:
@@ -82,7 +82,7 @@ deploy:
     ## For login local
     # - firebase login:ci --interactive
     # - firebase login:ci --interactive --no-localhost --debug
-    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --project $FIREBASE_PROJECT
+    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" GOOGLE_APPLICATION_CREDENTIAL=private-key.json --non-interactive --project $FIREBASE_PROJECT
     # - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY --project $FIREBASE_PROJECT
   dependencies:
     - install
