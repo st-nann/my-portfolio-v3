@@ -80,10 +80,13 @@ deploy:
   script:
     - yarn info yarn description
     - yarn global add firebase-tools --cache-folder node_modules
+    - firebase projects:addfirebase $FIREBASE_PROJECT
+    - firebase use --add $FIREBASE_PROJECT
+    - firebase projects:list
     ## For login local
     # - firebase login:ci --interactive
     # - firebase login:ci --interactive --no-localhost --debug
-    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" GOOGLE_APPLICATION_CREDENTIALS=private-key.json --non-interactive --project $FIREBASE_PROJECT
+    - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --debug
     # - firebase deploy -m "Pipeline $CI_PIPELINE_ID, build $CI_BUILD_ID" --non-interactive --token $FIREBASE_DEPLOY_KEY --project $FIREBASE_PROJECT
   dependencies:
     - install
