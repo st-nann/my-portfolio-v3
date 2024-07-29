@@ -74,6 +74,7 @@ deploy:
   before_script:
     - echo -n $GOOGLE_APPLICATION_CREDENTIALS_BASE64 | base64 -d > private-key.json
     - export GOOGLE_APPLICATION_CREDENTIAL=private-key.json
+    - env
     - node -v
     - yarn version
   script:
