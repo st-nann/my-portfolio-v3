@@ -80,8 +80,9 @@ deploy:
   script:
     - yarn info yarn description
     - yarn global add firebase-tools --cache-folder node_modules
-    - firebase projects:addfirebase $FIREBASE_PROJECT
-    - firebase use --add $FIREBASE_PROJECT
+    ## For first time
+    # - firebase projects:addfirebase $FIREBASE_PROJECT
+    # - firebase use --add $FIREBASE_PROJECT
     - firebase projects:list
     ## For login local
     # - firebase login:ci --interactive
